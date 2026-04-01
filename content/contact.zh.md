@@ -1,37 +1,25 @@
 ---
-title: "Contact"
+title: "联系"
 ---
 
-# Get in Touch
+# 联系方式
 
-I'm always interested in connecting with thoughtful professionals working on complex challenges at the intersection of strategy and technology.
+如果你对以下话题感兴趣，欢迎联系我：
 
-## Best Ways to Reach Me
+- 跨文化教育经验
+- 教育体系比较研究
+- 天文教育与科普
+- 职业转型经历
+- 在中亚或新西兰的工作生活
 
-**Email**: your.email@example.com  
-For substantive inquiries, detailed discussions, or collaboration opportunities.
+## Email
 
-**LinkedIn**: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)  
-For professional networking and staying connected.
+**contact@zhoupenglong.com**
 
-**Twitter/X**: [@yourhandle](https://twitter.com/yourhandle)  
-For quick thoughts and ongoing conversations.
+## 回复时间
 
-## What I'm Interested In
+我通常会在几天内回复邮件。如果你的问题需要深入思考，可能需要更长时间，但我会先确认收到。
 
-I'm particularly keen to hear from:
+## 关于社交媒体
 
-- **Executives** navigating digital transformation challenges
-- **Product leaders** building complex platforms or enterprise software
-- **Technologists** thinking deeply about strategy and organizational design
-- **Conference organizers** seeking speakers on strategy, AI, or technology leadership
-
-## Response Time
-
-I aim to respond to all thoughtful inquiries within 48 hours. If your message requires deep thought or detailed response, it may take longer—but I will acknowledge receipt promptly.
-
-## Not Sure If You Should Reach Out?
-
-If you're wondering whether your question or idea is "important enough" to warrant an email—it probably is. I value intellectual curiosity and thoughtful questions over formal credentials.
-
-The worst that can happen is I politely decline. The best that can happen is a valuable exchange of ideas.
+我不活跃在社交媒体平台上。邮件是最有效的联系方式。

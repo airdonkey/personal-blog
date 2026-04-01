@@ -13,7 +13,7 @@ if not exist "config.toml" (
 )
 
 echo [1/3] Processing drafts...
-python publish-article.py
+python publish_article.py
 
 if %ERRORLEVEL% NEQ 0 (
     echo.

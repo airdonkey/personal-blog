@@ -1,23 +1,19 @@
 baseURL = "https://zhoupenglong.com/"
-defaultContentLanguage = "zh"  # 默认语言为中文
-defaultContentLanguageInSubdir = true  # 中文也使用 /zh/ 子目录
+defaultContentLanguage = "zh"
+defaultContentLanguageInSubdir = true
 
-# 语言配置
 [languages]
   [languages.zh]
     languageCode = "zh-CN"
     languageName = "中文"
     weight = 1
-    title = "周鹏龙 | 战略与技术"
+    title = "周鹏龙 | 跨文化观察与学习"
     
     [languages.zh.params]
       author = "周鹏龙"
-      description = "战略咨询顾问 & 技术专家"
-      tagline = "连接商业战略与数字创新"
-      email = "your.email@example.com"
-      linkedin = "https://linkedin.com/in/zhoupenglong"
-      twitter = "https://twitter.com/zhoupenglong"
-      github = "https://github.com/zhoupenglong"
+      description = "教育工作者 & 天文学会执行秘书"
+      tagline = "记录跨文化观察与终身学习"
+      email = "contact@zhoupenglong.com"
     
     [[languages.zh.menu.main]]
       name = "文章"
@@ -38,16 +34,13 @@ defaultContentLanguageInSubdir = true  # 中文也使用 /zh/ 子目录
     languageCode = "en-US"
     languageName = "English"
     weight = 2
-    title = "Zhou Penglong | Strategy & Technology"
+    title = "Zhou Penglong | Cross-Cultural Learning"
     
     [languages.en.params]
       author = "Zhou Penglong"
-      description = "Strategy Consultant & Technology Advisor"
-      tagline = "Bridging Business Strategy and Digital Innovation"
-      email = "your.email@example.com"
-      linkedin = "https://linkedin.com/in/zhoupenglong"
-      twitter = "https://twitter.com/zhoupenglong"
-      github = "https://github.com/zhoupenglong"
+      description = "Educator & Executive Secretary of RASNZ"
+      tagline = "Cross-Cultural Observations & Lifelong Learning"
+      email = "contact@zhoupenglong.com"
     
     [[languages.en.menu.main]]
       name = "Articles"

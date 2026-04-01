@@ -1,41 +1,31 @@
 ---
-title: "About"
+title: "关于"
 ---
 
-# About Me
+# 关于我
 
-I help organizations bridge the gap between business strategy and technology execution. With over a decade of experience spanning strategy consulting, product leadership, and engineering management, I specialize in translating complex technical capabilities into clear business value.
+我曾在金融与国际发展领域工作多年，现为新西兰注册教师和新西兰皇家天文学会执行秘书。
 
-## What I Do
+## 职业经历
 
-**Strategy Consulting**  
-I work with executives to develop and execute digital transformation strategies, focusing on where technology creates genuine competitive advantage—not just where it's trendy.
+我的职业轨迹并非直线前进。从德勤北京办公室的审计师开始，我曾担任中国信保风险分析师，之后作为中国进出口银行派驻中亚和外高加索工作组的创始成员，在该地区工作数年。
 
-**Advisory & Mentorship**  
-I advise technology leaders on product strategy, organizational design, and building high-performing engineering teams.
+2010年代中期，我离开金融领域，移居新西兰并转入教育行业。目前我在新西兰从事教育工作，同时担任新西兰皇家天文学会的执行秘书。
 
-**Speaking & Writing**  
-I share insights on strategy, technology, and leadership through this blog, industry conferences, and guest lectures at leading business schools.
+## 关注领域
 
-## Background
+- **跨文化观察** — 在中国、中亚和大洋洲的生活经历让我对不同社会的运作方式保持持续兴趣
+- **教育比较学** — 从不同教育体系中寻找有价值的经验
+- **天文与地球科学** — 长期的个人兴趣，现在也是工作的一部分
 
-- **Previously**: Senior engineering and product roles at fast-growing technology companies
-- **Expertise**: Digital transformation, AI strategy, platform architecture, organizational design
-- **Education**: MBA (Strategy), BS (Computer Science)
+## 写作动机
 
-## Why I Write
+这个博客主要记录我在不同文化和专业领域之间观察到的模式、反差与洞见。我不提供现成答案，也不推销任何方法论——只是分享一个从金融转向教育和科学领域的人的观察。
 
-The technology industry suffers from an abundance of tactical content and a shortage of strategic thinking. This blog is my attempt to fill that gap—offering frameworks for thinking through complex problems rather than simple answers.
+我写作的对象是那些理解职业生涯不必遵循传统轨迹、对终身学习保持兴趣的人。
 
-I write for leaders who understand that technology is a means to an end, not an end in itself.
+## 联系方式
 
-## Let's Connect
+如果你对跨文化教育、天文教育普及或职业转型话题感兴趣，欢迎联系我。
 
-I'm always interested in connecting with thoughtful leaders working on challenging problems. Reach out if you'd like to:
-
-- Discuss a strategic challenge you're facing
-- Explore potential collaboration opportunities
-- Share insights from your own experience
-
-**Email**: your.email@example.com  
-**LinkedIn**: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
+**Email**: contact@zhoupenglong.com
