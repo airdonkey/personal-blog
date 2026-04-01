@@ -1,0 +1,29 @@
+[readingTime]
+other = "min read"
+
+[tags]
+other = "Tags"
+
+[backToArticles]
+other = "← Back to Articles"
+
+[subscribe]
+other = "Subscribe"
+
+[subscribeDescription]
+other = "Get insights on strategy and technology"
+
+[emailPlaceholder]
+other = "your@email.com"
+
+[subscribeButton]
+other = "Subscribe"
+
+[archive]
+other = "Archive"
+
+[recentPosts]
+other = "Recent Posts"
+
+[aboutAuthor]
+other = "About the Author"
