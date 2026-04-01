@@ -1,0 +1,33 @@
+{{ define "title" }}{{ .Title }} | {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<div class="container">
+    <article class="article-content">
+        <header>
+            <div class="article-meta">
+                <span class="article-date">{{ .Date.Format "January 2, 2006" }}</span>
+                <span class="article-reading-time">{{ .ReadingTime }} min read</span>
+            </div>
+            <h1>{{ .Title }}</h1>
+            
+            {{ if .Params.tags }}
+            <div class="article-tags" style="margin-top: 1rem;">
+                {{ range .Params.tags }}
+                <a href="/tags/{{ . | urlize }}" class="tag">{{ . }}</a>
+                {{ end }}
+            </div>
+            {{ end }}
+        </header>
+        
+        <div style="margin-top: 2rem;">
+            {{ .Content }}
+        </div>
+        
+        <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--gray-200);">
+            <p style="text-align: center; color: var(--text-muted);">
+                <a href="/">← Back to Articles</a>
+            </p>
+        </footer>
+    </article>
+</div>
+{{ end }}

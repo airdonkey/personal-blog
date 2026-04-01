@@ -1,0 +1,53 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>{{ .Site.Params.author }}</h1>
+            <p class="hero-tagline">{{ .Site.Params.tagline }}</p>
+            <p class="hero-description">
+                Helping organizations navigate digital transformation through strategic thinking and technology expertise. 
+                Sharing insights on business strategy, innovation, and leadership.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content with Sidebar -->
+<div class="container">
+    <div class="content-wrapper">
+        {{ partial "sidebar.html" . }}
+        
+        <!-- Article List -->
+        <div class="article-list">
+            {{ range first 10 (where .Site.RegularPages "Type" "posts") }}
+            <article class="article-card">
+                <div class="article-header">
+                    <div class="article-meta">
+                        <span class="article-date">{{ .Date.Format "January 2, 2006" }}</span>
+                        <span class="article-reading-time">{{ .ReadingTime }} min read</span>
+                    </div>
+                    <h2 class="article-title">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h2>
+                </div>
+                
+                <div class="article-excerpt">
+                    {{ .Summary }}
+                </div>
+                
+                {{ if .Params.tags }}
+                <div class="article-footer">
+                    <div class="article-tags">
+                        {{ range .Params.tags }}
+                        <a href="/tags/{{ . | urlize }}" class="tag">{{ . }}</a>
+                        {{ end }}
+                    </div>
+                </div>
+                {{ end }}
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

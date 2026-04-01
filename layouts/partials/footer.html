@@ -1,0 +1,13 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-links">
+                {{ with .Site.Params.linkedin }}<a href="{{ . }}" target="_blank">LinkedIn</a>{{ end }}
+                {{ with .Site.Params.twitter }}<a href="{{ . }}" target="_blank">Twitter</a>{{ end }}
+                {{ with .Site.Params.github }}<a href="{{ . }}" target="_blank">GitHub</a>{{ end }}
+                {{ with .Site.Params.email }}<a href="mailto:{{ . }}">Email</a>{{ end }}
+            </div>
+            <p>&copy; {{ now.Year }} {{ .Site.Params.author }}. All rights reserved.</p>
+        </div>
+    </div>
+</footer>

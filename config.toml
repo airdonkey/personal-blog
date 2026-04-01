@@ -1,0 +1,34 @@
+baseURL = "https://zhoupenglong.com/"
+languageCode = "zh-cn"
+title = "Zhou Penglong | Strategy & Technology"
+
+[params]
+  author = "Zhou Penglong"
+  description = "Strategy Consultant & Technology Advisor"
+  tagline = "Bridging Business Strategy and Digital Innovation"
+  
+  email = "your.email@example.com"
+  linkedin = "https://linkedin.com/in/zhoupenglong"
+  twitter = "https://twitter.com/zhoupenglong"
+  github = "https://github.com/zhoupenglong"
+
+[menu]
+  [[menu.main]]
+    name = "文章"
+    url = "/posts/"
+    weight = 1
+  
+  [[menu.main]]
+    name = "关于"
+    url = "/about/"
+    weight = 2
+  
+  [[menu.main]]
+    name = "联系"
+    url = "/contact/"
+    weight = 3
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
