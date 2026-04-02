@@ -8,7 +8,7 @@ I spent many years in finance and international development before transitioning
 
 ## Career Path
 
-My career trajectory has been anything but linear. Starting as an auditor at Deloitte's Beijing office, I moved into risk analysis at Sinosure before becoming a founding member of the China Export-Import Bank's working group stationed in Central Asia and the South Caucasus.
+My career trajectory has been anything but linear. Starting as an auditor at Deloitte Beijing Office, I moved into risk analysis at Sinosure before becoming a founding member of the Export-Import Bank of China's Liaison Group in Central Asia and Transcaucasia.
 
 In the mid-2010s, I left the financial sector, relocated to New Zealand, and transitioned into education. I now teach in New Zealand while managing administrative operations for the Royal Astronomical Society of New Zealand.
 
@@ -28,4 +28,4 @@ I write for those who understand that careers need not follow conventional paths
 
 If you're interested in cross-cultural education, astronomy outreach, or career transitions, feel free to get in touch.
 
-**Email**: contact@zhoupenglong.com
+**Email**: contact[at]zhoupenglong[dot]com

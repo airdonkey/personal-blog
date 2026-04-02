@@ -14,7 +14,7 @@ title: "联系"
 
 ## Email
 
-**contact@zhoupenglong.com**
+**contact[at]zhoupenglong[dot]com**
 
 ## 回复时间
 

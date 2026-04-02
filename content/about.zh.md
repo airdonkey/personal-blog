@@ -28,4 +28,4 @@ title: "关于"
 
 如果你对跨文化教育、天文教育普及或职业转型话题感兴趣，欢迎联系我。
 
-**Email**: contact@zhoupenglong.com
+**Email**: contact[at]zhoupenglong[dot]com

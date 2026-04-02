@@ -14,7 +14,7 @@ Feel free to reach out if you're interested in discussing:
 
 ## Email
 
-**contact@zhoupenglong.com**
+**contact[at]zhoupenglong[dot]com**
 
 ## Response Time
 
