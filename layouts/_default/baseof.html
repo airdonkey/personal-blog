@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ .Site.Params.description }}">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | absURL }}">
+    <link rel="alternate icon" href="{{ "favicon.ico" | absURL }}">
+    
     <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
 </head>
 <body>
