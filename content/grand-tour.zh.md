@@ -28,7 +28,6 @@ layout: "grand-tour"
   <div class="map-section">
     <div class="map-container">
       <div id="world-map"></div>
-      <div id="map-tooltip" class="map-tooltip"></div>
     </div>
   </div>
 
@@ -37,5 +36,14 @@ layout: "grand-tour"
   </div>
 </div>
 
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- 自定义样式 -->
 <link rel="stylesheet" href="/css/grand-tour.css">
-<script src="/js/grand-tour.js"></script>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- 自定义脚本 -->
+<script src="/js/grand-tour-leaflet.js"></script>
