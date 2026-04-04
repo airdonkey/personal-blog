@@ -4,6 +4,12 @@ description: "Footprints across 42 countries"
 layout: "grand-tour"
 ---
 
+<!-- Leaflet CSS - Must load before map container -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- Custom styles -->
+<link rel="stylesheet" href="/css/grand-tour.css">
+
 <div class="grand-tour-page">
   <div class="grand-tour-header">
     <h1>Grand Tour</h1>
@@ -35,12 +41,6 @@ layout: "grand-tour"
     <div id="countries-by-region"></div>
   </div>
 </div>
-
-<!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-
-<!-- Custom styles -->
-<link rel="stylesheet" href="/css/grand-tour.css">
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

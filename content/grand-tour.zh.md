@@ -4,6 +4,12 @@ description: "42个国家的足迹与观察"
 layout: "grand-tour"
 ---
 
+<!-- Leaflet CSS - 必须在地图容器之前加载 -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- 自定义样式 -->
+<link rel="stylesheet" href="/css/grand-tour.css">
+
 <div class="grand-tour-page">
   <div class="grand-tour-header">
     <h1>游历世界</h1>
@@ -35,12 +41,6 @@ layout: "grand-tour"
     <div id="countries-by-region"></div>
   </div>
 </div>
-
-<!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-
-<!-- 自定义样式 -->
-<link rel="stylesheet" href="/css/grand-tour.css">
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
