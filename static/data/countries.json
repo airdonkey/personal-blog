@@ -1,0 +1,289 @@
+[
+  {
+    "country": "葡萄牙",
+    "country_en": "Portugal",
+    "country_code": "PRT",
+    "visit_date": "2016-07",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 38.7223,
+    "longitude": -9.1393,
+    "capital": "里斯本",
+    "capital_en": "Lisbon",
+    "featured_places": [
+      {
+        "name": "罗卡角",
+        "name_en": "Cabo da Roca",
+        "description": "欧洲大陆最西端",
+        "description_en": "Westernmost point of continental Europe",
+        "latitude": 38.7803,
+        "longitude": -9.4989,
+        "visit_date": "2016-07",
+        "has_article": false,
+        "article_url": null
+      }
+    ],
+    "cities": [
+      {
+        "name": "里斯本",
+        "name_en": "Lisbon",
+        "note": "古老的电车和美丽的瓷砖画",
+        "note_en": "Ancient trams and beautiful azulejos",
+        "has_article": false
+      },
+      {
+        "name": "波尔图",
+        "name_en": "Porto",
+        "note": "波特酒的故乡",
+        "note_en": "Home of Port wine",
+        "has_article": false
+      }
+    ]
+  },
+  {
+    "country": "挪威",
+    "country_en": "Norway",
+    "country_code": "NOR",
+    "visit_date": "2017-08",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 59.9139,
+    "longitude": 10.7522,
+    "capital": "奥斯陆",
+    "capital_en": "Oslo",
+    "featured_places": [
+      {
+        "name": "北角",
+        "name_en": "North Cape",
+        "description": "欧洲大陆最北端",
+        "description_en": "Northernmost point of Europe",
+        "latitude": 71.1694,
+        "longitude": 25.7844,
+        "visit_date": "2017-08",
+        "has_article": false,
+        "article_url": null
+      }
+    ],
+    "cities": [
+      {
+        "name": "奥斯陆",
+        "name_en": "Oslo",
+        "note": "现代与自然完美结合的首都",
+        "note_en": "Capital blending modernity and nature",
+        "has_article": false
+      }
+    ]
+  },
+  {
+    "country": "哈萨克斯坦",
+    "country_en": "Kazakhstan",
+    "country_code": "KAZ",
+    "visit_date": "2014-09",
+    "region": "中亚",
+    "region_en": "Central Asia",
+    "latitude": 51.1694,
+    "longitude": 71.4491,
+    "capital": "阿斯塔纳",
+    "capital_en": "Astana",
+    "featured_places": [],
+    "cities": [
+      {
+        "name": "阿拉木图",
+        "name_en": "Almaty",
+        "note": "山脚下的旧都",
+        "note_en": "Former capital at the foot of mountains",
+        "has_article": false
+      },
+      {
+        "name": "阿斯塔纳",
+        "name_en": "Astana",
+        "note": "草原上的未来之城",
+        "note_en": "Futuristic city on the steppe",
+        "has_article": false
+      }
+    ]
+  },
+  {
+    "country": "乌兹别克斯坦",
+    "country_en": "Uzbekistan",
+    "country_code": "UZB",
+    "visit_date": "2015-06",
+    "region": "中亚",
+    "region_en": "Central Asia",
+    "latitude": 41.2995,
+    "longitude": 69.2401,
+    "capital": "塔什干",
+    "capital_en": "Tashkent",
+    "featured_places": [
+      {
+        "name": "咸海",
+        "name_en": "Aral Sea",
+        "description": "消失的海",
+        "description_en": "The vanishing sea",
+        "latitude": 45.0,
+        "longitude": 59.5,
+        "visit_date": "2015-06",
+        "has_article": false,
+        "article_url": null
+      }
+    ],
+    "cities": [
+      {
+        "name": "塔什干",
+        "name_en": "Tashkent",
+        "note": "中亚最大城市",
+        "note_en": "Largest city in Central Asia",
+        "has_article": false
+      },
+      {
+        "name": "撒马尔罕",
+        "name_en": "Samarkand",
+        "note": "丝绸之路的璀璨明珠",
+        "note_en": "Jewel of the Silk Road",
+        "has_article": false
+      },
+      {
+        "name": "布哈拉",
+        "name_en": "Bukhara",
+        "note": "古老的伊斯兰学术中心",
+        "note_en": "Ancient Islamic scholarly center",
+        "has_article": false
+      }
+    ]
+  },
+  {
+    "country": "新西兰",
+    "country_en": "New Zealand",
+    "country_code": "NZL",
+    "visit_date": "2015-12",
+    "region": "大洋洲",
+    "region_en": "Oceania",
+    "latitude": -41.2865,
+    "longitude": 174.7762,
+    "capital": "惠灵顿",
+    "capital_en": "Wellington",
+    "featured_places": [
+      {
+        "name": "查塔姆岛",
+        "name_en": "Chatham Islands",
+        "description": "新西兰最东端",
+        "description_en": "Easternmost point of New Zealand",
+        "latitude": -43.95,
+        "longitude": -176.57,
+        "visit_date": "2018-03",
+        "has_article": false,
+        "article_url": null
+      }
+    ],
+    "cities": [
+      {
+        "name": "奥克兰",
+        "name_en": "Auckland",
+        "note": "帆船之都",
+        "note_en": "City of Sails",
+        "has_article": false
+      },
+      {
+        "name": "惠灵顿",
+        "name_en": "Wellington",
+        "note": "风城首都",
+        "note_en": "Windy capital city",
+        "has_article": false
+      },
+      {
+        "name": "基督城",
+        "name_en": "Christchurch",
+        "note": "花园城市",
+        "note_en": "Garden city",
+        "has_article": false
+      }
+    ]
+  },
+  {
+    "country": "日本",
+    "country_en": "Japan",
+    "country_code": "JPN",
+    "visit_date": "2017-04",
+    "region": "亚洲",
+    "region_en": "Asia",
+    "latitude": 35.6762,
+    "longitude": 139.6503,
+    "capital": "东京",
+    "capital_en": "Tokyo",
+    "featured_places": [],
+    "cities": [
+      {
+        "name": "东京",
+        "name_en": "Tokyo",
+        "note": "传统与现代的完美融合",
+        "note_en": "Perfect blend of tradition and modernity",
+        "has_article": false
+      },
+      {
+        "name": "京都",
+        "name_en": "Kyoto",
+        "note": "千年古都的宁静",
+        "note_en": "Tranquility of the ancient capital",
+        "has_article": false
+      }
+    ]
+  },
+  {
+    "country": "法国",
+    "country_en": "France",
+    "country_code": "FRA",
+    "visit_date": "2016-05",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 48.8566,
+    "longitude": 2.3522,
+    "capital": "巴黎",
+    "capital_en": "Paris",
+    "featured_places": [],
+    "cities": [
+      {
+        "name": "巴黎",
+        "name_en": "Paris",
+        "note": "埃菲尔铁塔依然震撼",
+        "note_en": "The Eiffel Tower still impresses",
+        "has_article": false
+      },
+      {
+        "name": "里昂",
+        "name_en": "Lyon",
+        "note": "美食之都名不虚传",
+        "note_en": "Gastronomy capital lives up to its name",
+        "has_article": false
+      }
+    ]
+  },
+  {
+    "country": "德国",
+    "country_en": "Germany",
+    "country_code": "DEU",
+    "visit_date": "2016-06",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 52.5200,
+    "longitude": 13.4050,
+    "capital": "柏林",
+    "capital_en": "Berlin",
+    "featured_places": [],
+    "cities": [
+      {
+        "name": "柏林",
+        "name_en": "Berlin",
+        "note": "历史的厚重感",
+        "note_en": "Weight of history",
+        "has_article": false
+      },
+      {
+        "name": "慕尼黑",
+        "name_en": "Munich",
+        "note": "巴伐利亚的魅力",
+        "note_en": "Bavarian charm",
+        "has_article": false
+      }
+    ]
+  }
+]
