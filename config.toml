@@ -21,14 +21,19 @@ defaultContentLanguageInSubdir = true
       weight = 1
     
     [[languages.zh.menu.main]]
+      name = "游历"
+      url = "/zh/grand-tour/"
+      weight = 2
+    
+    [[languages.zh.menu.main]]
       name = "关于"
       url = "/zh/about/"
-      weight = 2
+      weight = 3
     
     [[languages.zh.menu.main]]
       name = "联系"
       url = "/zh/contact/"
-      weight = 3
+      weight = 4
 
   [languages.en]
     languageCode = "en-US"
@@ -48,14 +53,19 @@ defaultContentLanguageInSubdir = true
       weight = 1
     
     [[languages.en.menu.main]]
+      name = "Grand Tour"
+      url = "/en/grand-tour/"
+      weight = 2
+    
+    [[languages.en.menu.main]]
       name = "About"
       url = "/en/about/"
-      weight = 2
+      weight = 3
     
     [[languages.en.menu.main]]
       name = "Contact"
       url = "/en/contact/"
-      weight = 3
+      weight = 4
 
 [markup]
   [markup.goldmark]
