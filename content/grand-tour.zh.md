@@ -4,9 +4,6 @@ description: "42个国家的足迹与观察"
 layout: "grand-tour"
 ---
 
-<!-- Leaflet CSS - 必须在地图容器之前加载 -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-
 <!-- 自定义样式 -->
 <link rel="stylesheet" href="/css/grand-tour.css">
 
@@ -22,11 +19,11 @@ layout: "grand-tour"
       <div class="stat-label">已访问国家</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number">15</div>
+      <div class="stat-number">36</div>
       <div class="stat-label">特色地点</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number">100+</div>
+      <div class="stat-number">87</div>
       <div class="stat-label">探访城市</div>
     </div>
   </div>
@@ -42,8 +39,16 @@ layout: "grand-tour"
   </div>
 </div>
 
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<!-- Google Maps API -->
+<script>
+(function() {
+  const script = document.createElement('script');
+  script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyATeosKyKs3Fj4xiM3cc2MeLDGOdLX1NBo&callback=initGrandTourMap';
+  script.async = true;
+  script.defer = true;
+  document.head.appendChild(script);
+})();
+</script>
 
 <!-- 自定义脚本 -->
-<script src="/js/grand-tour-leaflet.js"></script>
+<script src="/js/grand-tour-google.js"></script>

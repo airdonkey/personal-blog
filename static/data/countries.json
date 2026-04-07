@@ -1,259 +1,144 @@
 [
   {
-    "country": "葡萄牙",
-    "country_en": "Portugal",
-    "country_code": "PRT",
-    "visit_date": "2016-07",
-    "region": "欧洲",
-    "region_en": "Europe",
-    "latitude": 38.7223,
-    "longitude": -9.1393,
-    "capital": "里斯本",
-    "capital_en": "Lisbon",
-    "featured_places": [
-      {
-        "name": "罗卡角",
-        "name_en": "Cabo da Roca",
-        "description": "欧洲大陆最西端",
-        "description_en": "Westernmost point of continental Europe",
-        "latitude": 38.7803,
-        "longitude": -9.4989,
-        "visit_date": "2016-07",
-        "has_article": false,
-        "article_url": null
-      }
-    ],
-    "cities": [
-      {
-        "name": "里斯本",
-        "name_en": "Lisbon",
-        "note": "古老的电车和美丽的瓷砖画",
-        "note_en": "Ancient trams and beautiful azulejos",
-        "has_article": false
-      },
-      {
-        "name": "波尔图",
-        "name_en": "Porto",
-        "note": "波特酒的故乡",
-        "note_en": "Home of Port wine",
-        "has_article": false
-      }
-    ]
-  },
-  {
-    "country": "挪威",
-    "country_en": "Norway",
-    "country_code": "NOR",
-    "visit_date": "2017-08",
-    "region": "欧洲",
-    "region_en": "Europe",
-    "latitude": 59.9139,
-    "longitude": 10.7522,
-    "capital": "奥斯陆",
-    "capital_en": "Oslo",
-    "featured_places": [
-      {
-        "name": "北角",
-        "name_en": "North Cape",
-        "description": "欧洲大陆最北端",
-        "description_en": "Northernmost point of Europe",
-        "latitude": 71.1694,
-        "longitude": 25.7844,
-        "visit_date": "2017-08",
-        "has_article": false,
-        "article_url": null
-      }
-    ],
-    "cities": [
-      {
-        "name": "奥斯陆",
-        "name_en": "Oslo",
-        "note": "现代与自然完美结合的首都",
-        "note_en": "Capital blending modernity and nature",
-        "has_article": false
-      }
-    ]
-  },
-  {
-    "country": "哈萨克斯坦",
-    "country_en": "Kazakhstan",
-    "country_code": "KAZ",
-    "visit_date": "2014-09",
-    "region": "中亚",
-    "region_en": "Central Asia",
-    "latitude": 51.1694,
-    "longitude": 71.4491,
-    "capital": "阿斯塔纳",
-    "capital_en": "Astana",
-    "featured_places": [],
-    "cities": [
-      {
-        "name": "阿拉木图",
-        "name_en": "Almaty",
-        "note": "山脚下的旧都",
-        "note_en": "Former capital at the foot of mountains",
-        "has_article": false
-      },
-      {
-        "name": "阿斯塔纳",
-        "name_en": "Astana",
-        "note": "草原上的未来之城",
-        "note_en": "Futuristic city on the steppe",
-        "has_article": false
-      }
-    ]
-  },
-  {
-    "country": "乌兹别克斯坦",
-    "country_en": "Uzbekistan",
-    "country_code": "UZB",
-    "visit_date": "2015-06",
-    "region": "中亚",
-    "region_en": "Central Asia",
-    "latitude": 41.2995,
-    "longitude": 69.2401,
-    "capital": "塔什干",
-    "capital_en": "Tashkent",
-    "featured_places": [
-      {
-        "name": "咸海",
-        "name_en": "Aral Sea",
-        "description": "消失的海",
-        "description_en": "The vanishing sea",
-        "latitude": 45.0,
-        "longitude": 59.5,
-        "visit_date": "2015-06",
-        "has_article": false,
-        "article_url": null
-      }
-    ],
-    "cities": [
-      {
-        "name": "塔什干",
-        "name_en": "Tashkent",
-        "note": "中亚最大城市",
-        "note_en": "Largest city in Central Asia",
-        "has_article": false
-      },
-      {
-        "name": "撒马尔罕",
-        "name_en": "Samarkand",
-        "note": "丝绸之路的璀璨明珠",
-        "note_en": "Jewel of the Silk Road",
-        "has_article": false
-      },
-      {
-        "name": "布哈拉",
-        "name_en": "Bukhara",
-        "note": "古老的伊斯兰学术中心",
-        "note_en": "Ancient Islamic scholarly center",
-        "has_article": false
-      }
-    ]
-  },
-  {
-    "country": "新西兰",
-    "country_en": "New Zealand",
-    "country_code": "NZL",
-    "visit_date": "2015-12",
-    "region": "大洋洲",
-    "region_en": "Oceania",
-    "latitude": -41.2865,
-    "longitude": 174.7762,
-    "capital": "惠灵顿",
-    "capital_en": "Wellington",
-    "featured_places": [
-      {
-        "name": "查塔姆岛",
-        "name_en": "Chatham Islands",
-        "description": "新西兰最东端",
-        "description_en": "Easternmost point of New Zealand",
-        "latitude": -43.95,
-        "longitude": -176.57,
-        "visit_date": "2018-03",
-        "has_article": false,
-        "article_url": null
-      }
-    ],
-    "cities": [
-      {
-        "name": "奥克兰",
-        "name_en": "Auckland",
-        "note": "帆船之都",
-        "note_en": "City of Sails",
-        "has_article": false
-      },
-      {
-        "name": "惠灵顿",
-        "name_en": "Wellington",
-        "note": "风城首都",
-        "note_en": "Windy capital city",
-        "has_article": false
-      },
-      {
-        "name": "基督城",
-        "name_en": "Christchurch",
-        "note": "花园城市",
-        "note_en": "Garden city",
-        "has_article": false
-      }
-    ]
-  },
-  {
-    "country": "日本",
-    "country_en": "Japan",
-    "country_code": "JPN",
-    "visit_date": "2017-04",
+    "country": "斯里兰卡",
+    "country_en": "Sri Lanka",
+    "country_code": "LKA",
     "region": "亚洲",
     "region_en": "Asia",
-    "latitude": 35.6762,
-    "longitude": 139.6503,
-    "capital": "东京",
-    "capital_en": "Tokyo",
-    "featured_places": [],
+    "latitude": 6.9271,
+    "longitude": 79.8612,
+    "visit_date": "2008-09-26",
     "cities": [
       {
-        "name": "东京",
-        "name_en": "Tokyo",
-        "note": "传统与现代的完美融合",
-        "note_en": "Perfect blend of tradition and modernity",
-        "has_article": false
-      },
+        "name": "科伦坡",
+        "name_en": "Colombo",
+        "latitude": 6.9271,
+        "longitude": 79.8612,
+        "show_on_map": true,
+        "note": "人生第一次出国的转机地",
+        "note_en": "First international flight transit"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "马尔代夫",
+    "country_en": "Maldives",
+    "country_code": "MDV",
+    "region": "亚洲",
+    "region_en": "Asia",
+    "latitude": 4.1755,
+    "longitude": 73.5093,
+    "visit_date": "2008-09-27",
+    "cities": [],
+    "featured_places": [
       {
-        "name": "京都",
-        "name_en": "Kyoto",
-        "note": "千年古都的宁静",
-        "note_en": "Tranquility of the ancient capital",
-        "has_article": false
+        "name": "卡尼岛",
+        "name_en": "Club Med Kani",
+        "latitude": 4.0733,
+        "longitude": 73.4333,
+        "description": "人生第一次出国的目的地，地中海俱乐部度假村",
+        "description_en": "First international destination, Club Med resort island",
+        "visit_date": "2008-09-27"
       }
     ]
   },
   {
-    "country": "法国",
-    "country_en": "France",
-    "country_code": "FRA",
-    "visit_date": "2016-05",
-    "region": "欧洲",
-    "region_en": "Europe",
-    "latitude": 48.8566,
-    "longitude": 2.3522,
-    "capital": "巴黎",
-    "capital_en": "Paris",
-    "featured_places": [],
+    "country": "泰国",
+    "country_en": "Thailand",
+    "country_code": "THA",
+    "region": "亚洲",
+    "region_en": "Asia",
+    "latitude": 13.7563,
+    "longitude": 100.5018,
+    "visit_date": "2009-10",
     "cities": [
       {
-        "name": "巴黎",
-        "name_en": "Paris",
-        "note": "埃菲尔铁塔依然震撼",
-        "note_en": "The Eiffel Tower still impresses",
-        "has_article": false
+        "name": "曼谷",
+        "name_en": "Bangkok",
+        "latitude": 13.7563,
+        "longitude": 100.5018,
+        "show_on_map": true,
+        "note": "东南亚繁华大都会，大皇宫与卧佛寺",
+        "note_en": "Bustling Southeast Asian metropolis, Grand Palace and Temple of the Reclining Buddha"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "土耳其",
+    "country_en": "Turkey",
+    "country_code": "TUR",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 39.9334,
+    "longitude": 32.8597,
+    "visit_date": "2009-10",
+    "cities": [
+      {
+        "name": "伊斯坦布尔",
+        "name_en": "Istanbul",
+        "latitude": 41.0082,
+        "longitude": 28.9784,
+        "show_on_map": true,
+        "note": "横跨欧亚两洲的千年古都",
+        "note_en": "Millennial capital spanning two continents"
       },
       {
-        "name": "里昂",
-        "name_en": "Lyon",
-        "note": "美食之都名不虚传",
-        "note_en": "Gastronomy capital lives up to its name",
-        "has_article": false
+        "name": "伊兹密尔",
+        "name_en": "Izmir",
+        "latitude": 38.4237,
+        "longitude": 27.1428,
+        "show_on_map": true,
+        "note": "爱琴海畔的现代港城",
+        "note_en": "Modern Aegean port city"
+      },
+      {
+        "name": "开塞利",
+        "name_en": "Kayseri",
+        "latitude": 38.7312,
+        "longitude": 35.4787,
+        "show_on_map": false,
+        "note": "卡帕多奇亚的门户城市",
+        "note_en": "Gateway to Cappadocia"
+      },
+      {
+        "name": "安塔利亚",
+        "name_en": "Antalya",
+        "latitude": 36.8969,
+        "longitude": 30.7133,
+        "show_on_map": true,
+        "note": "地中海沿岸的度假胜地",
+        "note_en": "Mediterranean coastal resort paradise"
+      }
+    ],
+    "featured_places": [
+      {
+        "name": "棉花堡",
+        "name_en": "Pamukkale",
+        "latitude": 37.9204,
+        "longitude": 29.1211,
+        "description": "雪白的钙化梯田温泉",
+        "description_en": "White travertine terraces",
+        "visit_date": "2009-10"
+      },
+      {
+        "name": "以弗所",
+        "name_en": "Ephesus",
+        "latitude": 37.9395,
+        "longitude": 27.3410,
+        "description": "古罗马时期遗址，塞尔苏斯图书馆",
+        "description_en": "Ancient Roman ruins, Library of Celsus",
+        "visit_date": "2009-10"
+      },
+      {
+        "name": "卡帕多奇亚",
+        "name_en": "Cappadocia",
+        "latitude": 38.6431,
+        "longitude": 34.8286,
+        "description": "奇石林立的热气球之乡",
+        "description_en": "Land of fairy chimneys and hot air balloons",
+        "visit_date": "2009-10"
       }
     ]
   },
@@ -261,29 +146,1508 @@
     "country": "德国",
     "country_en": "Germany",
     "country_code": "DEU",
-    "visit_date": "2016-06",
     "region": "欧洲",
     "region_en": "Europe",
     "latitude": 52.5200,
     "longitude": 13.4050,
-    "capital": "柏林",
-    "capital_en": "Berlin",
-    "featured_places": [],
+    "visit_date": "2010-06",
     "cities": [
-      {
-        "name": "柏林",
-        "name_en": "Berlin",
-        "note": "历史的厚重感",
-        "note_en": "Weight of history",
-        "has_article": false
-      },
       {
         "name": "慕尼黑",
         "name_en": "Munich",
-        "note": "巴伐利亚的魅力",
-        "note_en": "Bavarian charm",
-        "has_article": false
+        "latitude": 48.1351,
+        "longitude": 11.5820,
+        "show_on_map": true,
+        "note": "巴伐利亚首府，啤酒与宝马之城",
+        "note_en": "Bavarian capital, city of beer and BMW"
+      },
+      {
+        "name": "福森",
+        "name_en": "Füssen",
+        "latitude": 47.5708,
+        "longitude": 10.6991,
+        "show_on_map": true,
+        "note": "新天鹅堡脚下的阿尔卑斯小镇",
+        "note_en": "Alpine town at the foot of Neuschwanstein"
+      },
+      {
+        "name": "纽伦堡",
+        "name_en": "Nuremberg",
+        "latitude": 49.4521,
+        "longitude": 11.0767,
+        "show_on_map": true,
+        "note": "中世纪古城，纽伦堡审判举办地",
+        "note_en": "Medieval city, site of Nuremberg Trials"
+      },
+      {
+        "name": "博帕德",
+        "name_en": "Boppard",
+        "latitude": 50.2314,
+        "longitude": 7.5898,
+        "show_on_map": false,
+        "note": "莱茵河畔小镇",
+        "note_en": "Rhine riverside town"
+      },
+      {
+        "name": "法兰克福",
+        "name_en": "Frankfurt",
+        "latitude": 50.1109,
+        "longitude": 8.6821,
+        "show_on_map": true,
+        "note": "欧洲金融中心，歌德故乡",
+        "note_en": "European financial hub, Goethe's birthplace"
+      },
+      {
+        "name": "维尔茨堡",
+        "name_en": "Würzburg",
+        "latitude": 49.7913,
+        "longitude": 9.9534,
+        "show_on_map": false,
+        "note": "巴洛克宫殿，浪漫之路起点",
+        "note_en": "Baroque palace, start of Romantic Road"
+      },
+      {
+        "name": "斯图加特",
+        "name_en": "Stuttgart",
+        "latitude": 48.7758,
+        "longitude": 9.1829,
+        "show_on_map": false,
+        "note": "奔驰与保时捷的故乡",
+        "note_en": "Home of Mercedes and Porsche"
+      }
+    ],
+    "featured_places": [
+      {
+        "name": "新天鹅堡",
+        "name_en": "Neuschwanstein Castle",
+        "latitude": 47.5576,
+        "longitude": 10.7498,
+        "description": "路德维希二世的童话城堡，迪士尼城堡原型",
+        "description_en": "Ludwig II's fairy-tale castle, Disney castle prototype",
+        "visit_date": "2010-06"
       }
     ]
+  },
+  {
+    "country": "奥地利",
+    "country_en": "Austria",
+    "country_code": "AUT",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 48.2082,
+    "longitude": 16.3738,
+    "visit_date": "2010-06",
+    "cities": [
+      {
+        "name": "因斯布鲁克",
+        "name_en": "Innsbruck",
+        "latitude": 47.2692,
+        "longitude": 11.4041,
+        "show_on_map": true,
+        "note": "阿尔卑斯山中的古城",
+        "note_en": "Alpine city, two-time Winter Olympics host"
+      },
+      {
+        "name": "萨尔茨堡",
+        "name_en": "Salzburg",
+        "latitude": 47.8095,
+        "longitude": 13.0550,
+        "show_on_map": true,
+        "note": "莫扎特故乡，《音乐之声》拍摄地",
+        "note_en": "Mozart's birthplace, The Sound of Music filming location"
+      },
+      {
+        "name": "维也纳",
+        "name_en": "Vienna",
+        "latitude": 48.2082,
+        "longitude": 16.3738,
+        "show_on_map": true,
+        "note": "音乐之都，哈布斯堡王朝荣光",
+        "note_en": "City of music, Habsburg imperial glory"
+      }
+    ],
+    "featured_places": [
+      {
+        "name": "萨尔茨卡默古特",
+        "name_en": "Salzkammergut",
+        "latitude": 47.7333,
+        "longitude": 13.6500,
+        "description": "湖区小镇群，哈尔施塔特等",
+        "description_en": "Lake district with Hallstatt and other charming towns",
+        "visit_date": "2010-06"
+      }
+    ]
+  },
+  {
+    "country": "匈牙利",
+    "country_en": "Hungary",
+    "country_code": "HUN",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 47.4979,
+    "longitude": 19.0402,
+    "visit_date": "2010-06",
+    "cities": [
+      {
+        "name": "布达佩斯",
+        "name_en": "Budapest",
+        "latitude": 47.4979,
+        "longitude": 19.0402,
+        "show_on_map": true,
+        "note": "多瑙河上的明珠",
+        "note_en": "Pearl of the Danube"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "捷克",
+    "country_en": "Czech Republic",
+    "country_code": "CZE",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 50.0755,
+    "longitude": 14.4378,
+    "visit_date": "2010-06",
+    "cities": [
+      {
+        "name": "布拉格",
+        "name_en": "Prague",
+        "latitude": 50.0755,
+        "longitude": 14.4378,
+        "show_on_map": true,
+        "note": "百塔之城，卡夫卡与昆德拉的故乡",
+        "note_en": "City of a Hundred Spires, home of Kafka and Kundera"
+      },
+      {
+        "name": "克鲁姆洛夫",
+        "name_en": "Český Krumlov",
+        "latitude": 48.8127,
+        "longitude": 14.3175,
+        "show_on_map": true,
+        "note": "波西米亚小镇，伏尔塔瓦河畔明珠",
+        "note_en": "Bohemian gem on the Vltava River"
+      },
+      {
+        "name": "布杰约维采",
+        "name_en": "České Budějovice",
+        "latitude": 48.9745,
+        "longitude": 14.4742,
+        "show_on_map": false,
+        "note": "百威啤酒发源地",
+        "note_en": "Birthplace of Budweiser beer"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "斯洛伐克",
+    "country_en": "Slovakia",
+    "country_code": "SVK",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 48.1486,
+    "longitude": 17.1077,
+    "visit_date": "2010-06",
+    "cities": [
+      {
+        "name": "布拉迪斯拉发",
+        "name_en": "Bratislava",
+        "latitude": 48.1486,
+        "longitude": 17.1077,
+        "show_on_map": true,
+        "note": "多瑙河畔的斯洛伐克首都",
+        "note_en": "Slovak capital on the Danube"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "意大利",
+    "country_en": "Italy",
+    "country_code": "ITA",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 41.9028,
+    "longitude": 12.4964,
+    "visit_date": "2012-10",
+    "cities": [
+      {
+        "name": "威尼斯",
+        "name_en": "Venice",
+        "latitude": 45.4408,
+        "longitude": 12.3155,
+        "show_on_map": true,
+        "note": "水城，贡多拉与圣马可广场",
+        "note_en": "City of water, gondolas and Piazza San Marco"
+      },
+      {
+        "name": "罗马",
+        "name_en": "Rome",
+        "latitude": 41.9028,
+        "longitude": 12.4964,
+        "show_on_map": true,
+        "note": "永恒之城",
+        "note_en": "The Eternal City"
+      },
+      {
+        "name": "米兰",
+        "name_en": "Milan",
+        "latitude": 45.4642,
+        "longitude": 9.1900,
+        "show_on_map": true,
+        "note": "时尚之都，米兰大教堂",
+        "note_en": "Fashion capital, Milan Cathedral"
+      },
+      {
+        "name": "佛罗伦萨",
+        "name_en": "Florence",
+        "latitude": 43.7696,
+        "longitude": 11.2558,
+        "show_on_map": true,
+        "note": "文艺复兴发源地",
+        "note_en": "Birthplace of the Renaissance"
+      },
+      {
+        "name": "那不勒斯",
+        "name_en": "Naples",
+        "latitude": 40.8518,
+        "longitude": 14.2681,
+        "show_on_map": true,
+        "note": "披萨发源地",
+        "note_en": "Birthplace of pizza"
+      },
+      {
+        "name": "博洛尼亚",
+        "name_en": "Bologna",
+        "latitude": 44.4949,
+        "longitude": 11.3426,
+        "show_on_map": true,
+        "note": "世界第一所现代大学所在地",
+        "note_en": "Home of the world's first modern university"
+      }
+    ],
+    "featured_places": [
+      {
+        "name": "庞贝古城",
+        "name_en": "Pompeii",
+        "latitude": 40.7489,
+        "longitude": 14.4989,
+        "description": "火山灰下的罗马古城",
+        "description_en": "Roman city frozen in volcanic ash",
+        "visit_date": "2024-12"
+      }
+    ]
+  },
+  {
+    "country": "梵蒂冈",
+    "country_en": "Vatican City",
+    "country_code": "VAT",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 41.9029,
+    "longitude": 12.4534,
+    "visit_date": "2012-10",
+    "cities": [],
+    "featured_places": [
+      {
+        "name": "梵蒂冈城",
+        "name_en": "Vatican City",
+        "latitude": 41.9029,
+        "longitude": 12.4534,
+        "description": "世界最小国家，圣彼得大教堂与西斯廷礼拜堂",
+        "description_en": "World's smallest country, St. Peter's Basilica and Sistine Chapel",
+        "visit_date": "2012-10"
+      }
+    ]
+  },
+  {
+    "country": "西班牙",
+    "country_en": "Spain",
+    "country_code": "ESP",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 40.4168,
+    "longitude": -3.7038,
+    "visit_date": "2014-12-20",
+    "cities": [
+      {
+        "name": "马德里",
+        "name_en": "Madrid",
+        "latitude": 40.4168,
+        "longitude": -3.7038,
+        "show_on_map": true,
+        "note": "西班牙首都，普拉多博物馆",
+        "note_en": "Spanish capital, Prado Museum"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "葡萄牙",
+    "country_en": "Portugal",
+    "country_code": "PRT",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 38.7223,
+    "longitude": -9.1393,
+    "visit_date": "2014-12-20",
+    "cities": [
+      {
+        "name": "里斯本",
+        "name_en": "Lisbon",
+        "latitude": 38.7223,
+        "longitude": -9.1393,
+        "show_on_map": true,
+        "note": "大航海时代诸多传奇探险的起锚地",
+        "note_en": "Departure point for legendary Age of Discovery voyages"
+      },
+      {
+        "name": "波尔图",
+        "name_en": "Porto",
+        "latitude": 41.1579,
+        "longitude": -8.6291,
+        "show_on_map": true,
+        "note": "波特酒的故乡",
+        "note_en": "Home of Port wine"
+      }
+    ],
+    "featured_places": [
+      {
+        "name": "罗卡角",
+        "name_en": "Cabo da Roca",
+        "latitude": 38.7803,
+        "longitude": -9.4989,
+        "description": "欧洲大陆最西端，陆止于此，海始于斯",
+        "description_en": "Westernmost point of mainland Europe",
+        "visit_date": "2014-12"
+      },
+      {
+        "name": "蓬塔德尔加达",
+        "name_en": "Ponta Delgada",
+        "latitude": 37.7412,
+        "longitude": -25.6756,
+        "description": "亚速尔群岛圣米格尔岛主城",
+        "description_en": "Main city of São Miguel Island, Azores",
+        "visit_date": "2014-12-24"
+      },
+      {
+        "name": "法亚尔岛",
+        "name_en": "Faial Island",
+        "latitude": 38.5320,
+        "longitude": -28.7080,
+        "description": "亚速尔群岛中的蓝色小岛",
+        "description_en": "Blue island in the Azores archipelago",
+        "visit_date": "2014-12-24"
+      }
+    ]
+  },
+  {
+    "country": "格鲁吉亚",
+    "country_en": "Georgia",
+    "country_code": "GEO",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 41.7151,
+    "longitude": 44.8271,
+    "visit_date": "2015-01-27",
+    "cities": [
+      {
+        "name": "第比利斯",
+        "name_en": "Tbilisi",
+        "latitude": 41.7151,
+        "longitude": 44.8271,
+        "show_on_map": true,
+        "note": "第比利斯地下印刷所，中国老一辈的语文课本",
+        "note_en": "Underground printing press featured in Chinese textbooks"
+      }
+    ],
+    "featured_places": [
+      {
+        "name": "格尔格提三一教堂",
+        "name_en": "Gergeti Trinity Church",
+        "latitude": 42.6601,
+        "longitude": 44.6192,
+        "description": "卡兹别克山下的千年教堂",
+        "description_en": "Millennium-old church beneath Mount Kazbek",
+        "visit_date": "2015-01-27"
+      }
+    ]
+  },
+  {
+    "country": "亚美尼亚",
+    "country_en": "Armenia",
+    "country_code": "ARM",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 40.1792,
+    "longitude": 44.4991,
+    "visit_date": "2015-01-27",
+    "cities": [
+      {
+        "name": "埃里温",
+        "name_en": "Yerevan",
+        "latitude": 40.1792,
+        "longitude": 44.4991,
+        "show_on_map": true,
+        "note": "世界最古老城市之一",
+        "note_en": "One of the world's oldest continuously inhabited cities"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "希腊",
+    "country_en": "Greece",
+    "country_code": "GRC",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 37.9838,
+    "longitude": 23.7275,
+    "visit_date": "2024-12",
+    "cities": [
+      {
+        "name": "雅典",
+        "name_en": "Athens",
+        "latitude": 37.9838,
+        "longitude": 23.7275,
+        "show_on_map": true,
+        "note": "西方文明摇篮，众神之城",
+        "note_en": "Cradle of Western civilization, city of gods"
+      }
+    ],
+    "featured_places": [
+      {
+        "name": "雅典卫城",
+        "name_en": "Acropolis",
+        "latitude": 37.9715,
+        "longitude": 23.7267,
+        "description": "帕特农神庙，黄金分割建筑典范",
+        "description_en": "Parthenon, golden ratio architectural masterpiece",
+        "visit_date": "2024-12"
+      },
+      {
+        "name": "科林斯运河",
+        "name_en": "Corinth Canal",
+        "latitude": 37.9347,
+        "longitude": 22.9842,
+        "description": "连接爱琴海与爱奥尼亚海的工程奇迹",
+        "description_en": "Engineering marvel connecting two seas",
+        "visit_date": "2024-12"
+      },
+      {
+        "name": "海神庙",
+        "name_en": "Temple of Poseidon",
+        "latitude": 37.6515,
+        "longitude": 24.0253,
+        "description": "苏尼翁角上的古希腊神庙，拜伦曾留名于此",
+        "description_en": "Ancient temple at Cape Sounion, Byron carved his name here",
+        "visit_date": "2024-12"
+      },
+      {
+        "name": "迈锡尼",
+        "name_en": "Mycenae",
+        "latitude": 37.7307,
+        "longitude": 22.7564,
+        "description": "狮子门，阿伽门农黄金面具，荷马史诗中的古城",
+        "description_en": "Lion Gate, Agamemnon's gold mask, Homeric ancient city",
+        "visit_date": "2024-12"
+      },
+      {
+        "name": "克里特岛",
+        "name_en": "Crete",
+        "latitude": 35.2401,
+        "longitude": 24.8093,
+        "description": "米诺斯文明发源地，西方文明的源头",
+        "description_en": "Birthplace of Minoan civilization, origin of Western culture",
+        "visit_date": "2024-12-27"
+      }
+    ]
+  },
+  {
+    "country": "法国",
+    "country_en": "France",
+    "country_code": "FRA",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 48.8566,
+    "longitude": 2.3522,
+    "visit_date": "2025-01-08",
+    "cities": [
+      {
+        "name": "巴黎",
+        "name_en": "Paris",
+        "latitude": 48.8566,
+        "longitude": 2.3522,
+        "show_on_map": true,
+        "note": "光之城，埃菲尔铁塔与卢浮宫",
+        "note_en": "City of Light, Eiffel Tower and Louvre"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "波兰",
+    "country_en": "Poland",
+    "country_code": "POL",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 52.2297,
+    "longitude": 21.0122,
+    "visit_date": "2025-12-08",
+    "cities": [
+      {
+        "name": "华沙",
+        "name_en": "Warsaw",
+        "latitude": 52.2297,
+        "longitude": 21.0122,
+        "show_on_map": true,
+        "note": "浴火重生的凤凰之城",
+        "note_en": "Phoenix city risen from ashes"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "立陶宛",
+    "country_en": "Lithuania",
+    "country_code": "LTU",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 54.6872,
+    "longitude": 25.2797,
+    "visit_date": "2025-12",
+    "cities": [
+      {
+        "name": "维尔纽斯",
+        "name_en": "Vilnius",
+        "latitude": 54.6872,
+        "longitude": 25.2797,
+        "show_on_map": true,
+        "note": "巴洛克建筑之城",
+        "note_en": "City of Baroque architecture"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "拉脱维亚",
+    "country_en": "Latvia",
+    "country_code": "LVA",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 56.9496,
+    "longitude": 24.1052,
+    "visit_date": "2025-12",
+    "cities": [
+      {
+        "name": "里加",
+        "name_en": "Riga",
+        "latitude": 56.9496,
+        "longitude": 24.1052,
+        "show_on_map": true,
+        "note": "新艺术建筑博物馆城市",
+        "note_en": "Museum city of Art Nouveau architecture"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "爱沙尼亚",
+    "country_en": "Estonia",
+    "country_code": "EST",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 59.4370,
+    "longitude": 24.7536,
+    "visit_date": "2025-12",
+    "cities": [
+      {
+        "name": "塔林",
+        "name_en": "Tallinn",
+        "latitude": 59.4370,
+        "longitude": 24.7536,
+        "show_on_map": true,
+        "note": "中世纪汉萨古城",
+        "note_en": "Medieval Hanseatic city"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "芬兰",
+    "country_en": "Finland",
+    "country_code": "FIN",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 60.1695,
+    "longitude": 24.9354,
+    "visit_date": "2025-12-18",
+    "cities": [
+      {
+        "name": "赫尔辛基",
+        "name_en": "Helsinki",
+        "latitude": 60.1695,
+        "longitude": 24.9354,
+        "show_on_map": true,
+        "note": "波罗的海的女儿",
+        "note_en": "Daughter of the Baltic"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "挪威",
+    "country_en": "Norway",
+    "country_code": "NOR",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 59.9139,
+    "longitude": 10.7522,
+    "visit_date": "2025-12",
+    "cities": [
+      {
+        "name": "奥斯陆",
+        "name_en": "Oslo",
+        "latitude": 59.9139,
+        "longitude": 10.7522,
+        "show_on_map": true,
+        "note": "维京船博物馆与蒙克美术馆",
+        "note_en": "Viking Ship Museum and Munch Museum"
+      },
+      {
+        "name": "卑尔根",
+        "name_en": "Bergen",
+        "latitude": 60.3913,
+        "longitude": 5.3221,
+        "show_on_map": true,
+        "note": "七山之城，汉萨同盟遗迹",
+        "note_en": "City of Seven Mountains, Hanseatic heritage"
+      },
+      {
+        "name": "斯塔万格",
+        "name_en": "Stavanger",
+        "latitude": 58.9700,
+        "longitude": 5.7331,
+        "show_on_map": true,
+        "note": "挪威石油之都",
+        "note_en": "Norway's oil capital"
+      },
+      {
+        "name": "奥勒松",
+        "name_en": "Ålesund",
+        "latitude": 62.4722,
+        "longitude": 6.1549,
+        "show_on_map": false,
+        "note": "新艺术风格之城",
+        "note_en": "Art Nouveau city"
+      },
+      {
+        "name": "勒尔维克",
+        "name_en": "Rørvik",
+        "latitude": 64.8618,
+        "longitude": 11.2365,
+        "show_on_map": false,
+        "note": "海岸线小镇",
+        "note_en": "Coastal town"
+      },
+      {
+        "name": "斯沃尔韦尔",
+        "name_en": "Svolvær",
+        "latitude": 68.2343,
+        "longitude": 14.5683,
+        "show_on_map": false,
+        "note": "罗弗敦群岛主城",
+        "note_en": "Capital of Lofoten"
+      },
+      {
+        "name": "斯托克马克内斯",
+        "name_en": "Stokmarknes",
+        "latitude": 68.5667,
+        "longitude": 15.0167,
+        "show_on_map": false,
+        "note": "海达路德博物馆所在地",
+        "note_en": "Home of Hurtigruten Museum"
+      },
+      {
+        "name": "特罗姆瑟",
+        "name_en": "Tromsø",
+        "latitude": 69.6492,
+        "longitude": 18.9553,
+        "show_on_map": true,
+        "note": "北极之门",
+        "note_en": "Gateway to the Arctic"
+      },
+      {
+        "name": "霍宁斯沃格",
+        "name_en": "Honningsvåg",
+        "latitude": 70.9821,
+        "longitude": 25.9704,
+        "show_on_map": false,
+        "note": "前往北角的门户",
+        "note_en": "Gateway to North Cape"
+      },
+      {
+        "name": "阿尔塔",
+        "name_en": "Alta",
+        "latitude": 69.9689,
+        "longitude": 23.2717,
+        "show_on_map": false,
+        "note": "北极光之都",
+        "note_en": "City of Northern Lights"
+      },
+      {
+        "name": "纳尔维克",
+        "name_en": "Narvik",
+        "latitude": 68.4385,
+        "longitude": 17.4272,
+        "show_on_map": false,
+        "note": "铁矿石港口",
+        "note_en": "Iron ore port"
+      },
+      {
+        "name": "翁达尔斯内斯",
+        "name_en": "Åndalsnes",
+        "latitude": 62.5672,
+        "longitude": 7.6881,
+        "show_on_map": false,
+        "note": "峡湾户外天堂",
+        "note_en": "Fjord outdoor paradise"
+      },
+      {
+        "name": "克里斯蒂安桑",
+        "name_en": "Kristiansand",
+        "latitude": 58.1599,
+        "longitude": 8.0182,
+        "show_on_map": false,
+        "note": "南部海滨城市",
+        "note_en": "Southern coastal city"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "荷兰",
+    "country_en": "Netherlands",
+    "country_code": "NLD",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 52.3676,
+    "longitude": 4.9041,
+    "visit_date": "2024-12-26",
+    "cities": [
+      {
+        "name": "阿姆斯特丹",
+        "name_en": "Amsterdam",
+        "latitude": 52.3676,
+        "longitude": 4.9041,
+        "show_on_map": true,
+        "note": "运河之城，梵高博物馆",
+        "note_en": "City of canals, Van Gogh Museum"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "俄罗斯",
+    "country_en": "Russia",
+    "country_code": "RUS",
+    "region": "欧洲",
+    "region_en": "Europe",
+    "latitude": 55.7558,
+    "longitude": 37.6173,
+    "visit_date": "2016-11-26",
+    "cities": [
+      {
+        "name": "莫斯科",
+        "name_en": "Moscow",
+        "latitude": 55.7558,
+        "longitude": 37.6173,
+        "show_on_map": true,
+        "note": "转机于德莫杰多沃机场",
+        "note_en": "Transit at Domodedovo Airport"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "卡塔尔",
+    "country_en": "Qatar",
+    "country_code": "QAT",
+    "region": "亚洲",
+    "region_en": "Asia",
+    "latitude": 25.2854,
+    "longitude": 51.5310,
+    "visit_date": "2026-01",
+    "cities": [
+      {
+        "name": "多哈",
+        "name_en": "Doha",
+        "latitude": 25.2854,
+        "longitude": 51.5310,
+        "show_on_map": true,
+        "note": "2022世界杯举办地",
+        "note_en": "2022 World Cup host city"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "塔吉克斯坦",
+    "country_en": "Tajikistan",
+    "country_code": "TJK",
+    "region": "中亚",
+    "region_en": "Central Asia",
+    "latitude": 38.5598,
+    "longitude": 68.7738,
+    "visit_date": "2014-06-28",
+    "cities": [
+      {
+        "name": "杜尚别",
+        "name_en": "Dushanbe",
+        "latitude": 38.5598,
+        "longitude": 68.7738,
+        "show_on_map": true,
+        "note": "塔吉克斯坦首都，星期一之意",
+        "note_en": "Capital of Tajikistan, means Monday"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "吉尔吉斯斯坦",
+    "country_en": "Kyrgyzstan",
+    "country_code": "KGZ",
+    "region": "中亚",
+    "region_en": "Central Asia",
+    "latitude": 42.8746,
+    "longitude": 74.5698,
+    "visit_date": "2014-07-27",
+    "cities": [
+      {
+        "name": "比什凯克",
+        "name_en": "Bishkek",
+        "latitude": 42.8746,
+        "longitude": 74.5698,
+        "show_on_map": true,
+        "note": "原名伏龙芝，多次访问",
+        "note_en": "Formerly Frunze, visited many times"
+      },
+      {
+        "name": "奥什",
+        "name_en": "Osh",
+        "latitude": 40.5283,
+        "longitude": 72.7985,
+        "show_on_map": true,
+        "note": "古丝绸之路重镇",
+        "note_en": "Ancient Silk Road trading hub"
+      }
+    ],
+    "featured_places": [
+      {
+        "name": "伊塞克湖",
+        "name_en": "Issyk-Kul",
+        "latitude": 42.4419,
+        "longitude": 77.0881,
+        "description": "天山山脉中的热海，世界第二大高山湖",
+        "description_en": "Hot sea in Tian Shan, world's second-largest alpine lake",
+        "visit_date": "2016-06"
+      },
+      {
+        "name": "托克马克（碎叶城）",
+        "name_en": "Tokmok",
+        "latitude": 42.8419,
+        "longitude": 75.2953,
+        "description": "李白出生地碎叶城遗址所在",
+        "description_en": "Site of Suyab, birthplace of poet Li Bai",
+        "visit_date": ""
+      }
+    ]
+  },
+  {
+    "country": "土库曼斯坦",
+    "country_en": "Turkmenistan",
+    "country_code": "TKM",
+    "region": "中亚",
+    "region_en": "Central Asia",
+    "latitude": 37.9601,
+    "longitude": 58.3261,
+    "visit_date": "2014-11",
+    "cities": [
+      {
+        "name": "阿什哈巴德",
+        "name_en": "Ashgabat",
+        "latitude": 37.9601,
+        "longitude": 58.3261,
+        "show_on_map": true,
+        "note": "白色大理石之城",
+        "note_en": "City of white marble"
+      }
+    ],
+    "featured_places": [
+      {
+        "name": "地狱之门",
+        "name_en": "Darvaza Gas Crater",
+        "latitude": 40.2528,
+        "longitude": 58.4397,
+        "description": "沙漠中燃烧50年的天然气火坑",
+        "description_en": "Natural gas crater burning for 50 years",
+        "visit_date": "2014-11"
+      }
+    ]
+  },
+  {
+    "country": "哈萨克斯坦",
+    "country_en": "Kazakhstan",
+    "country_code": "KAZ",
+    "region": "中亚",
+    "region_en": "Central Asia",
+    "latitude": 51.1694,
+    "longitude": 71.4491,
+    "visit_date": "2016-05-07",
+    "cities": [
+      {
+        "name": "阿拉木图",
+        "name_en": "Almaty",
+        "latitude": 43.2220,
+        "longitude": 76.8512,
+        "show_on_map": true,
+        "note": "天山山脚下的苹果之城",
+        "note_en": "City of apples at the foot of Tian Shan"
+      },
+      {
+        "name": "阿斯塔纳",
+        "name_en": "Astana",
+        "latitude": 51.1694,
+        "longitude": 71.4491,
+        "show_on_map": true,
+        "note": "草原上的未来之城",
+        "note_en": "Futuristic city on the steppe"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "乌兹别克斯坦",
+    "country_en": "Uzbekistan",
+    "country_code": "UZB",
+    "region": "中亚",
+    "region_en": "Central Asia",
+    "latitude": 41.2995,
+    "longitude": 69.2401,
+    "visit_date": "2016-01-20 ~ 2017-05-26",
+    "cities": [
+      {
+        "name": "塔什干",
+        "name_en": "Tashkent",
+        "latitude": 41.2995,
+        "longitude": 69.2401,
+        "show_on_map": true,
+        "note": "中亚最大城市，曾长居16个月",
+        "note_en": "Largest city in Central Asia, lived here 16 months"
+      },
+      {
+        "name": "布哈拉",
+        "name_en": "Bukhara",
+        "latitude": 39.7747,
+        "longitude": 64.4286,
+        "show_on_map": true,
+        "note": "古丝绸之路上的伊斯兰学术中心",
+        "note_en": "Islamic scholarly center on the Silk Road"
+      },
+      {
+        "name": "乌尔根奇",
+        "name_en": "Urgench",
+        "latitude": 41.5500,
+        "longitude": 60.6333,
+        "show_on_map": false,
+        "note": "前往希瓦古城的门户",
+        "note_en": "Gateway to Khiva"
+      },
+      {
+        "name": "努库斯",
+        "name_en": "Nukus",
+        "latitude": 42.4531,
+        "longitude": 59.6103,
+        "show_on_map": true,
+        "note": "前往咸海的最后驿站",
+        "note_en": "Last station to Aral Sea"
+      }
+    ],
+    "featured_places": [
+      {
+        "name": "撒马尔罕",
+        "name_en": "Samarkand",
+        "latitude": 39.6270,
+        "longitude": 66.9750,
+        "description": "丝绸之路明珠，雷吉斯坦广场与帖木儿陵墓",
+        "description_en": "Pearl of the Silk Road, Registan Square and Timur's mausoleum",
+        "visit_date": "2016-09-02"
+      },
+      {
+        "name": "希瓦",
+        "name_en": "Khiva",
+        "latitude": 41.3775,
+        "longitude": 60.3642,
+        "description": "完整保存的丝路古城，中亚活化石",
+        "description_en": "Perfectly preserved Silk Road city",
+        "visit_date": "2017-04"
+      },
+      {
+        "name": "托普拉克卡拉",
+        "name_en": "Toprak Kala",
+        "latitude": 41.9222,
+        "longitude": 60.8083,
+        "description": "花剌子模古代要塞遗址，咸海文明的见证",
+        "description_en": "Ancient Khwarezmian fortress ruins, witness to Aral Sea civilization",
+        "visit_date": "2017-04-23"
+      },
+      {
+        "name": "莫伊诺克",
+        "name_en": "Moynaq",
+        "latitude": 43.7647,
+        "longitude": 59.0272,
+        "description": "咸海门户，沙漠之舟船只墓地",
+        "description_en": "Gateway to Aral Sea, ship graveyard in the desert",
+        "visit_date": "2017-04"
+      },
+      {
+        "name": "咸海",
+        "name_en": "Aral Sea",
+        "latitude": 45.0000,
+        "longitude": 60.0000,
+        "description": "消失的海，20世纪最大生态灾难见证",
+        "description_en": "Disappearing sea, witness to 20th century's greatest ecological disaster",
+        "visit_date": "2017-04"
+      }
+    ]
+  },
+  {
+    "country": "美国",
+    "country_en": "United States",
+    "country_code": "USA",
+    "region": "北美洲",
+    "region_en": "North America",
+    "latitude": 38.9072,
+    "longitude": -77.0369,
+    "visit_date": "2013-10-02",
+    "cities": [
+      {
+        "name": "洛杉矶",
+        "name_en": "Los Angeles",
+        "latitude": 34.0522,
+        "longitude": -118.2437,
+        "show_on_map": true,
+        "note": "天使之城，好莱坞",
+        "note_en": "City of Angels, Hollywood"
+      },
+      {
+        "name": "拉斯维加斯",
+        "name_en": "Las Vegas",
+        "latitude": 36.1699,
+        "longitude": -115.1398,
+        "show_on_map": true,
+        "note": "沙漠中的不夜城",
+        "note_en": "City that never sleeps in the desert"
+      },
+      {
+        "name": "旧金山",
+        "name_en": "San Francisco",
+        "latitude": 37.7749,
+        "longitude": -122.4194,
+        "show_on_map": true,
+        "note": "金门大桥，硅谷门户",
+        "note_en": "Golden Gate Bridge, gateway to Silicon Valley"
+      },
+      {
+        "name": "西雅图",
+        "name_en": "Seattle",
+        "latitude": 47.6062,
+        "longitude": -122.3321,
+        "show_on_map": true,
+        "note": "翡翠之城，波音与微软的故乡",
+        "note_en": "Emerald City, home of Boeing and Microsoft"
+      },
+      {
+        "name": "纽约",
+        "name_en": "New York",
+        "latitude": 40.7128,
+        "longitude": -74.0060,
+        "show_on_map": true,
+        "note": "世界之都，自由女神像",
+        "note_en": "Capital of the world, Statue of Liberty"
+      },
+      {
+        "name": "费城",
+        "name_en": "Philadelphia",
+        "latitude": 39.9526,
+        "longitude": -75.1652,
+        "show_on_map": true,
+        "note": "独立宣言签署地，自由钟",
+        "note_en": "Where Declaration of Independence was signed, Liberty Bell"
+      },
+      {
+        "name": "华盛顿",
+        "name_en": "Washington D.C.",
+        "latitude": 38.9072,
+        "longitude": -77.0369,
+        "show_on_map": true,
+        "note": "美国首都，白宫与国会山",
+        "note_en": "US capital, White House and Capitol Hill"
+      },
+      {
+        "name": "波士顿",
+        "name_en": "Boston",
+        "latitude": 42.3601,
+        "longitude": -71.0589,
+        "show_on_map": true,
+        "note": "自由之城，哈佛与MIT",
+        "note_en": "City of freedom, Harvard and MIT"
+      },
+      {
+        "name": "奥兰多",
+        "name_en": "Orlando",
+        "latitude": 28.5383,
+        "longitude": -81.3792,
+        "show_on_map": true,
+        "note": "世界主题公园之都",
+        "note_en": "Theme park capital of the world"
+      }
+    ],
+    "featured_places": [
+      {
+        "name": "檀香山",
+        "name_en": "Honolulu",
+        "latitude": 21.3099,
+        "longitude": -157.8581,
+        "description": "航班改签的意外之行；密苏里号停泊地，东京湾日本受降仪式举办地",
+        "description_en": "Unexpected visit from flight change; USS Missouri, site of Japan's surrender",
+        "visit_date": "2022-12-22"
+      }
+    ]
+  },
+  {
+    "country": "加拿大",
+    "country_en": "Canada",
+    "country_code": "CAN",
+    "region": "北美洲",
+    "region_en": "North America",
+    "latitude": 45.4215,
+    "longitude": -75.6972,
+    "visit_date": "2023-01-10",
+    "cities": [
+      {
+        "name": "温哥华",
+        "name_en": "Vancouver",
+        "latitude": 49.2827,
+        "longitude": -123.1207,
+        "show_on_map": true,
+        "note": "加拿大西海岸明珠",
+        "note_en": "Jewel of Canada's west coast"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "墨西哥",
+    "country_en": "Mexico",
+    "country_code": "MEX",
+    "region": "北美洲",
+    "region_en": "North America",
+    "latitude": 19.4326,
+    "longitude": -99.1332,
+    "visit_date": "2016-12-22",
+    "cities": [
+      {
+        "name": "墨西哥城",
+        "name_en": "Mexico City",
+        "latitude": 19.4326,
+        "longitude": -99.1332,
+        "show_on_map": true,
+        "note": "阿兹特克古都",
+        "note_en": "Ancient Aztec capital"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "波多黎各",
+    "country_en": "Puerto Rico",
+    "country_code": "PRI",
+    "region": "北美洲",
+    "region_en": "North America",
+    "latitude": 18.4655,
+    "longitude": -66.1057,
+    "visit_date": "2023-01-06",
+    "cities": [
+      {
+        "name": "圣胡安",
+        "name_en": "San Juan",
+        "latitude": 18.4655,
+        "longitude": -66.1057,
+        "show_on_map": true,
+        "note": "加勒比海殖民遗迹",
+        "note_en": "Caribbean colonial heritage"
+      }
+    ],
+    "featured_places": [
+      {
+        "name": "阿雷西博天文台",
+        "name_en": "Arecibo Observatory",
+        "latitude": 18.3464,
+        "longitude": -66.7528,
+        "description": "中国天眼的前辈致敬之地；电影《超时空接触》取景地",
+        "description_en": "Predecessor to China's FAST; filming location for Contact",
+        "visit_date": "2023-01-07"
+      }
+    ]
+  },
+  {
+    "country": "智利",
+    "country_en": "Chile",
+    "country_code": "CHL",
+    "region": "南美洲",
+    "region_en": "South America",
+    "latitude": -33.4489,
+    "longitude": -70.6693,
+    "visit_date": "2016-12",
+    "cities": [
+      {
+        "name": "圣地亚哥",
+        "name_en": "Santiago",
+        "latitude": -33.4489,
+        "longitude": -70.6693,
+        "show_on_map": true,
+        "note": "安第斯山脚下的葡萄酒之乡",
+        "note_en": "Wine capital at the foot of the Andes"
+      },
+      {
+        "name": "瓦尔帕莱索",
+        "name_en": "Valparaíso",
+        "latitude": -33.0472,
+        "longitude": -71.6127,
+        "show_on_map": true,
+        "note": "太平洋沿岸的彩色山城",
+        "note_en": "Colorful hillside city on the Pacific"
+      }
+    ],
+    "featured_places": [
+      {
+        "name": "复活节岛",
+        "name_en": "Easter Island",
+        "latitude": -27.1127,
+        "longitude": -109.3497,
+        "description": "神秘的摩艾石像之岛",
+        "description_en": "Mysterious island of Moai statues",
+        "visit_date": "2016-12-28"
+      }
+    ]
+  },
+  {
+    "country": "阿根廷",
+    "country_en": "Argentina",
+    "country_code": "ARG",
+    "region": "南美洲",
+    "region_en": "South America",
+    "latitude": -34.6037,
+    "longitude": -58.3816,
+    "visit_date": "2016-12-24",
+    "cities": [
+      {
+        "name": "布宜诺斯艾利斯",
+        "name_en": "Buenos Aires",
+        "latitude": -34.6037,
+        "longitude": -58.3816,
+        "show_on_map": true,
+        "note": "南美巴黎，探戈与博尔赫斯的故乡",
+        "note_en": "Paris of South America, home of tango and Borges"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "秘鲁",
+    "country_en": "Peru",
+    "country_code": "PER",
+    "region": "南美洲",
+    "region_en": "South America",
+    "latitude": -12.0464,
+    "longitude": -77.0428,
+    "visit_date": "2017-01",
+    "cities": [
+      {
+        "name": "利马",
+        "name_en": "Lima",
+        "latitude": -12.0464,
+        "longitude": -77.0428,
+        "show_on_map": true,
+        "note": "秘鲁首都，美食之都",
+        "note_en": "Peruvian capital, culinary capital"
+      },
+      {
+        "name": "库斯科",
+        "name_en": "Cusco",
+        "latitude": -13.5319,
+        "longitude": -71.9675,
+        "show_on_map": true,
+        "note": "印加帝国古都",
+        "note_en": "Ancient Inca capital"
+      }
+    ],
+    "featured_places": [
+      {
+        "name": "马丘比丘",
+        "name_en": "Machu Picchu",
+        "latitude": -13.1631,
+        "longitude": -72.5450,
+        "description": "云端上的失落之城",
+        "description_en": "Lost city in the clouds",
+        "visit_date": "2017-01"
+      },
+      {
+        "name": "萨克塞瓦曼",
+        "name_en": "Sacsayhuamán",
+        "latitude": -13.5089,
+        "longitude": -71.9819,
+        "description": "库斯科城外的印加巨石堡垒",
+        "description_en": "Inca megalithic fortress outside Cusco",
+        "visit_date": "2017-01"
+      }
+    ]
+  },
+  {
+    "country": "厄瓜多尔",
+    "country_en": "Ecuador",
+    "country_code": "ECU",
+    "region": "南美洲",
+    "region_en": "South America",
+    "latitude": -0.1807,
+    "longitude": -78.4678,
+    "visit_date": "2017-01-04",
+    "cities": [
+      {
+        "name": "瓜亚基尔",
+        "name_en": "Guayaquil",
+        "latitude": -2.1709,
+        "longitude": -79.9224,
+        "show_on_map": true,
+        "note": "厄瓜多尔第一大城市",
+        "note_en": "Ecuador's largest city"
+      },
+      {
+        "name": "基多",
+        "name_en": "Quito",
+        "latitude": -0.1807,
+        "longitude": -78.4678,
+        "show_on_map": true,
+        "note": "赤道线上的首都",
+        "note_en": "Capital on the equator"
+      }
+    ],
+    "featured_places": [
+      {
+        "name": "加拉帕格斯群岛",
+        "name_en": "Galápagos Islands",
+        "latitude": -0.9538,
+        "longitude": -90.9656,
+        "description": "达尔文进化论诞生地",
+        "description_en": "Birthplace of Darwin's theory of evolution",
+        "visit_date": "2017-01"
+      }
+    ]
+  },
+  {
+    "country": "新西兰",
+    "country_en": "New Zealand",
+    "country_code": "NZL",
+    "region": "大洋洲",
+    "region_en": "Oceania",
+    "latitude": -41.2865,
+    "longitude": 174.7762,
+    "visit_date": "",
+    "cities": [
+      {
+        "name": "奥克兰",
+        "name_en": "Auckland",
+        "latitude": -36.8485,
+        "longitude": 174.7633,
+        "show_on_map": true,
+        "note": "帆船之都，曾长期居住",
+        "note_en": "City of Sails, lived here long-term"
+      }
+    ],
+    "featured_places": [
+      {
+        "name": "雷因格海角",
+        "name_en": "Cape Reinga",
+        "latitude": -34.4243,
+        "longitude": 172.6793,
+        "description": "新西兰北岛最北端，毛利人灵魂归宿之地",
+        "description_en": "Northernmost point of North Island, Maori spiritual departure point",
+        "visit_date": "2017-10-10"
+      },
+      {
+        "name": "斯特灵角",
+        "name_en": "Stirling Point",
+        "latitude": -46.5956,
+        "longitude": 168.3463,
+        "description": "新西兰南岛最南端，布拉夫小镇标志",
+        "description_en": "Southernmost point of South Island, Bluff signpost",
+        "visit_date": "2020-08-07"
+      },
+      {
+        "name": "查塔姆岛",
+        "name_en": "Chatham Islands",
+        "latitude": -43.9500,
+        "longitude": -176.5000,
+        "description": "新西兰最东离岛，最接近国际日期变更线，世界最早见到日出的地方之一",
+        "description_en": "Easternmost NZ islands, closest to International Date Line, among first to see sunrise",
+        "visit_date": "2021-12-16"
+      }
+    ]
+  },
+  {
+    "country": "斐济",
+    "country_en": "Fiji",
+    "country_code": "FJI",
+    "region": "大洋洲",
+    "region_en": "Oceania",
+    "latitude": -18.1248,
+    "longitude": 178.4501,
+    "visit_date": "2023-11",
+    "cities": [
+      {
+        "name": "苏瓦",
+        "name_en": "Suva",
+        "latitude": -18.1248,
+        "longitude": 178.4501,
+        "show_on_map": true,
+        "note": "南太平洋的政治文化中心",
+        "note_en": "Political and cultural center of the South Pacific"
+      }
+    ],
+    "featured_places": []
+  },
+  {
+    "country": "汤加",
+    "country_en": "Tonga",
+    "country_code": "TON",
+    "region": "大洋洲",
+    "region_en": "Oceania",
+    "latitude": -21.1789,
+    "longitude": -175.1982,
+    "visit_date": "2023-11",
+    "cities": [
+      {
+        "name": "努库阿洛法",
+        "name_en": "Nuku'alofa",
+        "latitude": -21.1789,
+        "longitude": -175.1982,
+        "show_on_map": true,
+        "note": "探访曾在奥克兰大学一起学习TESOL的汤加同学",
+        "note_en": "Visited Tongan classmate from Auckland University TESOL program"
+      }
+    ],
+    "featured_places": []
   }
 ]
