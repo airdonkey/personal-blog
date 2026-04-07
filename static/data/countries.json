@@ -98,7 +98,7 @@
         "name_en": "Kayseri",
         "latitude": 38.7312,
         "longitude": 35.4787,
-        "show_on_map": false,
+        "show_on_map": true,
         "note": "卡帕多奇亚的门户城市",
         "note_en": "Gateway to Cappadocia"
       },
@@ -126,7 +126,7 @@
         "name": "以弗所",
         "name_en": "Ephesus",
         "latitude": 37.9395,
-        "longitude": 27.3410,
+        "longitude": 27.341,
         "description": "古罗马时期遗址，塞尔苏斯图书馆",
         "description_en": "Ancient Roman ruins, Library of Celsus",
         "visit_date": "2009-10"
@@ -148,15 +148,15 @@
     "country_code": "DEU",
     "region": "欧洲",
     "region_en": "Europe",
-    "latitude": 52.5200,
-    "longitude": 13.4050,
+    "latitude": 52.52,
+    "longitude": 13.405,
     "visit_date": "2010-06",
     "cities": [
       {
         "name": "慕尼黑",
         "name_en": "Munich",
         "latitude": 48.1351,
-        "longitude": 11.5820,
+        "longitude": 11.582,
         "show_on_map": true,
         "note": "巴伐利亚首府，啤酒与宝马之城",
         "note_en": "Bavarian capital, city of beer and BMW"
@@ -184,7 +184,7 @@
         "name_en": "Boppard",
         "latitude": 50.2314,
         "longitude": 7.5898,
-        "show_on_map": false,
+        "show_on_map": true,
         "note": "莱茵河畔小镇",
         "note_en": "Rhine riverside town"
       },
@@ -202,7 +202,7 @@
         "name_en": "Würzburg",
         "latitude": 49.7913,
         "longitude": 9.9534,
-        "show_on_map": false,
+        "show_on_map": true,
         "note": "巴洛克宫殿，浪漫之路起点",
         "note_en": "Baroque palace, start of Romantic Road"
       },
@@ -211,7 +211,7 @@
         "name_en": "Stuttgart",
         "latitude": 48.7758,
         "longitude": 9.1829,
-        "show_on_map": false,
+        "show_on_map": true,
         "note": "奔驰与保时捷的故乡",
         "note_en": "Home of Mercedes and Porsche"
       }
@@ -251,7 +251,7 @@
         "name": "萨尔茨堡",
         "name_en": "Salzburg",
         "latitude": 47.8095,
-        "longitude": 13.0550,
+        "longitude": 13.055,
         "show_on_map": true,
         "note": "莫扎特故乡，《音乐之声》拍摄地",
         "note_en": "Mozart's birthplace, The Sound of Music filming location"
@@ -271,7 +271,7 @@
         "name": "萨尔茨卡默古特",
         "name_en": "Salzkammergut",
         "latitude": 47.7333,
-        "longitude": 13.6500,
+        "longitude": 13.65,
         "description": "湖区小镇群，哈尔施塔特等",
         "description_en": "Lake district with Hallstatt and other charming towns",
         "visit_date": "2010-06"
@@ -333,7 +333,7 @@
         "name_en": "České Budějovice",
         "latitude": 48.9745,
         "longitude": 14.4742,
-        "show_on_map": false,
+        "show_on_map": true,
         "note": "百威啤酒发源地",
         "note_en": "Birthplace of Budweiser beer"
       }
@@ -394,7 +394,7 @@
         "name": "米兰",
         "name_en": "Milan",
         "latitude": 45.4642,
-        "longitude": 9.1900,
+        "longitude": 9.19,
         "show_on_map": true,
         "note": "时尚之都，米兰大教堂",
         "note_en": "Fashion capital, Milan Cathedral"
@@ -534,8 +534,8 @@
       {
         "name": "法亚尔岛",
         "name_en": "Faial Island",
-        "latitude": 38.5320,
-        "longitude": -28.7080,
+        "latitude": 38.532,
+        "longitude": -28.708,
         "description": "亚速尔群岛中的蓝色小岛",
         "description_en": "Blue island in the Azores archipelago",
         "visit_date": "2014-12-24"
@@ -758,14 +758,14 @@
     "country_code": "EST",
     "region": "欧洲",
     "region_en": "Europe",
-    "latitude": 59.4370,
+    "latitude": 59.437,
     "longitude": 24.7536,
     "visit_date": "2025-12",
     "cities": [
       {
         "name": "塔林",
         "name_en": "Tallinn",
-        "latitude": 59.4370,
+        "latitude": 59.437,
         "longitude": 24.7536,
         "show_on_map": true,
         "note": "中世纪汉萨古城",
@@ -827,7 +827,7 @@
       {
         "name": "斯塔万格",
         "name_en": "Stavanger",
-        "latitude": 58.9700,
+        "latitude": 58.97,
         "longitude": 5.7331,
         "show_on_map": true,
         "note": "挪威石油之都",
@@ -838,7 +838,7 @@
         "name_en": "Ålesund",
         "latitude": 62.4722,
         "longitude": 6.1549,
-        "show_on_map": false,
+        "show_on_map": true,
         "note": "新艺术风格之城",
         "note_en": "Art Nouveau city"
       },
@@ -847,7 +847,7 @@
         "name_en": "Rørvik",
         "latitude": 64.8618,
         "longitude": 11.2365,
-        "show_on_map": false,
+        "show_on_map": true,
         "note": "海岸线小镇",
         "note_en": "Coastal town"
       },
@@ -856,7 +856,7 @@
         "name_en": "Svolvær",
         "latitude": 68.2343,
         "longitude": 14.5683,
-        "show_on_map": false,
+        "show_on_map": true,
         "note": "罗弗敦群岛主城",
         "note_en": "Capital of Lofoten"
       },
@@ -865,7 +865,7 @@
         "name_en": "Stokmarknes",
         "latitude": 68.5667,
         "longitude": 15.0167,
-        "show_on_map": false,
+        "show_on_map": true,
         "note": "海达路德博物馆所在地",
         "note_en": "Home of Hurtigruten Museum"
       },
@@ -883,7 +883,7 @@
         "name_en": "Honningsvåg",
         "latitude": 70.9821,
         "longitude": 25.9704,
-        "show_on_map": false,
+        "show_on_map": true,
         "note": "前往北角的门户",
         "note_en": "Gateway to North Cape"
       },
@@ -892,7 +892,7 @@
         "name_en": "Alta",
         "latitude": 69.9689,
         "longitude": 23.2717,
-        "show_on_map": false,
+        "show_on_map": true,
         "note": "北极光之都",
         "note_en": "City of Northern Lights"
       },
@@ -901,7 +901,7 @@
         "name_en": "Narvik",
         "latitude": 68.4385,
         "longitude": 17.4272,
-        "show_on_map": false,
+        "show_on_map": true,
         "note": "铁矿石港口",
         "note_en": "Iron ore port"
       },
@@ -910,7 +910,7 @@
         "name_en": "Åndalsnes",
         "latitude": 62.5672,
         "longitude": 7.6881,
-        "show_on_map": false,
+        "show_on_map": true,
         "note": "峡湾户外天堂",
         "note_en": "Fjord outdoor paradise"
       },
@@ -919,7 +919,7 @@
         "name_en": "Kristiansand",
         "latitude": 58.1599,
         "longitude": 8.0182,
-        "show_on_map": false,
+        "show_on_map": true,
         "note": "南部海滨城市",
         "note_en": "Southern coastal city"
       }
@@ -977,14 +977,14 @@
     "region": "亚洲",
     "region_en": "Asia",
     "latitude": 25.2854,
-    "longitude": 51.5310,
+    "longitude": 51.531,
     "visit_date": "2026-01",
     "cities": [
       {
         "name": "多哈",
         "name_en": "Doha",
         "latitude": 25.2854,
-        "longitude": 51.5310,
+        "longitude": 51.531,
         "show_on_map": true,
         "note": "2022世界杯举办地",
         "note_en": "2022 World Cup host city"
@@ -1109,7 +1109,7 @@
       {
         "name": "阿拉木图",
         "name_en": "Almaty",
-        "latitude": 43.2220,
+        "latitude": 43.222,
         "longitude": 76.8512,
         "show_on_map": true,
         "note": "天山山脚下的苹果之城",
@@ -1158,9 +1158,9 @@
       {
         "name": "乌尔根奇",
         "name_en": "Urgench",
-        "latitude": 41.5500,
+        "latitude": 41.55,
         "longitude": 60.6333,
-        "show_on_map": false,
+        "show_on_map": true,
         "note": "前往希瓦古城的门户",
         "note_en": "Gateway to Khiva"
       },
@@ -1178,8 +1178,8 @@
       {
         "name": "撒马尔罕",
         "name_en": "Samarkand",
-        "latitude": 39.6270,
-        "longitude": 66.9750,
+        "latitude": 39.627,
+        "longitude": 66.975,
         "description": "丝绸之路明珠，雷吉斯坦广场与帖木儿陵墓",
         "description_en": "Pearl of the Silk Road, Registan Square and Timur's mausoleum",
         "visit_date": "2016-09-02"
@@ -1214,8 +1214,8 @@
       {
         "name": "咸海",
         "name_en": "Aral Sea",
-        "latitude": 45.0000,
-        "longitude": 60.0000,
+        "latitude": 45.0,
+        "longitude": 60.0,
         "description": "消失的海，20世纪最大生态灾难见证",
         "description_en": "Disappearing sea, witness to 20th century's greatest ecological disaster",
         "visit_date": "2017-04"
@@ -1272,7 +1272,7 @@
         "name": "纽约",
         "name_en": "New York",
         "latitude": 40.7128,
-        "longitude": -74.0060,
+        "longitude": -74.006,
         "show_on_map": true,
         "note": "世界之都，自由女神像",
         "note_en": "Capital of the world, Statue of Liberty"
@@ -1499,7 +1499,7 @@
         "name": "马丘比丘",
         "name_en": "Machu Picchu",
         "latitude": -13.1631,
-        "longitude": -72.5450,
+        "longitude": -72.545,
         "description": "云端上的失落之城",
         "description_en": "Lost city in the clouds",
         "visit_date": "2017-01"
@@ -1598,8 +1598,8 @@
       {
         "name": "查塔姆岛",
         "name_en": "Chatham Islands",
-        "latitude": -43.9500,
-        "longitude": -176.5000,
+        "latitude": -43.95,
+        "longitude": -176.5,
         "description": "新西兰最东离岛，最接近国际日期变更线，世界最早见到日出的地方之一",
         "description_en": "Easternmost NZ islands, closest to International Date Line, among first to see sunrise",
         "visit_date": "2021-12-16"
