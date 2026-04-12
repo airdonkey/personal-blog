@@ -1,5 +1,6 @@
-// Grand Tour - Google Maps版本（三层标记系统）
+// Grand Tour - Google Maps版本（三层标记系统 - 优化版）
 // 🔵 蓝色：国家标记 | 🟠 橙色：城市标记 | 🟡 黄色：景点标记
+// 优化：简洁圆点样式 + 优化控件 + 改进弹窗布局
 
 (function() {
   'use strict';
@@ -12,7 +13,17 @@
   const CONFIG = {
     dataPath: '/data/countries.json',
     mapCenter: { lat: 20, lng: 0 },
-    mapZoom: 2
+    mapZoom: 2,
+    // ImageKit CDN配置 - Sydney (Australia) region
+    imagekit: {
+      endpoint: 'https://ik.imagekit.io/airdonkey',
+      folder: 'grand-tour',
+      params: {
+        thumbnail: 'tr=w-400,q-80,f-auto',
+        popup: 'tr=w-800,q-85,f-auto',
+        large: 'tr=w-1200,q-90,f-auto'
+      }
+    }
   };
 
   // 辅助函数
@@ -59,6 +70,22 @@
     }
   }
 
+  // 生成图片HTML
+  function getImageHtml(imageName, altText) {
+    if (!imageName) return '';
+    
+    const imageUrl = `${CONFIG.imagekit.endpoint}/${CONFIG.imagekit.folder}/${imageName}?${CONFIG.imagekit.params.popup}`;
+    
+    return `
+      <div style="margin-bottom: 10px;">
+        <img src="${imageUrl}" 
+             alt="${altText}"
+             style="width: 100%; max-width: 300px; height: auto; border-radius: 8px; display: block;"
+             loading="lazy">
+      </div>
+    `;
+  }
+
   // 获取国旗emoji
   function getCountryFlag(countryCode) {
     if (!countryCode || countryCode.length !== 3) return '🌍';
@@ -74,13 +101,19 @@
       'CHL': 'CL', 'ARG': 'AR', 'PER': 'PE', 'ECU': 'EC', 'NZL': 'NZ',
       'FJI': 'FJ', 'TON': 'TO'
     };
-
-    const alpha2 = codeMap[countryCode] || countryCode.substring(0, 2);
-    const offset = 127397;
-    return String.fromCodePoint(...alpha2.split('').map(c => c.charCodeAt(0) + offset));
+    
+    const twoLetterCode = codeMap[countryCode];
+    if (!twoLetterCode) return '🌍';
+    
+    const codePoints = twoLetterCode
+      .toUpperCase()
+      .split('')
+      .map(char => 127397 + char.charCodeAt());
+    
+    return String.fromCodePoint(...codePoints);
   }
 
-  // 初始化Google地图
+  // 初始化地图（优化控件配置）
   function initializeMap() {
     const mapElement = document.getElementById('world-map');
     
@@ -89,13 +122,21 @@
       zoom: CONFIG.mapZoom,
       minZoom: 2,
       maxZoom: 18,
+      // 优化控件配置
       mapTypeControl: true,
       mapTypeControlOptions: {
-        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
         position: google.maps.ControlPosition.TOP_RIGHT
       },
       streetViewControl: false,
-      fullscreenControl: true
+      fullscreenControl: true,
+      fullscreenControlOptions: {
+        position: google.maps.ControlPosition.RIGHT_TOP
+      },
+      zoomControl: true,
+      zoomControlOptions: {
+        position: google.maps.ControlPosition.RIGHT_CENTER
+      }
     });
 
     return map;
@@ -112,15 +153,20 @@
       position: position,
       map: map,
       title: getText(country.country, country.country_en),
+      // 方案A：简洁圆点样式
       icon: {
-        url: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
-        scaledSize: new google.maps.Size(32, 32)
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: '#378ADD',      // 蓝色
+        fillOpacity: 1,
+        strokeColor: '#ffffff',     // 白色边框
+        strokeWeight: 2,
+        scale: 6                    // 小一点
       },
       zIndex: 100
     });
 
     const infoContent = `
-      <div style="padding: 10px; min-width: 200px; font-family: sans-serif;">
+      <div style="padding: 12px; min-width: 240px; max-width: 340px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
         <h3 style="margin: 0 0 8px 0; color: #0A2540; font-size: 1.1em;">
           ${getCountryFlag(country.country_code)} ${getText(country.country, country.country_en)}
         </h3>
@@ -141,7 +187,7 @@
     return marker;
   }
 
-  // 添加城市标记（橙色圆点）
+  // 添加城市标记（橙色圆点 - 方案A）
   function addCityMarker(map, city, country) {
     if (!city.show_on_map) return null;
 
@@ -154,21 +200,29 @@
       position: position,
       map: map,
       title: getText(city.name, city.name_en),
+      // 方案A：简洁圆点样式
       icon: {
-        url: 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png',
-        scaledSize: new google.maps.Size(40, 40)
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: '#C05621',      // 橙色
+        fillOpacity: 1,
+        strokeColor: '#ffffff',     // 白色边框
+        strokeWeight: 2,
+        scale: 8                    // 城市标记稍大
       },
       zIndex: 500
     });
 
+    // 优化弹窗布局 - 解决换行问题
     const infoContent = `
-      <div style="padding: 10px; min-width: 220px; font-family: sans-serif;">
-        <div style="font-size: 1.1em; margin-bottom: 6px;">
-          🏙️ <strong style="color: #C05621;">
+      <div style="padding: 12px; min-width: 240px; max-width: 340px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+        ${getImageHtml(city.marker_image, getText(city.name, city.name_en))}
+        <div style="display: flex; align-items: baseline; margin-bottom: 8px; gap: 6px;">
+          <span style="font-size: 1.2em;">🏙️</span>
+          <strong style="font-size: 1.1em; color: #C05621; white-space: nowrap;">
             ${getText(city.name, city.name_en)}
           </strong>
         </div>
-        <div style="color: #4A5568; font-size: 0.9em; margin-bottom: 6px;">
+        <div style="color: #4A5568; font-size: 0.9em; line-height: 1.4; margin-bottom: 6px;">
           ${getText(city.note, city.note_en)}
         </div>
         <div style="color: #718096; font-size: 0.85em;">
@@ -188,7 +242,7 @@
     return marker;
   }
 
-  // 添加特色地点标记（黄色星标）
+  // 添加特色地点标记（黄色圆点 - 方案A）
   function addFeaturedMarker(map, place, country) {
     const position = {
       lat: place.latitude,
@@ -199,24 +253,32 @@
       position: position,
       map: map,
       title: getText(place.name, place.name_en),
+      // 方案A：简洁圆点样式
       icon: {
-        url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
-        scaledSize: new google.maps.Size(48, 48)
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: '#B8860B',      // 黄色（金色）
+        fillOpacity: 1,
+        strokeColor: '#ffffff',     // 白色边框
+        strokeWeight: 2,
+        scale: 10                   // 特色地点最大
       },
       zIndex: 1000
     });
 
+    // 优化弹窗布局
     const infoContent = `
-      <div style="padding: 10px; min-width: 220px; font-family: sans-serif;">
-        <div style="font-size: 1.2em; margin-bottom: 6px;">
-          ⭐ <strong style="color: #B8860B;">
+      <div style="padding: 12px; min-width: 240px; max-width: 340px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+        ${getImageHtml(place.marker_image, getText(place.name, place.name_en))}
+        <div style="display: flex; align-items: baseline; margin-bottom: 8px; gap: 6px;">
+          <span style="font-size: 1.3em;">⭐</span>
+          <strong style="font-size: 1.15em; color: #B8860B; white-space: nowrap;">
             ${getText(place.name, place.name_en)}
           </strong>
         </div>
-        <div style="color: #4A5568; font-size: 0.95em; margin-bottom: 6px;">
+        <div style="color: #4A5568; font-size: 0.95em; line-height: 1.4; margin-bottom: 6px;">
           ${getText(place.description, place.description_en)}
         </div>
-        <div style="color: #718096; font-size: 0.85em; margin-bottom: 6px;">
+        <div style="color: #718096; font-size: 0.85em;">
           ${getText(country.country, country.country_en)}
           ${place.visit_date ? ' · ' + formatDate(place.visit_date) : ''}
         </div>
@@ -236,118 +298,67 @@
 
   // 渲染地区列表
   function renderRegionsList(countriesData) {
-    const container = document.getElementById('countries-by-region');
-    if (!container) return;
-
-    // 按地区分组
-    const regions = {};
-    countriesData.forEach(country => {
-      const regionKey = getText(country.region, country.region_en);
-      if (!regions[regionKey]) {
-        regions[regionKey] = [];
-      }
-      regions[regionKey].push(country);
-    });
-
-    // 地区图标
-    const regionIcons = {
-      '亚洲': '🌏', 'Asia': '🌏',
-      '中亚': '🏔️', 'Central Asia': '🏔️',
-      '欧洲': '🌍', 'Europe': '🌍',
-      '北美洲': '🌎', 'North America': '🌎',
-      '南美洲': '🌎', 'South America': '🌎',
-      '大洋洲': '🌊', 'Oceania': '🌊'
+    const regions = {
+      '亚洲': { en: 'Asia', countries: [] },
+      '欧洲': { en: 'Europe', countries: [] },
+      '美洲': { en: 'Americas', countries: [] },
+      '大洋洲': { en: 'Oceania', countries: [] }
     };
 
-    // 地区顺序
-    const regionOrder = isEnglish ? 
-      ['Asia', 'Central Asia', 'Europe', 'North America', 'South America', 'Oceania'] :
-      ['亚洲', '中亚', '欧洲', '北美洲', '南美洲', '大洋洲'];
-
-    // 按顺序渲染
-    regionOrder.forEach(regionName => {
-      if (regions[regionName]) {
-        const regionSection = createRegionSection(
-          regionName, 
-          regions[regionName], 
-          regionIcons[regionName] || '🌐'
-        );
-        container.appendChild(regionSection);
+    // 按地区分组
+    countriesData.forEach(country => {
+      const region = country.region;
+      if (regions[region]) {
+        regions[region].countries.push(country);
       }
     });
+
+    const listContainer = document.getElementById('countries-by-region');
+    if (!listContainer) return;
+
+    listContainer.innerHTML = '';
+
+    // 渲染每个地区
+    Object.keys(regions).forEach(regionName => {
+      const region = regions[regionName];
+      if (region.countries.length === 0) return;
+
+      const regionElement = createRegionElement(regionName, region);
+      listContainer.appendChild(regionElement);
+    });
   }
 
-  function createRegionSection(regionName, countries, icon) {
-    const section = document.createElement('div');
-    section.className = 'region-section';
+  // 创建地区元素
+  function createRegionElement(regionName, region) {
+    const container = document.createElement('div');
+    container.className = 'region-group';
 
-    const header = document.createElement('div');
-    header.className = 'region-header expanded';
-    header.innerHTML = `
-      <div class="region-title">
-        <span class="region-icon">${icon}</span>
-        <h2>${regionName}</h2>
-        <span class="region-count">${countries.length}${getText('国', ' countries')}</span>
-      </div>
-      <span class="expand-icon">▼</span>
-    `;
+    const header = document.createElement('h3');
+    header.className = 'region-title';
+    header.textContent = getText(regionName, region.en);
+    container.appendChild(header);
 
-    const content = document.createElement('div');
-    content.className = 'region-content visible';
-
-    countries.forEach(country => {
+    region.countries.forEach(country => {
       const countryItem = createCountryItem(country);
-      content.appendChild(countryItem);
+      container.appendChild(countryItem);
     });
 
-    header.addEventListener('click', () => {
-      header.classList.toggle('expanded');
-      content.classList.toggle('visible');
-    });
-
-    section.appendChild(header);
-    section.appendChild(content);
-
-    return section;
+    return container;
   }
 
+  // 创建国家列表项
   function createCountryItem(country) {
     const item = document.createElement('div');
     item.className = 'country-item';
 
-    const countryName = getText(country.country, country.country_en);
-    const countryFlag = getCountryFlag(country.country_code);
-    
     let html = `
       <div class="country-header">
-        <span class="country-flag">${countryFlag}</span>
-        <span class="country-name">${countryName}</span>
-        <span class="country-date">${formatDate(country.visit_date)}</span>
+        <h4 class="country-name">
+          ${getCountryFlag(country.country_code)} ${getText(country.country, country.country_en)}
+        </h4>
+        <div class="country-date">${formatDate(country.visit_date)}</div>
       </div>
     `;
-
-    // 特色地点
-    if (country.featured_places && country.featured_places.length > 0) {
-      html += `<div class="featured-places">`;
-      html += `<div class="featured-places-title">${getText('特色地点', 'Featured Places')}</div>`;
-      
-      country.featured_places.forEach(place => {
-        const placeName = getText(place.name, place.name_en);
-        const placeDesc = getText(place.description, place.description_en);
-        
-        html += `
-          <div class="featured-place">
-            <span class="star-icon">⭐</span>
-            <div class="featured-place-info">
-              <div class="featured-place-name">${placeName}</div>
-              <div class="featured-place-description">${placeDesc}</div>
-            </div>
-          </div>
-        `;
-      });
-      
-      html += `</div>`;
-    }
 
     // 访问城市
     if (country.cities && country.cities.length > 0) {
@@ -391,7 +402,7 @@
 
   // 初始化函数
   async function init() {
-    console.log('=== Grand Tour (Google Maps三层标记版本) 初始化 ===');
+    console.log('=== Grand Tour (Google Maps优化版 - 圆点样式) 初始化 ===');
     
     const mapContainer = document.getElementById('world-map');
     const listContainer = document.getElementById('countries-by-region');
@@ -424,7 +435,7 @@
 
     // 初始化地图
     const map = initializeMap();
-    console.log('Google地图初始化完成');
+    console.log('Google地图初始化完成 - 使用优化控件配置');
 
     // 统计
     let cityCount = 0;
@@ -432,10 +443,10 @@
 
     // 添加所有标记
     countriesData.forEach(country => {
-      // 国家标记（蓝色）
+      // 国家标记（蓝色圆点）
       addCountryMarker(map, country);
       
-      // 城市标记（橙色）
+      // 城市标记（橙色圆点）
       if (country.cities && country.cities.length > 0) {
         country.cities.forEach(city => {
           if (city.show_on_map) {
@@ -445,7 +456,7 @@
         });
       }
       
-      // 特色地点标记（黄色）
+      // 特色地点标记（黄色圆点）
       if (country.featured_places && country.featured_places.length > 0) {
         country.featured_places.forEach(place => {
           addFeaturedMarker(map, place, country);
@@ -455,25 +466,21 @@
     });
 
     console.log(`标记统计: ${countriesData.length}个国家, ${cityCount}个城市, ${featuredCount}个特色地点`);
+    console.log('样式: 方案A - 简洁圆点 ✅');
 
     // 渲染列表
     if (listContainer) {
       listContainer.innerHTML = '';
       renderRegionsList(countriesData);
+      console.log('国家列表渲染完成');
     }
-
-    console.log('=== 初始化完成 ===');
   }
 
-  // 等待Google Maps API加载完成后初始化
-  if (typeof google !== 'undefined' && google.maps) {
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init);
-    } else {
-      init();
-    }
+  // 页面加载完成后初始化
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    window.initGrandTourMap = init;
+    init();
   }
 
 })();
