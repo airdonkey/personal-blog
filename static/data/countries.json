@@ -15,8 +15,9 @@
         "latitude": 6.9271,
         "longitude": 79.8612,
         "show_on_map": true,
-        "note": "人生第一次出国的转机地",
-        "note_en": "First international flight transit"
+        "note": "人生第一次出国的转机地；机场电视正播放斯里兰卡内战新闻",
+        "note_en": "First international flight transit; Terminal TV broadcasting news on Sri Lankan Civil War",
+        "marker_image": "colombo.jpg"
       }
     ],
     "featured_places": []
@@ -35,10 +36,11 @@
       {
         "name": "卡尼岛",
         "name_en": "Club Med Kani",
+        "marker_image": "club-med-kani.jpg",
         "latitude": 4.0733,
         "longitude": 73.4333,
-        "description": "人生第一次出国的目的地，地中海俱乐部度假村",
-        "description_en": "First international destination, Club Med resort island",
+        "description": "人生第一次出国的目的地；新婚蜜月旅行",
+        "description_en": "First international destination；Honeymoon",
         "visit_date": "2008-09-27"
       }
     ]
@@ -59,8 +61,8 @@
         "latitude": 13.7563,
         "longitude": 100.5018,
         "show_on_map": true,
-        "note": "东南亚繁华大都会，大皇宫与卧佛寺",
-        "note_en": "Bustling Southeast Asian metropolis, Grand Palace and Temple of the Reclining Buddha"
+        "note": "转机飞往伊斯坦布尔；俯瞰一片水乡泽国",
+        "note_en": "Connecting flight to Istanbul; Looking down over a landscape of waterways and marshes"
       }
     ],
     "featured_places": []
@@ -78,11 +80,12 @@
       {
         "name": "伊斯坦布尔",
         "name_en": "Istanbul",
+        "marker_image": "istanbul.jpg",
         "latitude": 41.0082,
         "longitude": 28.9784,
         "show_on_map": true,
-        "note": "横跨欧亚两洲的千年古都",
-        "note_en": "Millennial capital spanning two continents"
+        "note": "君士坦丁堡；横跨欧亚两洲的万城之城",
+        "note_en": "Constantinople: the Queen of Cities, straddling Europe and Asia"
       },
       {
         "name": "伊兹密尔",
@@ -116,6 +119,7 @@
       {
         "name": "棉花堡",
         "name_en": "Pamukkale",
+        "marker_image": "pamukkale.jpg",
         "latitude": 37.9204,
         "longitude": 29.1211,
         "description": "雪白的钙化梯田温泉",
@@ -125,6 +129,7 @@
       {
         "name": "以弗所",
         "name_en": "Ephesus",
+        "marker_image": "ephesus.jpg",
         "latitude": 37.9395,
         "longitude": 27.341,
         "description": "古罗马时期遗址，塞尔苏斯图书馆",
@@ -220,6 +225,7 @@
       {
         "name": "新天鹅堡",
         "name_en": "Neuschwanstein Castle",
+        "marker_image": "neuschwanstein-castle.jpg",
         "latitude": 47.5576,
         "longitude": 10.7498,
         "description": "路德维希二世的童话城堡，迪士尼城堡原型",
@@ -259,6 +265,7 @@
       {
         "name": "维也纳",
         "name_en": "Vienna",
+        "marker_image": "vienna.jpg",
         "latitude": 48.2082,
         "longitude": 16.3738,
         "show_on_map": true,
@@ -519,7 +526,7 @@
         "latitude": 38.7803,
         "longitude": -9.4989,
         "description": "欧洲大陆最西端，陆止于此，海始于斯",
-        "description_en": "Westernmost point of mainland Europe",
+        "description_en": "Westernmost point of mainland Europe; Where the land ends and the sea begins.",
         "visit_date": "2014-12"
       },
       {
@@ -1235,6 +1242,7 @@
       {
         "name": "洛杉矶",
         "name_en": "Los Angeles",
+        "marker_image": "los-angeles.jpg",
         "latitude": 34.0522,
         "longitude": -118.2437,
         "show_on_map": true,
@@ -1244,6 +1252,7 @@
       {
         "name": "拉斯维加斯",
         "name_en": "Las Vegas",
+        "marker_image": "las-vegas.jpg",
         "latitude": 36.1699,
         "longitude": -115.1398,
         "show_on_map": true,
@@ -1396,7 +1405,7 @@
         "name_en": "Arecibo Observatory",
         "latitude": 18.3464,
         "longitude": -66.7528,
-        "description": "中国天眼的前辈致敬之地；电影《超时空接触》取景地",
+        "description": "致敬中国天眼的前辈；电影《超时空接触》取景地",
         "description_en": "Predecessor to China's FAST; filming location for Contact",
         "visit_date": "2023-01-07"
       }
