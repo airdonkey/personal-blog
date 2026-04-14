@@ -59,7 +59,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   line-height: 1.7;
   color: var(--text-primary);
   background-color: var(--gray-50);
@@ -68,23 +68,62 @@ body {
 }
 
 /* ===================================
-   Typography
+   Typography - Magazine Bold Style
    =================================== */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  line-height: 1.3;
+  font-weight: 500;
   color: var(--navy-dark);
   margin-bottom: var(--space-md);
 }
 
-h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.25rem; }
+/* 英文: 48px, 中文: 44px - 大标题视觉冲击 */
+h1 { 
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+}
+
+/* 针对中文优化 */
+html[lang="zh"] h1,
+html[lang="zh-CN"] h1 {
+  font-size: 2.75rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+h2 { 
+  font-size: 1.625rem;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  margin-top: var(--space-xl);
+}
+
+html[lang="zh"] h2,
+html[lang="zh-CN"] h2 {
+  line-height: 1.35;
+}
+
+h3 { 
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+h4 { 
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
 
 p {
-  margin-bottom: var(--space-md);
-  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+  line-height: 1.65;
+}
+
+/* 中文段落更大行距 */
+html[lang="zh"] p,
+html[lang="zh-CN"] p {
+  line-height: 1.8;
 }
 
 a {
@@ -347,25 +386,44 @@ main {
   border-bottom: 1px solid var(--gray-100);
 }
 
+/* Magazine Style: Feature Badge */
+.article-header::before {
+  content: attr(data-category);
+  display: inline-block;
+  background: var(--navy-dark);
+  color: var(--white);
+  padding: 6px 14px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
 .article-meta {
   display: flex;
   gap: var(--space-md);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--text-muted);
   margin-bottom: var(--space-sm);
+  padding-top: var(--space-md);
+  border-top: 3px solid var(--navy-dark);
 }
 
 .article-date::before {
-  content: '📅 ';
+  content: '';
 }
 
 .article-reading-time::before {
-  content: '⏱ ';
+  content: '· ';
 }
 
 .article-title {
-  font-size: 1.75rem;
-  margin-bottom: var(--space-sm);
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-md);
+  font-weight: 500;
 }
 
 .article-title a {
@@ -378,8 +436,9 @@ main {
 }
 
 .article-excerpt {
-  color: var(--text-secondary);
-  line-height: 1.8;
+  color: var(--text-primary);
+  line-height: 1.7;
+  font-size: 1.0625rem;
   padding: 0 var(--space-xl) var(--space-lg);
 }
 
@@ -412,21 +471,114 @@ main {
 }
 
 /* ===================================
-   Single Article Page
+   Single Article Page - Magazine Style
    =================================== */
 .article-content {
   background: var(--white);
   padding: var(--space-2xl);
   border-radius: 12px;
   box-shadow: var(--shadow-md);
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto var(--space-2xl);
 }
 
+/* Magazine-style article header */
+.article-content header {
+  margin-bottom: 3rem;
+}
+
+.article-content .article-meta {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 3px solid var(--navy-dark);
+  font-size: 13px;
+  color: var(--text-muted);
+  border-bottom: none;
+}
+
+.article-content h1 {
+  margin-bottom: 1rem;
+}
+
+/* Subtitle/description styling */
+.article-content header p:first-of-type {
+  font-size: 1.3125rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+html[lang="zh"] .article-content header p:first-of-type,
+html[lang="zh-CN"] .article-content header p:first-of-type {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+/* Article body h2 styling - Magazine style */
 .article-content h2 {
-  margin-top: var(--space-xl);
-  padding-top: var(--space-lg);
-  border-top: 3px solid var(--bronze-subtle);
+  margin-top: 3rem;
+  padding-top: 0;
+  border-top: none;
+  font-size: 1.625rem;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+
+/* Numbered list styling - Magazine card style */
+.article-content ol {
+  list-style: none;
+  counter-reset: magazine-counter;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.article-content ol > li {
+  counter-increment: magazine-counter;
+  background: var(--gray-50);
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  border: 0.5px solid var(--gray-200);
+  position: relative;
+}
+
+.article-content ol > li::before {
+  content: counter(magazine-counter, decimal-leading-zero);
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--bronze);
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.article-content ol > li > strong:first-child,
+.article-content ol > li > p:first-child {
+  font-size: 1.1875rem;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--navy-dark);
+  margin-bottom: 1rem;
+}
+
+html[lang="zh"] .article-content ol > li > strong:first-child,
+html[lang="zh-CN"] .article-content ol > li > strong:first-child,
+html[lang="zh"] .article-content ol > li > p:first-child,
+html[lang="zh-CN"] .article-content ol > li > p:first-child {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+/* Unordered lists - simpler style */
+.article-content ul {
+  padding-left: 1.5rem;
+  margin: var(--space-lg) 0;
+}
+
+.article-content ul > li {
+  margin-bottom: 0.75rem;
+  line-height: 1.8;
 }
 
 .article-content img {
@@ -442,6 +594,7 @@ main {
   margin: var(--space-lg) 0;
   font-style: italic;
   color: var(--text-secondary);
+  font-size: 1.125rem;
 }
 
 .article-content code {
@@ -522,7 +675,16 @@ main {
   }
   
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  html[lang="zh"] h1,
+  html[lang="zh-CN"] h1 {
+    font-size: 2.25rem;
   }
 }
 
@@ -535,6 +697,35 @@ main {
   .site-name {
     font-size: 1.1rem;
   }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  html[lang="zh"] h1,
+  html[lang="zh-CN"] h1 {
+    font-size: 1.875rem;
+  }
+  
+  h2 {
+    font-size: 1.375rem;
+  }
+  
+  .article-title {
+    font-size: 1.625rem;
+  }
+  
+  .article-content {
+    padding: var(--space-lg);
+  }
+  
+  .article-content ol > li {
+    padding: 1.25rem;
+  }
+  
+  .article-content ol > li::before {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -543,10 +734,26 @@ main {
     gap: var(--space-sm);
   }
   
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
+  h1 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
   
-  .article-content {
-    padding: var(--space-lg);
+  html[lang="zh"] h1,
+  html[lang="zh-CN"] h1 {
+    font-size: 1.625rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  .article-content header p:first-of-type {
+    font-size: 1.125rem;
+  }
+  
+  .article-content ol > li > strong:first-child,
+  .article-content ol > li > p:first-child {
+    font-size: 1rem;
   }
 }
