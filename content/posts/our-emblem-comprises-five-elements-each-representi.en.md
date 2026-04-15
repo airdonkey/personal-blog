@@ -1,3 +1,9 @@
+---
+title: "Our emblem comprises five elements, each representing an educational philosophy:"
+date: 2026-04-15
+tags: []
+---
+
 Our emblem comprises five elements, each representing an educational philosophy:
 
 The Spark: Learning begins with the awakening of understanding, not the input of information. Without this spark, even the most perfect structure cannot truly function.

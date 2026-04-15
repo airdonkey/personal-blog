@@ -1,64 +1,64 @@
 @echo off
 echo ========================================
-echo Push to GitHub and Deploy
+echo 推送到 GitHub 并部署
 echo ========================================
 echo.
 
-REM Check for uncommitted changes
+REM 检查是否有未提交的更改
 git status --short > temp_status.txt
 set /p changes=<temp_status.txt
 del temp_status.txt
 
 if "%changes%"=="" (
-    echo No changes to push
+    echo 没有需要推送的更改
     pause
     exit /b 0
 )
 
-echo Changes to be pushed:
+echo 待推送的更改:
 echo.
 git status --short
 echo.
 
-REM Get commit message
-echo Enter commit message (press Enter for default):
-set /p commit_msg="Message: "
+REM 获取提交信息
+echo 请输入提交说明 (直接回车使用默认):
+set /p commit_msg="提交说明: "
 
 if "%commit_msg%"=="" (
     for /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set mydate=%%c-%%a-%%b)
-    set commit_msg=Update articles %mydate%
+    set commit_msg=Update content %mydate%
 )
 
 echo.
-echo [1/3] Adding files...
+echo [1/3] 添加文件...
 git add .
 
-echo [2/3] Committing changes...
+echo [2/3] 提交更改...
 git commit -m "%commit_msg%"
 
-echo [3/3] Pushing to GitHub...
+echo [3/3] 推送到 GitHub...
 git push
 
 if %ERRORLEVEL% EQU 0 (
     echo.
     echo ========================================
-    echo OK Push successful!
+    echo ✓ 推送成功！
     echo ========================================
     echo.
-    echo Cloudflare Pages is building...
-    echo Expected online in 2-3 minutes:
+    echo Cloudflare Pages 正在构建...
+    echo 预计2-3分钟后上线:
     echo https://zhoupenglong.com
     echo.
 ) else (
     echo.
     echo ========================================
-    echo X Push failed
+    echo ✗ 推送失败
     echo ========================================
     echo.
-    echo Possible reasons:
-    echo 1. Network connection issue
-    echo 2. GitHub authentication failed
-    echo 3. Remote repository conflict
+    echo 可能的原因:
+    echo 1. 网络连接问题
+    echo 2. GitHub 认证失败
+    echo 3. 远程仓库冲突
     echo.
 )
 
