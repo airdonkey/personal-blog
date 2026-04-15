@@ -11,7 +11,7 @@
             <h1>{{ .Title }}</h1>
             
             {{ if .Params.tags }}
-            <div class="article-tags" style="margin-top: 1rem;">
+            <div class="article-tags" style="margin-top: 1.5rem;">
                 {{ range .Params.tags }}
                 <a href="/tags/{{ . | urlize }}" class="tag">{{ . }}</a>
                 {{ end }}
@@ -19,13 +19,13 @@
             {{ end }}
         </header>
         
-        <div style="margin-top: 2rem;">
+        <div style="margin-top: 2.5rem;">
             {{ .Content }}
         </div>
         
-        <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--gray-200);">
-            <p style="text-align: center; color: var(--text-muted);">
-                <a href="/">← Back to Articles</a>
+        <footer style="margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid var(--gray-200);">
+            <p style="text-align: center;">
+                <a href="/">Back to Articles</a>
             </p>
         </footer>
     </article>

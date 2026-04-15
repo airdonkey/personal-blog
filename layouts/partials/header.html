@@ -11,8 +11,14 @@
             <div class="header-right">
                 <nav class="main-nav">
                     <ul>
+                        {{ $currentPage := .RelPermalink }}
                         {{ range .Site.Menus.main }}
-                        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                        <li>
+                            <a href="{{ .URL }}" 
+                               class="{{ if eq $currentPage .URL }}active{{ end }}">
+                                {{ .Name }}
+                            </a>
+                        </li>
                         {{ end }}
                     </ul>
                 </nav>
@@ -46,3 +52,38 @@
     }
 }
 </style>
+
+<script>
+// 滚动时添加阴影效果
+(function() {
+    const header = document.querySelector('.site-header');
+    let lastScrollTop = 0;
+    
+    function updateHeaderOnScroll() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > 10) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        
+        lastScrollTop = scrollTop;
+    }
+    
+    // 初始检查
+    updateHeaderOnScroll();
+    
+    // 滚动监听
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                updateHeaderOnScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+})();
+</script>
