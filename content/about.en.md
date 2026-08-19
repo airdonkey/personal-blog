@@ -1,8 +1,9 @@
 ---
 title: "About"
+description: "A career across finance, international development, education, astronomy, and New Zealand."
+type: "page"
+layout: "about"
 ---
-
-# About Me
 
 I spent many years in finance and international development before transitioning to education and astronomy. I currently work as a registered teacher in New Zealand and serve as Executive Secretary of the Royal Astronomical Society of New Zealand.
 

@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="about-hero">
+    <div class="page-frame about-grid">
+        <picture class="about-photo-wrap">
+            <source srcset="{{ "images/profile.webp" | relURL }}" type="image/webp">
+            <img class="about-photo" src="{{ "images/profile.jpg" | relURL }}" width="720" height="946" alt="{{ .Site.Params.author }}">
+        </picture>
+        <div class="about-intro">
+            <p class="eyebrow">{{ .Site.Params.description }}</p>
+            <h1>{{ .Title }}</h1>
+            {{ with .Description }}<p>{{ . }}</p>{{ end }}
+        </div>
+    </div>
+</section>
+<div class="reading-frame prose about-prose section-space">
+    {{ .Content }}
+</div>
+{{ end }}

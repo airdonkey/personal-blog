@@ -1,0 +1,31 @@
+{{ define "main" }}
+<header class="page-header">
+    <div class="page-frame narrow-header">
+        <p class="eyebrow">{{ .Site.Params.author }}</p>
+        <h1>{{ .Title }}</h1>
+        <p>{{ with .Description }}{{ . }}{{ else }}{{ i18n "articlesArchive" }}{{ end }}</p>
+    </div>
+</header>
+
+<div class="page-frame archive-shell section-space">
+    {{ range .Pages.ByDate.Reverse.GroupByDate "2006" }}
+    <section class="archive-year" aria-labelledby="year-{{ .Key }}">
+        <h2 id="year-{{ .Key }}">{{ .Key }}</h2>
+        <div class="archive-list">
+            {{ range .Pages }}
+            <article class="archive-entry">
+                <div class="archive-meta">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ partial "date.html" . }}</time>
+                    <span>{{ i18n "readingTime" (dict "Count" .ReadingTime) }}</span>
+                </div>
+                <div>
+                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    <p>{{ .Summary | plainify | htmlUnescape | truncate 210 }}</p>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+</div>
+{{ end }}

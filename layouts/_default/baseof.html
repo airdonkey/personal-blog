@@ -1,25 +1,67 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<!doctype html>
+<html lang="{{ .Site.Language.Locale }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ .Site.Params.description }}">
-    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | absURL }}">
-    <link rel="alternate icon" href="{{ "favicon.ico" | absURL }}">
-    
-    <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{- $description := .Site.Params.description -}}
+    {{- if .Description -}}
+        {{- $description = .Description -}}
+    {{- else -}}
+        {{- if and (not .IsHome) .Summary -}}
+            {{- $description = .Summary | plainify | htmlUnescape | truncate 160 -}}
+        {{- end -}}
+    {{- end -}}
+
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Params.author }}{{ end }}</title>
+    <meta name="description" content="{{ $description }}">
+    <meta name="author" content="{{ .Site.Params.author }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    {{- range .AllTranslations }}
+    <link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ .Permalink }}">
+    {{- end }}
+    <link rel="alternate" hreflang="x-default" href="{{ .Site.BaseURL }}">
+
+    {{- with .OutputFormats.Get "RSS" }}
+    <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">
+    {{- end }}
+
+    <meta property="og:type" content="{{ if and (eq .Section "posts") (not .IsSection) }}article{{ else }}website{{ end }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:description" content="{{ $description }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:locale" content="{{ replace .Site.Language.Locale "-" "_" }}">
+    <meta property="og:image" content="{{ "images/profile.jpg" | absURL }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta name="twitter:description" content="{{ $description }}">
+    <meta name="twitter:image" content="{{ "images/profile.jpg" | absURL }}">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32.png" | relURL }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    {{ block "head" . }}{{ end }}
+
+    {{- $personData := dict
+        "@context" "https://schema.org"
+        "@type" "Person"
+        "name" .Site.Params.author
+        "url" .Site.BaseURL
+        "image" ("images/profile.jpg" | absURL)
+        "description" .Site.Params.description
+    -}}
+    <script type="application/ld+json">{{ $personData | jsonify | safeJS }}</script>
+    <script src="{{ "js/site.js" | relURL }}" defer></script>
 </head>
-<body>
-    <div class="site-wrapper">
+<body class="{{ if .IsHome }}is-home{{ else }}kind-{{ .Kind }}{{ end }}">
+    <a class="skip-link" href="#main-content">{{ i18n "skipToContent" }}</a>
+    <div class="site-shell">
         {{ partial "header.html" . }}
-        
-        <main>
+        <main id="main-content" tabindex="-1">
             {{ block "main" . }}{{ end }}
         </main>
-        
         {{ partial "footer.html" . }}
     </div>
 </body>

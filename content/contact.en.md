@@ -1,8 +1,8 @@
 ---
 title: "Contact"
+description: "For thoughtful conversations about education, astronomy, career transitions, and cross-cultural experience."
+type: "page"
 ---
-
-# Get in Touch
 
 Feel free to reach out if you're interested in discussing:
 

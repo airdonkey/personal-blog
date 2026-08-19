@@ -1,0 +1,34 @@
+{{ define "main" }}
+<article class="article-page">
+    <header class="article-hero">
+        <div class="reading-frame">
+            <a class="back-link" href="{{ .CurrentSection.RelPermalink }}">{{ i18n "backToArticles" }}</a>
+            <div class="article-meta">
+                {{ if not .Date.IsZero }}
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ partial "date.html" . }}</time>
+                {{ end }}
+                <span>{{ i18n "readingTime" (dict "Count" .ReadingTime) }}</span>
+            </div>
+            <h1>{{ .Title }}</h1>
+            {{ with .Description }}<p class="article-deck">{{ . }}</p>{{ end }}
+            {{ with .GetTerms "tags" }}
+            <ul class="article-tags" aria-label="{{ i18n "tags" }}">
+                {{ range . }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}
+            </ul>
+            {{ end }}
+        </div>
+    </header>
+
+    <div class="reading-frame prose">
+        {{ .Content }}
+    </div>
+
+    <nav class="reading-frame article-navigation" aria-label="Article navigation">
+        <a class="back-link" href="{{ .CurrentSection.RelPermalink }}">{{ i18n "backToArticles" }}</a>
+        <div>
+            {{ with .PrevInSection }}<a href="{{ .RelPermalink }}"><span>{{ i18n "previousArticle" }}</span>{{ .Title }}</a>{{ end }}
+            {{ with .NextInSection }}<a href="{{ .RelPermalink }}"><span>{{ i18n "nextArticle" }}</span>{{ .Title }}</a>{{ end }}
+        </div>
+    </nav>
+</article>
+{{ end }}

@@ -1,11 +1,13 @@
 baseURL = "https://zhoupenglong.com/"
 defaultContentLanguage = "zh"
 defaultContentLanguageInSubdir = true
+enableRobotsTXT = true
+summaryLength = 36
 
 [languages]
   [languages.zh]
-    languageCode = "zh-CN"
-    languageName = "中文"
+    locale = "zh-CN"
+    label = "中文"
     weight = 1
     title = "周鹏龙 | 跨文化观察与学习"
     
@@ -13,6 +15,7 @@ defaultContentLanguageInSubdir = true
       author = "周鹏龙"
       description = "教育工作者 & 天文学会执行秘书"
       tagline = "记录跨文化观察与终身学习"
+      introduction = "记录教育、文化、天文与终身学习中的观察和思考。"
       email = "contact@zhoupenglong.com"
     
     [[languages.zh.menu.main]]
@@ -36,8 +39,8 @@ defaultContentLanguageInSubdir = true
       weight = 4
 
   [languages.en]
-    languageCode = "en-US"
-    languageName = "English"
+    locale = "en-US"
+    label = "English"
     weight = 2
     title = "Zhou Penglong | Cross-Cultural Learning"
     
@@ -45,6 +48,7 @@ defaultContentLanguageInSubdir = true
       author = "Zhou Penglong"
       description = "Educator & Executive Secretary of RASNZ"
       tagline = "Cross-Cultural Observations & Lifelong Learning"
+      introduction = "Writing on education, culture, astronomy, and a lifelong practice of learning."
       email = "contact@zhoupenglong.com"
     
     [[languages.en.menu.main]]
@@ -71,3 +75,9 @@ defaultContentLanguageInSubdir = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]

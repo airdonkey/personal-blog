@@ -1,41 +1,22 @@
 {{ define "main" }}
-<div class="container" style="margin-top: 2rem;">
-    <div class="content-wrapper">
-        {{ partial "sidebar.html" . }}
-        
-        <div>
-            <h1 style="margin-bottom: 2rem;">{{ .Title }}</h1>
-            
-            <div class="article-list">
-                {{ range .Pages }}
-                <article class="article-card">
-                    <div class="article-header">
-                        <div class="article-meta">
-                            <span class="article-date">{{ .Date.Format "January 2, 2006" }}</span>
-                            <span class="article-reading-time">{{ .ReadingTime }} min read</span>
-                        </div>
-                        <h2 class="article-title">
-                            <a href="{{ .Permalink }}">{{ .Title }}</a>
-                        </h2>
-                    </div>
-                    
-                    <div class="article-excerpt">
-                        {{ .Summary }}
-                    </div>
-                    
-                    {{ if .Params.tags }}
-                    <div class="article-footer">
-                        <div class="article-tags">
-                            {{ range .Params.tags }}
-                            <a href="/tags/{{ . | urlize }}" class="tag">{{ . }}</a>
-                            {{ end }}
-                        </div>
-                    </div>
-                    {{ end }}
-                </article>
-                {{ end }}
+<header class="page-header">
+    <div class="page-frame narrow-header">
+        <p class="eyebrow">{{ .Site.Params.author }}</p>
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    </div>
+</header>
+<div class="page-frame archive-shell section-space">
+    <div class="archive-list">
+        {{ range .Pages.ByTitle }}
+        <article class="archive-entry">
+            <div class="archive-meta">{{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ partial "date.html" . }}</time>{{ end }}</div>
+            <div>
+                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                {{ with .Summary }}<p>{{ . | plainify | htmlUnescape | truncate 210 }}</p>{{ end }}
             </div>
-        </div>
+        </article>
+        {{ end }}
     </div>
 </div>
 {{ end }}

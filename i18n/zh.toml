@@ -1,11 +1,11 @@
 [readingTime]
-other = "分钟阅读"
+other = "{{ .Count }} 分钟阅读"
 
 [tags]
 other = "标签"
 
 [backToArticles]
-other = "← 返回文章列表"
+other = "返回文章列表"
 
 [subscribe]
 other = "订阅"
@@ -27,3 +27,96 @@ other = "最新文章"
 
 [aboutAuthor]
 other = "关于作者"
+
+[skipToContent]
+other = "跳到主要内容"
+
+[primaryNavigation]
+other = "主要导航"
+
+[openMenu]
+other = "打开菜单"
+
+[closeMenu]
+other = "关闭菜单"
+
+[languageSwitcher]
+other = "语言选择"
+
+[latestWriting]
+other = "最新文章"
+
+[latestWritingIntro]
+other = "关于教育、跨文化经验、天文与学习的长期写作。"
+
+[featuredArticle]
+other = "最新发布"
+
+[readArticle]
+other = "阅读全文"
+
+[viewAllArticles]
+other = "浏览全部文章"
+
+[aboutThisSite]
+other = "关于这个网站"
+
+[learnMore]
+other = "了解更多"
+
+[grandTourIntro]
+other = "跨越不同文化与地域的足迹，以及旅途中留下的观察。"
+
+[exploreGrandTour]
+other = "查看游历地图"
+
+[articlesArchive]
+other = "按时间整理的文章目录。"
+
+[publishedOn]
+other = "发表于"
+
+[previousArticle]
+other = "上一篇"
+
+[nextArticle]
+other = "下一篇"
+
+[email]
+other = "电子邮件"
+
+[rss]
+other = "RSS"
+
+[countriesVisited]
+other = "访问国家"
+
+[featuredPlaces]
+other = "特色地点"
+
+[citiesExplored]
+other = "探访城市"
+
+[loadMap]
+other = "加载互动地图"
+
+[mapLoading]
+other = "正在加载地图……"
+
+[mapExplanation]
+other = "地图仅在您选择后加载。下方的文字目录无需地图或 JavaScript 即可阅读。"
+
+[mapUnavailable]
+other = "互动地图暂时无法加载；您仍可浏览下方的完整文字目录。"
+
+[placesByRegion]
+other = "按地区浏览"
+
+[countries]
+other = "个国家"
+
+[cities]
+other = "城市"
+
+[visited]
+other = "到访"

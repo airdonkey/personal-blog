@@ -1,73 +1,18 @@
-<div class="language-switcher">
-    {{ if .IsTranslated }}
-        {{ range .Translations }}
-            <a href="{{ .Permalink }}" 
-               class="lang-link {{ if eq .Language.Lang $.Language.Lang }}active{{ end }}"
-               title="Switch to {{ .Language.LanguageName }}">
-                {{ if eq .Language.Lang "zh" }}中{{ else }}EN{{ end }}
-            </a>
-        {{ end }}
-    {{ end }}
-    <a href="{{ .Permalink }}" 
-       class="lang-link active"
-       title="Current: {{ .Language.LanguageName }}">
-        {{ if eq .Language.Lang "zh" }}中{{ else }}EN{{ end }}
-    </a>
+{{- $page := . -}}
+<div class="language-switcher" aria-label="{{ i18n "languageSwitcher" }}">
+    {{- range sort hugo.Sites "Language.Weight" }}
+        {{- $language := .Language.Lang -}}
+        {{- $target := .Home.RelPermalink -}}
+        {{- range $page.AllTranslations -}}
+            {{- if eq .Language.Lang $language -}}
+                {{- $target = .RelPermalink -}}
+            {{- end -}}
+        {{- end -}}
+        {{- $label := cond (eq $language "zh") "中" "EN" -}}
+        {{- if eq $language $page.Language.Lang }}
+            <span class="language-current" lang="{{ .Language.Locale }}" aria-current="true">{{ $label }}</span>
+        {{- else }}
+            <a href="{{ $target }}" lang="{{ .Language.Locale }}" hreflang="{{ .Language.Locale }}">{{ $label }}</a>
+        {{- end }}
+    {{- end }}
 </div>
-
-<style>
-.language-switcher {
-    display: flex;
-    gap: 0.375rem;
-    align-items: center;
-    background: var(--gray-50);
-    padding: 0.25rem;
-    border-radius: 8px;
-    border: 1px solid var(--gray-200);
-}
-
-.lang-link {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 6px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    transition: var(--transition);
-    text-decoration: none;
-    color: var(--text-secondary);
-    background: transparent;
-    letter-spacing: 0.03em;
-    min-width: 50px;
-    text-align: center;
-}
-
-.lang-link:hover {
-    background: var(--gray-100);
-    color: var(--navy-dark);
-    border-bottom: none;
-}
-
-.lang-link.active {
-    background: var(--bronze);
-    color: var(--white);
-    box-shadow: 0 2px 4px rgba(184, 134, 11, 0.2);
-}
-
-.lang-link.active:hover {
-    transform: none;
-    cursor: default;
-    background: var(--bronze);
-}
-
-@media (max-width: 640px) {
-    .language-switcher {
-        padding: 0.2rem;
-    }
-    
-    .lang-link {
-        padding: 0.4rem 0.75rem;
-        font-size: 0.8125rem;
-        min-width: 44px;
-    }
-}
-</style>

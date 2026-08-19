@@ -1,0 +1,107 @@
+{{ define "head" }}
+<link rel="stylesheet" href="{{ "css/grand-tour.css" | relURL }}">
+<script src="{{ "js/grand-tour.js" | relURL }}" defer></script>
+{{ end }}
+
+{{ define "main" }}
+{{- $countries := hugo.Data.countries -}}
+{{- $cityCount := 0 -}}
+{{- $featuredCount := 0 -}}
+{{- range $countries -}}
+    {{- with index . "cities" }}{{ $cityCount = add $cityCount (len .) }}{{ end -}}
+    {{- with index . "featured_places" }}{{ $featuredCount = add $featuredCount (len .) }}{{ end -}}
+{{- end -}}
+
+<header class="tour-hero">
+    <div class="page-frame tour-hero-grid">
+        <div>
+            <p class="eyebrow">Grand Tour</p>
+            <h1>{{ .Title }}</h1>
+            <p>{{ .Description }}</p>
+        </div>
+        <dl class="tour-stats">
+            <div><dt>{{ i18n "countriesVisited" }}</dt><dd>{{ len $countries }}</dd></div>
+            <div><dt>{{ i18n "featuredPlaces" }}</dt><dd>{{ $featuredCount }}</dd></div>
+            <div><dt>{{ i18n "citiesExplored" }}</dt><dd>{{ $cityCount }}</dd></div>
+        </dl>
+    </div>
+</header>
+
+<section class="page-frame map-section section-space" data-map-language="{{ .Language.Lang }}" data-map-error="{{ i18n "mapUnavailable" }}" data-map-loading="{{ i18n "mapLoading" }}" data-map-data="{{ "data/countries.json" | relURL }}">
+    <div class="map-introduction">
+        <div>
+            <p class="eyebrow">Map</p>
+            <h2>{{ i18n "loadMap" }}</h2>
+            <p>{{ i18n "mapExplanation" }}</p>
+        </div>
+        <button class="map-load-button" type="button" id="load-map">{{ i18n "loadMap" }}</button>
+    </div>
+    <p class="map-status" id="map-status" role="status" aria-live="polite"></p>
+    <div id="world-map" class="world-map" aria-label="{{ .Title }}" hidden></div>
+</section>
+
+<section class="page-frame regions-section section-space" aria-labelledby="regions-title">
+    <header class="section-heading">
+        <div>
+            <p class="eyebrow">Index</p>
+            <h2 id="regions-title">{{ i18n "placesByRegion" }}</h2>
+        </div>
+    </header>
+
+    <div class="region-list">
+        {{- range slice "亚洲" "欧洲" "美洲" "大洋洲" -}}
+            {{- $regionName := . -}}
+            {{- $regionCountries := where $countries "region" $regionName -}}
+            {{- if gt (len $regionCountries) 0 -}}
+            {{- $firstCountry := index $regionCountries 0 -}}
+            {{- $displayRegion := cond (eq $.Language.Lang "en") (index $firstCountry "region_en") $regionName -}}
+            <details class="region-group">
+                <summary>
+                    <span>{{ $displayRegion }}</span>
+                    <span>{{ len $regionCountries }} {{ i18n "countries" }}</span>
+                </summary>
+                <div class="country-list">
+                    {{- range $regionCountries -}}
+                    {{- $countryName := cond (eq $.Language.Lang "en") (index . "country_en") (index . "country") -}}
+                    <article class="country-entry">
+                        <header>
+                            <h3>{{ $countryName }}</h3>
+                            {{ with index . "visit_date" }}<p>{{ i18n "visited" }} {{ . }}</p>{{ end }}
+                        </header>
+                        {{ with index . "featured_places" }}
+                        {{ if gt (len .) 0 }}
+                        <div class="place-group">
+                            <h4>{{ i18n "featuredPlaces" }}</h4>
+                            <ul>
+                                {{ range . }}
+                                {{ $placeName := cond (eq $.Language.Lang "en") (index . "name_en") (index . "name") }}
+                                {{ $placeDescription := cond (eq $.Language.Lang "en") (index . "description_en") (index . "description") }}
+                                <li><strong>{{ $placeName }}</strong>{{ with $placeDescription }} — {{ . }}{{ end }}</li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                        {{ end }}
+                        {{ end }}
+                        {{ with index . "cities" }}
+                        {{ if gt (len .) 0 }}
+                        <div class="place-group">
+                            <h4>{{ i18n "cities" }}</h4>
+                            <ul class="city-list">
+                                {{ range . }}
+                                {{ $cityName := cond (eq $.Language.Lang "en") (index . "name_en") (index . "name") }}
+                                {{ $cityNote := cond (eq $.Language.Lang "en") (index . "note_en") (index . "note") }}
+                                <li><strong>{{ $cityName }}</strong>{{ with $cityNote }} — {{ . }}{{ end }}</li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                        {{ end }}
+                        {{ end }}
+                    </article>
+                    {{- end }}
+                </div>
+            </details>
+            {{- end }}
+        {{- end }}
+    </div>
+</section>
+{{ end }}

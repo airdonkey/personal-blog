@@ -1,13 +1,16 @@
 <footer class="site-footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-links">
-                {{ with .Site.Params.linkedin }}<a href="{{ . }}" target="_blank">LinkedIn</a>{{ end }}
-                {{ with .Site.Params.twitter }}<a href="{{ . }}" target="_blank">Twitter</a>{{ end }}
-                {{ with .Site.Params.github }}<a href="{{ . }}" target="_blank">GitHub</a>{{ end }}
-                {{ with .Site.Params.email }}<a href="mailto:{{ . }}">Email</a>{{ end }}
-            </div>
-            <p>&copy; {{ now.Year }} {{ .Site.Params.author }}. All rights reserved.</p>
+    <div class="page-frame footer-inner">
+        <div>
+            <a class="footer-name" href="{{ .Site.Home.RelPermalink }}">{{ .Site.Params.author }}</a>
+            <p>{{ .Site.Params.tagline }}</p>
         </div>
+        <nav class="footer-links" aria-label="Footer">
+            <a href="{{ printf "%sabout/" .Site.Home.RelPermalink }}">{{ i18n "aboutAuthor" }}</a>
+            <a href="mailto:{{ .Site.Params.email }}">{{ i18n "email" }}</a>
+            {{- with .Site.Home.OutputFormats.Get "RSS" }}
+            <a href="{{ .RelPermalink }}">{{ i18n "rss" }}</a>
+            {{- end }}
+        </nav>
+        <p class="copyright">&copy; {{ now.Year }} {{ .Site.Params.author }}. All rights reserved.</p>
     </div>
 </footer>

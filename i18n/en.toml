@@ -1,11 +1,11 @@
 [readingTime]
-other = "min read"
+other = "{{ .Count }} min read"
 
 [tags]
 other = "Tags"
 
 [backToArticles]
-other = "← Back to Articles"
+other = "Back to articles"
 
 [subscribe]
 other = "Subscribe"
@@ -27,3 +27,96 @@ other = "Recent Posts"
 
 [aboutAuthor]
 other = "About the Author"
+
+[skipToContent]
+other = "Skip to main content"
+
+[primaryNavigation]
+other = "Primary navigation"
+
+[openMenu]
+other = "Open menu"
+
+[closeMenu]
+other = "Close menu"
+
+[languageSwitcher]
+other = "Language selection"
+
+[latestWriting]
+other = "Latest writing"
+
+[latestWritingIntro]
+other = "Long-form writing on education, cross-cultural experience, astronomy, and learning."
+
+[featuredArticle]
+other = "Latest publication"
+
+[readArticle]
+other = "Read article"
+
+[viewAllArticles]
+other = "Browse all articles"
+
+[aboutThisSite]
+other = "About this site"
+
+[learnMore]
+other = "Learn more"
+
+[grandTourIntro]
+other = "Footprints across cultures and places, with observations gathered along the way."
+
+[exploreGrandTour]
+other = "Explore the Grand Tour"
+
+[articlesArchive]
+other = "A chronological index of published writing."
+
+[publishedOn]
+other = "Published"
+
+[previousArticle]
+other = "Previous"
+
+[nextArticle]
+other = "Next"
+
+[email]
+other = "Email"
+
+[rss]
+other = "RSS"
+
+[countriesVisited]
+other = "Countries visited"
+
+[featuredPlaces]
+other = "Featured places"
+
+[citiesExplored]
+other = "Cities explored"
+
+[loadMap]
+other = "Load interactive map"
+
+[mapLoading]
+other = "Loading the map…"
+
+[mapExplanation]
+other = "The map loads only when you choose it. The complete text index below works without a map or JavaScript."
+
+[mapUnavailable]
+other = "The interactive map could not load. You can still use the complete text index below."
+
+[placesByRegion]
+other = "Browse by region"
+
+[countries]
+other = "countries"
+
+[cities]
+other = "Cities"
+
+[visited]
+other = "Visited"

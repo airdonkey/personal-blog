@@ -1,89 +1,30 @@
 <header class="site-header">
-    <div class="container">
-        <div class="header-content">
-            <a href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/" class="site-logo">
-                <img src="{{ "images/badge.svg" | relURL }}" 
-                     alt="{{ .Site.Params.author }}" 
-                     class="nav-badge">
-                <span class="site-name">{{ .Site.Params.author }}</span>
-            </a>
-            
-            <div class="header-right">
-                <nav class="main-nav">
-                    <ul>
-                        {{ $currentPage := .RelPermalink }}
-                        {{ range .Site.Menus.main }}
-                        <li>
-                            <a href="{{ .URL }}" 
-                               class="{{ if eq $currentPage .URL }}active{{ end }}">
-                                {{ .Name }}
-                            </a>
-                        </li>
-                        {{ end }}
-                    </ul>
-                </nav>
-                
-                {{ partial "language-switcher.html" . }}
-            </div>
+    <div class="page-frame header-inner">
+        <a class="site-brand" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ .Site.Params.author }} — {{ .Site.Params.tagline }}">
+            <picture>
+                <source srcset="{{ "images/badge-96.webp" | relURL }}" type="image/webp">
+                <img class="brand-mark" src="{{ "images/badge-96.png" | relURL }}" width="42" height="42" alt="">
+            </picture>
+            <span>{{ .Site.Params.author }}</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="{{ i18n "openMenu" }}" data-open-label="{{ i18n "openMenu" }}" data-close-label="{{ i18n "closeMenu" }}">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </button>
+
+        <div class="header-actions" id="site-menu">
+            <nav class="main-nav" aria-label="{{ i18n "primaryNavigation" }}">
+                <ul>
+                    {{- $current := .RelPermalink -}}
+                    {{- range .Site.Menus.main }}
+                    {{- $active := or (eq $current .URL) (and (ne .URL $.Site.Home.RelPermalink) (hasPrefix $current .URL)) -}}
+                    <li><a href="{{ .URL }}"{{ if $active }} class="active" aria-current="page"{{ end }}>{{ .Name }}</a></li>
+                    {{- end }}
+                </ul>
+            </nav>
+            {{ partial "language-switcher.html" . }}
         </div>
     </div>
 </header>
-
-<style>
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: var(--space-lg);
-}
-
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        gap: var(--space-md);
-    }
-    
-    .header-right {
-        width: 100%;
-        justify-content: space-between;
-    }
-    
-    .main-nav ul {
-        gap: var(--space-md);
-    }
-}
-</style>
-
-<script>
-// 滚动时添加阴影效果
-(function() {
-    const header = document.querySelector('.site-header');
-    let lastScrollTop = 0;
-    
-    function updateHeaderOnScroll() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > 10) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-        
-        lastScrollTop = scrollTop;
-    }
-    
-    // 初始检查
-    updateHeaderOnScroll();
-    
-    // 滚动监听
-    let ticking = false;
-    window.addEventListener('scroll', function() {
-        if (!ticking) {
-            window.requestAnimationFrame(function() {
-                updateHeaderOnScroll();
-                ticking = false;
-            });
-            ticking = true;
-        }
-    });
-})();
-</script>

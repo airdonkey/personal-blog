@@ -1,107 +1,113 @@
 # Zhou Penglong Personal Website
 
-🌐 **网站地址:** [https://zhoupenglong.com](https://zhoupenglong.com)
+个人双语网站：[zhoupenglong.com](https://zhoupenglong.com)。内容以长篇写作、个人履历和 Grand Tour 为主，不用于推广辅导业务。
 
-## 📖 简介
+## 技术与版本
 
-个人博客网站，记录跨文化观察与终身学习。
+- Hugo `0.165.0`
+- 自定义 Hugo templates（不依赖外部 theme）
+- GitHub 版本管理
+- Cloudflare Pages 构建与托管
+- 中文路径 `/zh/`，英文路径 `/en/`
 
-- 🌍 中英双语支持
-- 🗺️ Grand Tour 游历功能（交互式地图）
-- 📱 响应式设计
+## 本地预览
 
-## 🛠️ 技术栈
+先确认 Git 与 Hugo 已安装：
 
-- **框架:** Hugo 静态网站生成器
-- **托管:** Cloudflare Pages
-- **语言:** 中文 / English
+```bash
+git --version
+hugo version
+```
 
-## 🚀 本地开发
+启动本地预览：
 
-### 预览网站
 ```bash
 hugo server -D
 ```
 
-访问: http://localhost:1313
+浏览器打开 `http://localhost:1313/zh/`。提交前运行生产构建：
 
-### 创建新文章
+```bash
+hugo --gc --minify
+```
 
-在 `content/posts/` 目录创建文件：
+生成的 `public/` 已被 `.gitignore` 忽略，不应提交。
 
-**中文版 (`your-article.zh.md`):**
-```markdown
+## 新文章
+
+中英文版本放在 `content/posts/`，文件主名相同、语言后缀不同：
+
+```text
+content/posts/20260819-example.zh.md
+content/posts/20260819-example.en.md
+```
+
+Front matter 示例：
+
+```yaml
 ---
 title: "文章标题"
-date: 2026-04-15
-tags: ["标签1", "标签2"]
+date: 2026-08-19
+description: "用于列表页和搜索结果的简短说明。"
+tags: ["教育", "天文"]
 ---
-
-文章内容...
 ```
 
-**英文版 (`your-article.en.md`):**
-```markdown
----
-title: "Article Title"
-date: 2026-04-15
-tags: ["tag1", "tag2"]
----
+只有中文稿时也可以先发布中文文件；语言切换器会回到另一语言的首页，不会产生失效链接。
 
-Article content...
-```
+## 安全更新流程
 
-## 📦 部署
+每次修改都从最新 `main` 建立独立分支：
 
-### 推送到 GitHub
 ```bash
-.\publish.bat
+git switch main
+git pull --ff-only origin main
+git switch -c content/short-description
+hugo server -D
+hugo --gc --minify
+git status --short
+git add path/to/changed-file
+git commit -m "Update article title"
+git push -u origin content/short-description
 ```
 
-Cloudflare Pages 会自动构建并部署（约2-3分钟）。
+然后在 GitHub 创建 Pull Request，检查文件变化后合并到 `main`。Cloudflare Pages 只需监听 `main`，合并后会自动部署。
 
-## 🗺️ Grand Tour 功能
+Windows 用户也可运行 `publish.bat`。脚本会先构建、显示待提交文件并要求确认；在非 `main` 分支运行时，它只推送分支，不会直接发布生产站点。
 
-交互式地图展示访问过的42个国家和特色地点。
+## Cloudflare Pages 设置
 
-### 添加地图照片
-```bash
-python add-image.py
+在 Cloudflare Dashboard 的 Pages 项目中确认：
+
+| Setting | Value |
+|---|---|
+| Production branch | `main` |
+| Build command | `hugo --gc --minify` |
+| Build output directory | `public` |
+| Root directory | 留空 |
+| Environment variable | `HUGO_VERSION=0.165.0` |
+
+建议在 Production 和 Preview 两个环境都设置同一个 `HUGO_VERSION`。
+
+## 主要文件
+
+```text
+config.toml                 # 双语站点配置与导航
+content/                    # 文章及静态页面内容
+layouts/                    # 首页、文章、列表、About、Grand Tour templates
+i18n/                       # 中英文界面文本
+static/css/style.css        # 全站设计系统
+static/css/grand-tour.css   # Grand Tour 样式
+static/js/site.js           # 移动导航
+static/js/grand-tour.js     # 按需加载的互动地图
+data/countries.json         # Hugo 构建时使用的游历数据
+static/data/countries.json  # 浏览器地图使用的同一份数据
+static/images/profile.*     # 头像
+assets/brand/               # 不直接发布的品牌源文件
 ```
 
-详见: `SOP-1-添加Grand-Tour图片.md`
+编辑 Grand Tour 数据时，`data/countries.json` 与 `static/data/countries.json` 必须保持完全一致。
 
-## 📁 项目结构
-
-```
-professional-blog/
-├── content/          # 页面内容
-│   ├── posts/       # 文章
-│   ├── about.*      # 关于页面
-│   ├── contact.*    # 联系页面
-│   └── grand-tour.* # 游历页面
-├── layouts/         # 布局模板
-├── static/          # 静态资源
-│   ├── css/         # 样式表
-│   ├── images/      # 图片
-│   └── data/        # 数据文件
-├── i18n/            # 国际化配置
-└── config.toml      # 网站配置
-```
-
-## 🎨 自定义
-
-### 修改网站信息
-编辑 `config.toml`:
-```toml
-[languages.zh.params]
-  author = "你的名字"
-  description = "你的描述"
-```
-
-### 修改样式
-编辑 `static/css/style.css`
-
-## 📝 许可
+## 许可
 
 © 2026 Zhou Penglong. All rights reserved.

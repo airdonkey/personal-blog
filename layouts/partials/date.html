@@ -1,0 +1,5 @@
+{{- if eq .Language.Lang "zh" -}}
+    {{- .Date.Format "2006年1月2日" -}}
+{{- else -}}
+    {{- .Date.Format "2 January 2006" -}}
+{{- end -}}
