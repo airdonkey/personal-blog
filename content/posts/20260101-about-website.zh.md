@@ -1,7 +1,11 @@
 ---
 title: "我想做什么"
 date: 2026-01-27
+language: zh
+urlSlug: about-website
+draft: false
 tags: []
+translationKey: about-website
 ---
 
 这个网站的存在，是我书面记录个人观察与思考的开始。

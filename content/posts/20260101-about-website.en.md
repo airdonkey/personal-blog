@@ -1,7 +1,11 @@
 ---
 title: "What I Hope to Achieve"
 date: 2026-01-27
+language: en
+urlSlug: about-website
+draft: false
 tags: []
+translationKey: about-website
 ---
 
 This site serves as a dedicated space for me to document my personal observations and reflections.

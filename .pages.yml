@@ -1,0 +1,105 @@
+media:
+  - name: article_images
+    label: 文章图片 / Article images
+    input: static/images/articles
+    output: /images/articles
+    rename: safe
+    categories: [image]
+
+content:
+  - name: articles
+    label: 文章 / Articles
+    type: collection
+    path: content/posts
+    format: yaml-frontmatter
+    exclude:
+      - _index.zh.md
+      - _index.en.md
+    subfolders: false
+    filename:
+      template: "{date}-{urlSlug}.{language}.md"
+      field: false
+    operations:
+      create: true
+      rename: true
+      delete: true
+    view:
+      fields: [title, date, language, draft]
+      primary: title
+      sort: [date, title]
+      search: [title, description, tags]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: 标题 / Title
+        type: string
+        required: true
+      - name: date
+        label: 发布日期 / Publication date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: language
+        label: 语言 / Language
+        type: select
+        required: true
+        options:
+          values:
+            - name: zh
+              label: 中文
+            - name: en
+              label: English
+      - name: urlSlug
+        label: 网址英文短名 / URL slug
+        type: string
+        required: true
+        description: 只用小写英文字母、数字和连字符，例如 ai-and-education。发布后尽量不要修改，以保持链接稳定。
+        pattern:
+          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          message: 请使用小写英文字母、数字和连字符，例如 ai-and-education。
+      - name: draft
+        label: 保存为草稿 / Save as draft
+        type: boolean
+        default: true
+      - name: description
+        label: 摘要 / Summary
+        type: text
+        required: false
+        options:
+          minlength: 20
+          maxlength: 220
+      - name: tags
+        label: 标签 / Tags
+        type: string
+        list: true
+        required: false
+      - name: translationKey
+        label: 双语关联键 / Translation key
+        type: string
+        required: false
+        description: 中英文版本填写相同的简短英文键；只有一个语言版本时可留空。
+        pattern: "^[a-z0-9-]*$"
+      - name: body
+        label: 正文 / Body
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          switcher: true
+          media: article_images
+          rename: safe
+
+settings:
+  hide: true
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      create: "Create article: {filename}"
+      update: "Update article: {filename}"
+      delete: "Delete article: {filename}"
+      rename: "Rename article: {oldFilename} -> {newFilename}"
