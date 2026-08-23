@@ -1,6 +1,7 @@
 baseURL = "https://zhoupenglong.com/"
 defaultContentLanguage = "zh"
 defaultContentLanguageInSubdir = true
+timeZone = "Pacific/Auckland"
 enableRobotsTXT = true
 summaryLength = 36
 
