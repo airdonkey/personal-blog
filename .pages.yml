@@ -61,7 +61,7 @@ content:
           regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
           message: 请使用小写英文字母、数字和连字符，例如 ai-and-education。
       - name: draft
-        label: 保存为草稿 / Save as draft
+        label: 草稿 / Draft
         type: boolean
         default: true
       - name: description
@@ -99,7 +99,7 @@ settings:
   commit:
     identity: user
     templates:
-      create: "Create article: {filename}"
-      update: "Update article: {filename}"
-      delete: "Delete article: {filename}"
-      rename: "Rename article: {oldFilename} -> {newFilename}"
+      create: "CMS: create {filename}"
+      update: "CMS: update {filename}"
+      delete: "CMS: delete {filename}"
+      rename: "CMS: rename {oldFilename} -> {newFilename}"
