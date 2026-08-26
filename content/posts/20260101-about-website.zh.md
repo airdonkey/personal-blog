@@ -4,7 +4,10 @@ date: 2026-01-27
 language: zh
 urlSlug: about-website
 draft: false
-tags: []
+description: "这个网站从哪里出发，以及我为什么想长期记录跨文化教育、学习与一个普通人的改变。"
+tags: ["写作", "终身学习"]
+series: "self-building"
+readerQuestion: "如果你也想长期记录自己的生活，你最希望留下什么？"
 translationKey: about-website
 ---
 

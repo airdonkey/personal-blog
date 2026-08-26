@@ -4,7 +4,10 @@ date: 2026-01-27
 language: en
 urlSlug: about-website
 draft: false
-tags: []
+description: "Where this site began, and why I want to keep writing about cross-cultural education, learning, and an ordinary life in motion."
+tags: ["writing", "lifelong learning"]
+series: "self-building"
+readerQuestion: "If you began documenting your own life for the long term, what would you most want to preserve?"
 translationKey: about-website
 ---
 

@@ -47,7 +47,7 @@ other = "Language selection"
 other = "Latest writing"
 
 [latestWritingIntro]
-other = "Long-form writing on education, cross-cultural experience, astronomy, and learning."
+other = "Long-form writing on migration, career change, effort, and rebuilding a life."
 
 [featuredArticle]
 other = "Latest publication"
@@ -65,7 +65,7 @@ other = "About this site"
 other = "Learn more"
 
 [grandTourIntro]
-other = "Footprints across cultures and places, with observations gathered along the way."
+other = "Forty-two countries—not as a scorecard, but as places where a life kept changing coordinates."
 
 [exploreGrandTour]
 other = "Explore the Grand Tour"
@@ -120,3 +120,72 @@ other = "Cities"
 
 [visited]
 other = "Visited"
+
+[authorJournal]
+other = "Personal writing"
+
+[readLatestWriting]
+other = "Start reading"
+
+[exploreThemes]
+other = "Explore the themes"
+
+[editorialPromise]
+other = "This writing practice"
+
+[editorialPromiseText]
+other = "Each essay begins with lived experience and stays with one question worth asking more than once."
+
+[writingMap]
+other = "Writing map"
+
+[recurringQuestions]
+other = "Four questions I keep returning to"
+
+[viewAllThemes]
+other = "Enter the themes"
+
+[livedExperience]
+other = "The work behind the writing"
+
+[workBehindWriting]
+other = "Writing grounded in work and migration"
+
+[workBehindWritingText]
+other = "From financial institutions in Beijing and international development work in Central Asia to New Zealand classrooms, astronomy organisations, and computing study—these are not a list of topics, but the material through which I examine how ordinary people are shaped by their times and learn to choose again."
+
+[viewPractice]
+other = "View practice and experience"
+
+[themeInProgress]
+other = "Writing in this theme is in progress."
+
+[questionsAhead]
+other = "Questions this theme will continue to explore"
+
+[publishedInTheme]
+other = "Published in this theme"
+
+[continueConversation]
+other = "Continue the conversation"
+
+[defaultReaderQuestion]
+other = "Which part of your own life did this essay bring back to you?"
+
+[conversationInvitation]
+other = "If you would like to share it, write to me. Thoughtful reader responses also help shape what I write next."
+
+[writeToMe]
+other = "Write to me"
+
+[sameTheme]
+other = "Continue with this theme"
+
+[themes]
+other = "Themes"
+
+[practice]
+other = "Practice"
+
+[contact]
+other = "Contact"

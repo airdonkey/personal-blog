@@ -47,7 +47,7 @@ other = "语言选择"
 other = "最新文章"
 
 [latestWritingIntro]
-other = "关于教育、跨文化经验、天文与学习的长期写作。"
+other = "关于迁徙、职业转换、努力与自我建造的长期写作。"
 
 [featuredArticle]
 other = "最新发布"
@@ -65,7 +65,7 @@ other = "关于这个网站"
 other = "了解更多"
 
 [grandTourIntro]
-other = "跨越不同文化与地域的足迹，以及旅途中留下的观察。"
+other = "跨越42个国家的足迹，不是成就清单，而是一个人不断改变坐标的现场。"
 
 [exploreGrandTour]
 other = "查看游历地图"
@@ -120,3 +120,72 @@ other = "城市"
 
 [visited]
 other = "到访"
+
+[authorJournal]
+other = "个人写作"
+
+[readLatestWriting]
+other = "开始阅读"
+
+[exploreThemes]
+other = "查看写作主题"
+
+[editorialPromise]
+other = "这项写作"
+
+[editorialPromiseText]
+other = "从真实经历出发，每次只回答一个值得反复追问的问题。"
+
+[writingMap]
+other = "写作地图"
+
+[recurringQuestions]
+other = "我反复追问的四个问题"
+
+[viewAllThemes]
+other = "进入主题页"
+
+[livedExperience]
+other = "履历背后的现场"
+
+[workBehindWriting]
+other = "写作从真实工作与迁徙中生长"
+
+[workBehindWritingText]
+other = "从北京的金融机构、中亚的国际发展工作，到新西兰的学校、天文组织与计算机课堂；这些经历不是栏目清单，而是我理解普通人如何被时代塑造、又如何重新选择自己的材料。"
+
+[viewPractice]
+other = "查看实践与经历"
+
+[themeInProgress]
+other = "这个主题正在持续写作中。"
+
+[questionsAhead]
+other = "接下来的文章将从这些问题展开"
+
+[publishedInTheme]
+other = "已经写下"
+
+[continueConversation]
+other = "继续对话"
+
+[defaultReaderQuestion]
+other = "这篇文章让你想起了自己的哪段经历？"
+
+[conversationInvitation]
+other = "如果你愿意分享，欢迎写信给我。真正的读者回应，也会帮助我决定下一步写什么。"
+
+[writeToMe]
+other = "写信给我"
+
+[sameTheme]
+other = "继续阅读这个主题"
+
+[themes]
+other = "主题"
+
+[practice]
+other = "实践"
+
+[contact]
+other = "联系"

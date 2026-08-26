@@ -1,0 +1,48 @@
+{{ define "main" }}
+{{- $posts := (where .Site.RegularPages "Section" "posts").ByDate.Reverse -}}
+{{- $themes := index hugo.Data.themes .Site.Language.Lang -}}
+
+<header class="page-header themes-header">
+    <div class="page-frame narrow-header">
+        <p class="eyebrow">{{ i18n "writingMap" }}</p>
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    </div>
+</header>
+
+<div class="page-frame themes-page section-space">
+    {{ with .Content }}<div class="themes-introduction prose static-prose">{{ . }}</div>{{ end }}
+    <div class="theme-index">
+        {{ range $themes }}
+        {{- $theme := . -}}
+        {{- $themePosts := where $posts "Params.series" $theme.key -}}
+        <section class="theme-panel" id="{{ $theme.key }}" aria-labelledby="theme-{{ $theme.key }}">
+            <div class="theme-panel-number" aria-hidden="true">{{ $theme.number }}</div>
+            <div class="theme-panel-main">
+                <h2 id="theme-{{ $theme.key }}">{{ $theme.title }}</h2>
+                <p class="theme-description">{{ $theme.description }}</p>
+                <p class="theme-question">{{ $theme.question }}</p>
+                <p class="theme-foundation">{{ $theme.foundation }}</p>
+                <div class="theme-angles">
+                    <h3>{{ i18n "questionsAhead" }}</h3>
+                    <ul>
+                        {{ range $theme.angles }}<li>{{ . }}</li>{{ end }}
+                    </ul>
+                </div>
+                {{ if gt (len $themePosts) 0 }}
+                <div class="theme-posts">
+                    <p class="theme-posts-label">{{ i18n "publishedInTheme" }}</p>
+                    {{ range first 3 $themePosts }}
+                    <article>
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ partial "date.html" . }}</time>
+                        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    </article>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </section>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
