@@ -71,11 +71,41 @@ content:
         options:
           minlength: 20
           maxlength: 220
+      - name: workingThesis
+        label: 这篇只想说清的一句话 / Working thesis
+        type: text
+        required: false
+        description: 仅供写作时聚焦使用，不会显示在网站上。先写判断，再开始正文。
+        options:
+          maxlength: 240
       - name: tags
         label: 标签 / Tags
         type: string
         list: true
         required: false
+      - name: series
+        label: 长期主题 / Writing theme
+        type: select
+        required: true
+        default: self-building
+        description: 每篇文章只进入一个长期主题，避免栏目越建越多。
+        options:
+          values:
+            - name: self-building
+              label: 无名者的自我建造 / The work of rebuilding
+            - name: migration
+              label: 迁徙与重新命名 / Migration and being renamed
+            - name: work-and-learning
+              label: 职业转换与终身学习 / Career change and lifelong learning
+            - name: education-and-technology
+              label: 教育、技术与人的尺度 / Education, technology, and human scale
+      - name: readerQuestion
+        label: 文末读者问题 / Reader question
+        type: text
+        required: false
+        description: 用一个具体问题邀请读者回应；留空时网站会使用默认问题。
+        options:
+          maxlength: 180
       - name: translationKey
         label: 双语关联键 / Translation key
         type: string
@@ -86,11 +116,161 @@ content:
         label: 正文 / Body
         type: rich-text
         required: true
+        default: |
+          ## 从一个具体场景开始
+
+          写下当时在哪里、发生了什么，以及你首先注意到的细节。先不要解释道理。
+
+          ## 我真正想说的一句话
+
+          这件事改变或印证了你的什么判断？这一篇只保留一个核心判断。
+
+          ## 事情没有那么简单
+
+          写出与你的判断相反的一面、结构限制，或者你自己仍然无法回答的问题。
+
+          ## 它对普通人意味着什么
+
+          从个人经历回到读者：为什么一个没有相同经历的人仍然值得读完？
+
+          ## 留下一个问题
+
+          用一个具体问题结束，并把同一个问题填写到上方的“文末读者问题”。
         options:
           format: markdown
           switcher: true
           media: article_images
           rename: safe
+
+  - name: site_pages
+    label: 固定页面 / Core pages
+    type: group
+    items:
+      - name: profile_zh
+        label: 中文个人简介
+        type: file
+        path: content/about.zh.md
+        format: yaml-frontmatter
+        fields:
+          - name: title
+            label: 页面标题
+            type: string
+            readonly: true
+          - name: description
+            label: 搜索与分享摘要
+            type: text
+            required: true
+          - name: shortTitle
+            label: 首页简介标题
+            type: string
+            required: true
+          - name: shortBio
+            label: 首页短简介
+            type: text
+            required: true
+            description: 首页使用。尽量控制在三句话内；详细内容继续写在正文。
+          - name: type
+            type: string
+            hidden: true
+          - name: layout
+            type: string
+            hidden: true
+          - name: translationKey
+            type: string
+            hidden: true
+          - name: body
+            label: 完整个人简介
+            type: rich-text
+            required: true
+            options:
+              format: markdown
+              switcher: true
+              media: article_images
+
+      - name: profile_en
+        label: English profile
+        type: file
+        path: content/about.en.md
+        format: yaml-frontmatter
+        fields:
+          - name: title
+            label: Page title
+            type: string
+            readonly: true
+          - name: description
+            label: Search and sharing summary
+            type: text
+            required: true
+          - name: shortTitle
+            label: Homepage profile heading
+            type: string
+            required: true
+          - name: shortBio
+            label: Homepage short profile
+            type: text
+            required: true
+          - name: type
+            type: string
+            hidden: true
+          - name: layout
+            type: string
+            hidden: true
+          - name: translationKey
+            type: string
+            hidden: true
+          - name: body
+            label: Full profile
+            type: rich-text
+            required: true
+            options:
+              format: markdown
+              switcher: true
+              media: article_images
+
+      - name: supporting_pages
+        label: 其他栏目页面 / Supporting pages
+        type: collection
+        path: content
+        format: yaml-frontmatter
+        subfolders: false
+        exclude:
+          - about.zh.md
+          - about.en.md
+        operations:
+          create: false
+          rename: false
+          delete: false
+        view:
+          fields: [title, description]
+          primary: title
+          sort: [title]
+          search: [title, description]
+        fields:
+          - name: title
+            label: 标题 / Title
+            type: string
+            readonly: true
+          - name: description
+            label: 页面简介 / Description
+            type: text
+            required: false
+          - name: type
+            type: string
+            hidden: true
+          - name: layout
+            type: string
+            hidden: true
+          - name: translationKey
+            type: string
+            hidden: true
+          - name: body
+            label: 页面正文 / Page body
+            type: rich-text
+            required: false
+            options:
+              format: markdown
+              switcher: true
+              media: article_images
 
 settings:
   hide: true

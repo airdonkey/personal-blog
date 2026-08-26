@@ -17,6 +17,7 @@
                 <div class="archive-meta">
                     <time datetime="{{ .Date.Format "2006-01-02" }}">{{ partial "date.html" . }}</time>
                     <span>{{ i18n "readingTime" (dict "Count" .ReadingTime) }}</span>
+                    {{ if .Params.series }}<span class="series-label">{{ partial "series-label.html" . }}</span>{{ end }}
                 </div>
                 <div>
                     <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>

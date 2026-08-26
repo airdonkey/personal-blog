@@ -1,8 +1,17 @@
 {{ define "main" }}
+{{- $series := .Params.series -}}
+{{- $related := slice -}}
+{{- if $series -}}
+    {{- $related = where (where .Site.RegularPages "Section" "posts") "Params.series" $series -}}
+    {{- $related = where $related "RelPermalink" "ne" .RelPermalink -}}
+{{- end -}}
 <article class="article-page">
     <header class="article-hero">
         <div class="reading-frame">
             <a class="back-link" href="{{ .CurrentSection.RelPermalink }}">{{ i18n "backToArticles" }}</a>
+            {{ if $series }}
+            <a class="article-series" href="{{ printf "%sthemes/#%s" .Site.Home.RelPermalink $series }}">{{ partial "series-label.html" . }}</a>
+            {{ end }}
             <div class="article-meta">
                 {{ if not .Date.IsZero }}
                 <time datetime="{{ .Date.Format "2006-01-02" }}">{{ partial "date.html" . }}</time>
@@ -22,6 +31,30 @@
     <div class="reading-frame prose">
         {{ .Content }}
     </div>
+
+    <aside class="reading-frame article-afterword" aria-labelledby="continue-conversation-title">
+        <p class="eyebrow">{{ i18n "continueConversation" }}</p>
+        <h2 id="continue-conversation-title">
+            {{ with .Params.readerQuestion }}{{ . }}{{ else }}{{ i18n "defaultReaderQuestion" }}{{ end }}
+        </h2>
+        <p>{{ i18n "conversationInvitation" }}</p>
+        <a class="text-link" href="mailto:{{ .Site.Params.email }}?subject={{ .Title | urlquery }}">{{ i18n "writeToMe" }}</a>
+    </aside>
+
+    {{ if gt (len $related) 0 }}
+    <section class="reading-frame related-writing" aria-labelledby="related-writing-title">
+        <p class="eyebrow">{{ i18n "sameTheme" }}</p>
+        <h2 id="related-writing-title">{{ partial "series-label.html" . }}</h2>
+        <div class="related-writing-list">
+            {{ range first 3 $related.ByDate.Reverse }}
+            <article>
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ partial "date.html" . }}</time>
+                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            </article>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
 
     <nav class="reading-frame article-navigation" aria-label="Article navigation">
         <a class="back-link" href="{{ .CurrentSection.RelPermalink }}">{{ i18n "backToArticles" }}</a>

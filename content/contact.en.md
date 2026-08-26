@@ -1,25 +1,20 @@
 ---
 title: "Contact"
-description: "For thoughtful conversations about education, astronomy, career transitions, and cross-cultural experience."
+description: "Write to me about an essay, a shared experience, or a thoughtful collaboration."
 type: "page"
+translationKey: "contact"
 ---
 
-Feel free to reach out if you're interested in discussing:
+If an essay brings back part of your own experience, I would be glad to hear about it. A real reader response helps this writing grow more than a passing reaction does.
 
-- Cross-cultural education experiences
-- Comparative education systems
-- Astronomy education and outreach
-- Career transition experiences
-- Living or working in Central Asia or New Zealand
+You are also welcome to contact me about:
+
+- migration, career change, and lifelong learning discussed in the essays
+- professional exchange in education, astronomy, or public service
+- clearly scoped writing, speaking, interview, or collaboration enquiries
 
 ## Email
 
 **contact[at]zhoupenglong[dot]com**
 
-## Response Time
-
-I typically respond within a few days. If your question requires deeper thought, it may take longer, but I'll acknowledge receipt.
-
-## About Social Media
-
-I'm not active on social media platforms. Email is the most effective way to reach me.
+I usually reply within a few days. If a message needs more thought, I will first confirm that I have received it.

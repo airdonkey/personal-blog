@@ -1,0 +1,111 @@
+[[zh]]
+key = "self-building"
+number = "01"
+title = "无名者的自我建造"
+description = "在资源并不公平的世界里，不神化努力，也不把自己交给宿命。"
+question = "一个普通人如何持续获得重新定义自己人生的权利？"
+foundation = "我对努力的理解经历过两次变化：年轻时相信它几乎可以解释一切，后来又看见资源、家庭背景和社会网络足以让同样的努力产生完全不同的结果。这个主题既不提供廉价的励志，也不把结构当作放弃行动的理由。它关心的是，没有现成筹码的人怎样把一次次微小行动变成作品、能力、声誉和选择权。"
+angles = [
+  "努力在哪些时刻仍然有效，又在哪些时刻会被结构吞没？",
+  "普通家庭出身的人，怎样把经历变成能够长期积累的个人资产？",
+  "抱负、家庭责任与有限精力发生冲突时，应该怎样安排人生？",
+  "怎样从不断替别人解题，走向为自己命题？"
+]
+
+[[zh]]
+key = "migration"
+number = "02"
+title = "迁徙与重新命名"
+description = "从中国到中亚，再到新西兰：迁徙如何改变身份、尺度与归属。"
+question = "当熟悉的坐标消失，我们靠什么重新认识自己？"
+foundation = "迁徙并不只是从一个国家搬到另一个国家。它会剥去原有的人脉、身份和熟练感，让一个成年人重新面对语言、制度与他人的判断。我想记录的既不是成功移民指南，也不是异国风情，而是人在离开熟悉坐标以后，怎样承受失重，又怎样在新的地方重新获得名字。"
+angles = [
+  "离开中国以前，我以为什么东西会跟着自己一起走？",
+  "在中亚工作，让我第一次看见了哪些制度与文化差异？",
+  "移居新西兰以后，哪些能力失效了，哪些能力反而开始生长？",
+  "一个人的故乡、归属与身份，究竟由什么构成？"
+]
+
+[[zh]]
+key = "work-and-learning"
+number = "03"
+title = "职业转换与终身学习"
+description = "从金融到教育，再到中年学习计算机：把变化变成一种长期能力。"
+question = "离开已经熟悉的道路之后，怎样再次成为初学者？"
+foundation = "职业转换最困难的部分，往往不是学习新知识，而是接受自己从熟练者重新变成笨拙的新手。从审计、信用风险和国际发展转向教育，再到四十岁以后学习计算机，我不断经历能力重新定价、身份重新解释和时间重新分配。这个主题记录的，是成年人怎样在现实责任之下继续生长。"
+angles = [
+  "一项曾经可靠的职业能力，为什么会在新的环境里突然贬值？",
+  "中年学习与年轻学习相比，真正的优势和障碍分别是什么？",
+  "怎样把零散兴趣变成可以交付的技能与作品？",
+  "如何判断一次转型是在逃避，还是在建立新的可能？"
+]
+
+[[zh]]
+key = "education-and-technology"
+number = "04"
+title = "教育、技术与人的尺度"
+description = "从真实课堂、人工智能与科学教育出发，观察技术怎样改变普通人的机会。"
+question = "工具越来越强大时，人仍然需要保留哪些不可外包的能力？"
+foundation = "我每天同时站在几种技术变化的交界处：作为教师，看学生怎样学习；作为计算机专业的初学者，体验人工智能怎样降低门槛；作为写作者，又感到表达能力正在被快速商品化。这个主题不把技术简单写成威胁或救赎，而是追问：当工具重新分配能力与机会时，普通人怎样保留判断、经验和人的尺度。"
+angles = [
+  "AI能够润色所有人的表达以后，个人写作还剩下什么价值？",
+  "技术降低门槛的同时，会不会制造新的资源差距？",
+  "课堂里哪些能力可以交给工具，哪些必须由学生亲自形成？",
+  "天文学与通识教育为什么仍值得占据年轻人的时间？"
+]
+
+[[en]]
+key = "self-building"
+number = "01"
+title = "The work of rebuilding"
+description = "Living without inherited advantage: neither romanticising effort nor surrendering to fate."
+question = "How does an ordinary person retain the right to redefine a life?"
+foundation = "My understanding of effort changed twice. When I was young, I believed it explained almost everything; later I saw how resources, family background, and social networks could make equal effort produce radically unequal outcomes. This theme offers neither easy motivation nor structural inequality as a reason to stop acting. It asks how people without ready-made advantages can turn small repeated actions into work, capability, reputation, and choice."
+angles = [
+  "When does effort still work, and when is it overwhelmed by structure?",
+  "How can someone from an ordinary family turn experience into a compounding asset?",
+  "What happens when ambition, family responsibility, and limited energy collide?",
+  "How do we move from answering other people's questions to framing our own?"
+]
+
+[[en]]
+key = "migration"
+number = "02"
+title = "Migration and being renamed"
+description = "From China to Central Asia and New Zealand: how movement changes identity, scale, and belonging."
+question = "When familiar coordinates disappear, how do we learn to recognise ourselves again?"
+foundation = "Migration is more than movement between countries. It can strip away networks, status, and fluency, making an adult face language, institutions, and other people's judgements as a beginner. I am interested neither in a success manual nor in travel colour, but in what happens after familiar coordinates disappear: how a person bears that weightlessness and gradually earns a name again."
+angles = [
+  "Before leaving China, what did I assume would travel with me?",
+  "What did working in Central Asia first reveal about institutions and culture?",
+  "Which abilities lost value in New Zealand, and which began to grow?",
+  "What actually creates a sense of home, belonging, and identity?"
+]
+
+[[en]]
+key = "work-and-learning"
+number = "03"
+title = "Career change and lifelong learning"
+description = "From finance to education and learning computing in midlife: turning change into a durable capability."
+question = "After leaving a familiar path, how do we become beginners again?"
+foundation = "The hardest part of career change is often not learning new knowledge, but accepting the return from competence to awkward beginnerhood. Moving from audit, credit risk, and international development into education—and later learning computing after forty—has repeatedly forced me to reprice capability, reinterpret identity, and redistribute time. This theme follows how adults continue to grow while carrying real responsibilities."
+angles = [
+  "Why can a reliable professional ability suddenly lose value in a new environment?",
+  "What are the real advantages and obstacles of learning in midlife?",
+  "How can scattered interests become skills and work that can be delivered?",
+  "How do we tell the difference between escaping a career and building a new possibility?"
+]
+
+[[en]]
+key = "education-and-technology"
+number = "04"
+title = "Education, technology, and human scale"
+description = "Observations from classrooms, artificial intelligence, and science education."
+question = "As tools become more capable, which human abilities should never be outsourced?"
+foundation = "I work at several boundaries of technological change: as a teacher observing how students learn, as a computing beginner experiencing how AI lowers entry barriers, and as a writer watching fluent expression become increasingly commoditised. This theme treats technology as neither threat nor salvation. It asks how ordinary people preserve judgement, experience, and human scale while tools redistribute capability and opportunity."
+angles = [
+  "When AI can polish everyone's expression, what value remains in personal writing?",
+  "Can technology lower barriers while creating new forms of inequality?",
+  "Which classroom abilities can be delegated to tools, and which must be formed personally?",
+  "Why should astronomy and general education still claim a young person's time?"
+]

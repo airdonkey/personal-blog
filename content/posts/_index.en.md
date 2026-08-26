@@ -1,4 +1,4 @@
 ---
 title: "Articles"
-description: "Writing on education, cross-cultural experience, astronomy, and lifelong learning."
+description: "Essays grounded in lived experience: migration, career change, effort, education, and the work of rebuilding an ordinary life."
 ---

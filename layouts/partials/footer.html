@@ -5,8 +5,11 @@
             <p>{{ .Site.Params.tagline }}</p>
         </div>
         <nav class="footer-links" aria-label="Footer">
+            <a href="{{ printf "%sthemes/" .Site.Home.RelPermalink }}">{{ i18n "themes" }}</a>
+            <a href="{{ printf "%swork/" .Site.Home.RelPermalink }}">{{ i18n "practice" }}</a>
+            <a href="{{ printf "%sgrand-tour/" .Site.Home.RelPermalink }}">Grand Tour</a>
             <a href="{{ printf "%sabout/" .Site.Home.RelPermalink }}">{{ i18n "aboutAuthor" }}</a>
-            <a href="mailto:{{ .Site.Params.email }}">{{ i18n "email" }}</a>
+            <a href="{{ printf "%scontact/" .Site.Home.RelPermalink }}">{{ i18n "contact" }}</a>
             {{- with .Site.Home.OutputFormats.Get "RSS" }}
             <a href="{{ .RelPermalink }}">{{ i18n "rss" }}</a>
             {{- end }}

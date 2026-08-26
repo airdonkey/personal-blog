@@ -1,0 +1,7 @@
+{{- $key := .Params.series -}}
+{{- if $key -}}
+  {{- $themes := index hugo.Data.themes .Site.Language.Lang -}}
+  {{- range where $themes "key" $key -}}
+    {{- .title -}}
+  {{- end -}}
+{{- end -}}
