@@ -8,6 +8,7 @@
 </header>
 
 <div class="page-frame archive-shell section-space">
+    {{ partial "writing-lanes.html" (dict "page" . "active" "essays") }}
     {{ range .Pages.ByDate.Reverse.GroupByDate "2006" }}
     <section class="archive-year" aria-labelledby="year-{{ .Key }}">
         <h2 id="year-{{ .Key }}">{{ .Key }}</h2>
@@ -22,6 +23,13 @@
                 <div>
                     <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
                     <p>{{ .Summary | plainify | htmlUnescape | truncate 210 }}</p>
+                    {{ with .GetTerms "tags" }}
+                    <ul class="entry-tags" aria-label="{{ i18n "tags" }}">
+                        {{ range . }}
+                        <li><a href="{{ .RelPermalink }}">{{ partial "tag-info.html" (dict "key" .LinkTitle "site" $.Site) }}</a></li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
                 </div>
             </article>
             {{ end }}

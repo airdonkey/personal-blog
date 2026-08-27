@@ -1,0 +1,45 @@
+{{ define "main" }}
+<header class="page-header notes-header">
+    <div class="page-frame narrow-header">
+        <p class="eyebrow">{{ i18n "sidePaths" }}</p>
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+    </div>
+</header>
+
+<div class="page-frame archive-shell notes-shell section-space">
+    {{ partial "writing-lanes.html" (dict "page" . "active" "notes") }}
+    {{ with .Content }}<div class="notes-introduction prose static-prose">{{ . }}</div>{{ end }}
+
+    {{ if gt (len .Pages) 0 }}
+        {{ range .Pages.ByDate.Reverse.GroupByDate "2006" }}
+        <section class="archive-year" aria-labelledby="notes-year-{{ .Key }}">
+            <h2 id="notes-year-{{ .Key }}">{{ .Key }}</h2>
+            <div class="note-list">
+                {{ range .Pages }}
+                <article class="note-entry">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ partial "date.html" . }}</time>
+                    <div>
+                        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                        <p>{{ .Summary | plainify | htmlUnescape | truncate 160 }}</p>
+                        {{ with .GetTerms "tags" }}
+                        <ul class="entry-tags" aria-label="{{ i18n "tags" }}">
+                            {{ range . }}
+                            <li><a href="{{ .RelPermalink }}">{{ partial "tag-info.html" (dict "key" .LinkTitle "site" $.Site) }}</a></li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+                    </div>
+                </article>
+                {{ end }}
+            </div>
+        </section>
+        {{ end }}
+    {{ else }}
+        <div class="intentional-empty">
+            <p class="eyebrow">{{ i18n "firstNotes" }}</p>
+            <p>{{ i18n "firstNotesText" }}</p>
+        </div>
+    {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,11 @@
+{{- $site := .site -}}
+{{- $key := .key -}}
+{{- $field := .field | default "label" -}}
+{{- $fallback := dict "key" $key "label" (humanize $key) "description" "" "group" "curiosities" "order" 999 -}}
+{{- $items := index hugo.Data.tags $site.Language.Lang -}}
+{{- $matches := where $items "key" $key -}}
+{{- $item := $fallback -}}
+{{- if gt (len $matches) 0 -}}
+  {{- $item = index $matches 0 -}}
+{{- end -}}
+{{- index $item $field -}}

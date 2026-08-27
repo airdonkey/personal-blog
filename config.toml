@@ -40,6 +40,12 @@ summaryLength = 36
       url = "/zh/about/"
       weight = 4
 
+    [languages.zh.permalinks]
+      [languages.zh.permalinks.page]
+        journeys = "/grand-tour/:slug/"
+      [languages.zh.permalinks.section]
+        journeys = "/grand-tour/stories/"
+
   [languages.en]
     locale = "en-US"
     label = "English"
@@ -73,6 +79,12 @@ summaryLength = 36
       name = "About"
       url = "/en/about/"
       weight = 4
+
+    [languages.en.permalinks]
+      [languages.en.permalinks.page]
+        journeys = "/grand-tour/:slug/"
+      [languages.en.permalinks.section]
+        journeys = "/grand-tour/stories/"
 
 [taxonomies]
   tag = "tags"

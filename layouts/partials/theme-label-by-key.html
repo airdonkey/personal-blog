@@ -1,0 +1,8 @@
+{{- $site := .site -}}
+{{- $key := .key -}}
+{{- $label := humanize $key -}}
+{{- $themes := index hugo.Data.themes $site.Language.Lang -}}
+{{- range where $themes "key" $key -}}
+  {{- $label = .title -}}
+{{- end -}}
+{{- $label -}}

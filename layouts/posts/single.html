@@ -22,7 +22,9 @@
             {{ with .Description }}<p class="article-deck">{{ . }}</p>{{ end }}
             {{ with .GetTerms "tags" }}
             <ul class="article-tags" aria-label="{{ i18n "tags" }}">
-                {{ range . }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}
+                {{ range . }}
+                <li><a href="{{ .RelPermalink }}">{{ partial "tag-info.html" (dict "key" .LinkTitle "site" $.Site) }}</a></li>
+                {{ end }}
             </ul>
             {{ end }}
         </div>

@@ -44,13 +44,13 @@ other = "关闭菜单"
 other = "语言选择"
 
 [latestWriting]
-other = "最新文章"
+other = "主文"
 
 [latestWritingIntro]
 other = "关于迁徙、职业转换、努力与自我建造的长期写作。"
 
 [featuredArticle]
-other = "最新发布"
+other = "首页选读"
 
 [readArticle]
 other = "阅读全文"
@@ -65,7 +65,7 @@ other = "关于这个网站"
 other = "了解更多"
 
 [grandTourIntro]
-other = "跨越42个国家的足迹，不是成就清单，而是一个人不断改变坐标的现场。"
+other = "把有限的积蓄换成距离、陌生语言与亲眼所见。"
 
 [exploreGrandTour]
 other = "查看游历地图"
@@ -189,3 +189,159 @@ other = "实践"
 
 [contact]
 other = "联系"
+
+[recentEssays]
+other = "最近主文"
+
+[writingLanes]
+other = "写作入口"
+
+[essays]
+other = "主文"
+
+[essaysShort]
+other = "完整论述"
+
+[sidePaths]
+other = "小径"
+
+[sidePathsShort]
+other = "短札记与兴趣"
+
+[topicIndex]
+other = "话题"
+
+[topicIndexShort]
+other = "按具体事物相遇"
+
+[essaySingular]
+other = "主文"
+
+[sidePathSingular]
+other = "小径"
+
+[journeySingular]
+other = "旅程"
+
+[backToSidePaths]
+other = "返回小径"
+
+[firstNotes]
+other = "第一块路标已经立好"
+
+[firstNotesText]
+other = "这里已经为读书、影像、天文、地图与偶然想到的事留出位置。第一则札记不必完整，只需留下一个值得记住的细节。"
+
+[noteAfterword]
+other = "小径保存念头刚刚发生的时刻。如果它也碰到了你的经验，欢迎写信告诉我。"
+
+[previousNote]
+other = "上一篇小径"
+
+[nextNote]
+other = "下一篇小径"
+
+[workTopics]
+other = "工作与方法"
+
+[placeTopics]
+other = "生活过的地方"
+
+[curiosityTopics]
+other = "兴趣与好奇"
+
+[pieces]
+other = "篇"
+
+[topic]
+other = "话题"
+
+[sidePathsHomeTitle]
+other = "思想发生的现场"
+
+[sidePathsHomeText]
+other = "不是每个念头都需要成为长文。这里保存读书、影像、天文、地图与日常兴趣留下的短札记。"
+
+[viewAllNotes]
+other = "进入小径"
+
+[grandTourHomeText]
+other = "地图保存抵达，照片保存现场，游记保存看见以后发生的变化。"
+
+[atlasFirst]
+other = "先有坐标，再慢慢写成故事"
+
+[atlasFirstText]
+other = "旅程档案的结构已经准备好。每段经历都可以先留下一条记录，再逐步补成照片故事与完整游记。"
+
+[backToGrandTour]
+other = "返回 Grand Tour"
+
+[route]
+other = "路线"
+
+[photoEssay]
+other = "照片故事"
+
+[selectedPhotographs]
+other = "精选现场"
+
+[photographs]
+other = "张照片"
+
+[photoViewer]
+other = "照片查看器"
+
+[closePhoto]
+other = "关闭照片"
+
+[previousPhoto]
+other = "上一张照片"
+
+[nextPhoto]
+other = "下一张照片"
+
+[relatedWritingTheme]
+other = "这段旅程通向的长期母题"
+
+[fromJourneyToEssay]
+other = "从旅程继续思考"
+
+[continueInWriting]
+other = "相关主文"
+
+[previousJourney]
+other = "上一段旅程"
+
+[nextJourney]
+other = "下一段旅程"
+
+[whyTravel]
+other = "为什么出发"
+
+[enlargingTheWorld]
+other = "把有限的积蓄换成更大的世界"
+
+[journeysWritten]
+other = "已写旅程"
+
+[curatedJourneys]
+other = "精选旅程"
+
+[journeysThatChangedScale]
+other = "改变我观看尺度的旅程"
+
+[viewJourneyArchive]
+other = "浏览全部旅程"
+
+[chronology]
+other = "时间轴"
+
+[journeysThroughTime]
+other = "沿时间重走这些路"
+
+[atlas]
+other = "坐标档案"
+
+[completeIndex]
+other = "完整地名索引"

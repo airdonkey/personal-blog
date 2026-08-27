@@ -44,13 +44,13 @@ other = "Close menu"
 other = "Language selection"
 
 [latestWriting]
-other = "Latest writing"
+other = "Essays"
 
 [latestWritingIntro]
 other = "Long-form writing on migration, career change, effort, and rebuilding a life."
 
 [featuredArticle]
-other = "Latest publication"
+other = "Selected essay"
 
 [readArticle]
 other = "Read article"
@@ -65,7 +65,7 @@ other = "About this site"
 other = "Learn more"
 
 [grandTourIntro]
-other = "Forty-two countries—not as a scorecard, but as places where a life kept changing coordinates."
+other = "Turning limited savings into distance, unfamiliar languages, and things seen first-hand."
 
 [exploreGrandTour]
 other = "Explore the Grand Tour"
@@ -189,3 +189,159 @@ other = "Practice"
 
 [contact]
 other = "Contact"
+
+[recentEssays]
+other = "Recent essays"
+
+[writingLanes]
+other = "Writing pathways"
+
+[essays]
+other = "Essays"
+
+[essaysShort]
+other = "Developed arguments"
+
+[sidePaths]
+other = "Side Paths"
+
+[sidePathsShort]
+other = "Notes and curiosities"
+
+[topicIndex]
+other = "Topics"
+
+[topicIndexShort]
+other = "Meet through particulars"
+
+[essaySingular]
+other = "Essay"
+
+[sidePathSingular]
+other = "Side Path"
+
+[journeySingular]
+other = "Journey"
+
+[backToSidePaths]
+other = "Back to Side Paths"
+
+[firstNotes]
+other = "The first signpost is in place"
+
+[firstNotesText]
+other = "The structure is ready for books, film, astronomy, maps, and passing observations. The first note need not be complete; it only needs to preserve one detail worth keeping."
+
+[noteAfterword]
+other = "Side Paths preserve thoughts close to the moment they occur. If this one touched something in your own experience, you are welcome to write."
+
+[previousNote]
+other = "Previous Side Path"
+
+[nextNote]
+other = "Next Side Path"
+
+[workTopics]
+other = "Work and methods"
+
+[placeTopics]
+other = "Places lived"
+
+[curiosityTopics]
+other = "Interests and curiosities"
+
+[pieces]
+other = "pieces"
+
+[topic]
+other = "Topic"
+
+[sidePathsHomeTitle]
+other = "Where thoughts first take shape"
+
+[sidePathsHomeText]
+other = "Not every thought needs to become an essay. These shorter notes keep traces left by books, film, astronomy, maps, and everyday interests."
+
+[viewAllNotes]
+other = "Enter Side Paths"
+
+[grandTourHomeText]
+other = "The map preserves arrival, photographs preserve the scene, and travel writing preserves what changed after seeing it."
+
+[atlasFirst]
+other = "Coordinates first; stories can grow later"
+
+[atlasFirstText]
+other = "The journey archive is ready. Each experience can begin as a record, then gradually become a photo story or a complete travelogue."
+
+[backToGrandTour]
+other = "Back to Grand Tour"
+
+[route]
+other = "Route"
+
+[photoEssay]
+other = "Photo story"
+
+[selectedPhotographs]
+other = "Selected scenes"
+
+[photographs]
+other = "photographs"
+
+[photoViewer]
+other = "Photo viewer"
+
+[closePhoto]
+other = "Close photograph"
+
+[previousPhoto]
+other = "Previous photograph"
+
+[nextPhoto]
+other = "Next photograph"
+
+[relatedWritingTheme]
+other = "The longer theme this journey opens into"
+
+[fromJourneyToEssay]
+other = "Thinking beyond the journey"
+
+[continueInWriting]
+other = "Related essays"
+
+[previousJourney]
+other = "Previous journey"
+
+[nextJourney]
+other = "Next journey"
+
+[whyTravel]
+other = "Why leave"
+
+[enlargingTheWorld]
+other = "Turning limited savings into a larger world"
+
+[journeysWritten]
+other = "Journeys written"
+
+[curatedJourneys]
+other = "Selected journeys"
+
+[journeysThatChangedScale]
+other = "Journeys that changed my sense of scale"
+
+[viewJourneyArchive]
+other = "Browse all journeys"
+
+[chronology]
+other = "Chronology"
+
+[journeysThroughTime]
+other = "Retracing these routes through time"
+
+[atlas]
+other = "Atlas"
+
+[completeIndex]
+other = "Complete place index"

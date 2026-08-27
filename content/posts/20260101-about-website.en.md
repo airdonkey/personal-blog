@@ -2,11 +2,12 @@
 title: "What I Hope to Achieve"
 date: 2026-01-27
 language: en
-urlSlug: about-website
+slug: "20260101-about-website"
 draft: false
 description: "Where this site began, and why I want to keep writing about cross-cultural education, learning, and an ordinary life in motion."
-tags: ["writing", "lifelong learning"]
+tags: ["language-and-writing", "education"]
 series: "self-building"
+featured: true
 readerQuestion: "If you began documenting your own life for the long term, what would you most want to preserve?"
 translationKey: about-website
 ---

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{- $description := .Site.Params.description -}}
+    {{- $socialImage := "images/profile.jpg" | absURL -}}
+    {{- with .Params.heroImage -}}
+        {{- $socialImage = . | absURL -}}
+    {{- end -}}
     {{- if .Description -}}
         {{- $description = .Description -}}
     {{- else -}}
@@ -27,17 +31,17 @@
     <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">
     {{- end }}
 
-    <meta property="og:type" content="{{ if and (eq .Section "posts") (not .IsSection) }}article{{ else }}website{{ end }}">
+    <meta property="og:type" content="{{ if and (in (slice "posts" "notes" "journeys") .Section) (not .IsSection) }}article{{ else }}website{{ end }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
     <meta property="og:description" content="{{ $description }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:locale" content="{{ replace .Site.Language.Locale "-" "_" }}">
-    <meta property="og:image" content="{{ "images/profile.jpg" | absURL }}">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="{{ $socialImage }}">
+    <meta name="twitter:card" content="{{ if .Params.heroImage }}summary_large_image{{ else }}summary{{ end }}">
     <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
     <meta name="twitter:description" content="{{ $description }}">
-    <meta name="twitter:image" content="{{ "images/profile.jpg" | absURL }}">
+    <meta name="twitter:image" content="{{ $socialImage }}">
 
     <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32.png" | relURL }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
