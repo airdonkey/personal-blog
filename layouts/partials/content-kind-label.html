@@ -1,0 +1,7 @@
+{{- if eq .Section "notes" -}}
+  {{- i18n "sidePathSingular" -}}
+{{- else if eq .Section "journeys" -}}
+  {{- i18n "journeySingular" -}}
+{{- else -}}
+  {{- i18n "essaySingular" -}}
+{{- end -}}

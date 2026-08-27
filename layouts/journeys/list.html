@@ -1,0 +1,43 @@
+{{ define "head" }}
+<link rel="stylesheet" href="{{ "css/grand-tour.css" | relURL }}">
+{{ end }}
+
+{{ define "main" }}
+<header class="page-header journey-archive-header">
+    <div class="page-frame narrow-header">
+        <p class="eyebrow">Grand Tour</p>
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+    </div>
+</header>
+
+<div class="page-frame journey-archive section-space">
+    {{ with .Content }}<div class="journey-archive-intro prose static-prose">{{ . }}</div>{{ end }}
+    {{ if gt (len .Pages) 0 }}
+    <div class="journey-card-grid">
+        {{ range (.Pages.ByParam "journeyYear").Reverse }}
+        {{- $journey := . -}}
+        <article class="journey-card{{ if not .Params.heroImage }} journey-card-text{{ end }}">
+            {{ with .Params.heroImage }}
+            <a class="journey-card-image" href="{{ $journey.RelPermalink }}" aria-hidden="true" tabindex="-1">
+                <img src="{{ . | relURL }}" alt="" loading="lazy">
+            </a>
+            {{ end }}
+            <div class="journey-card-copy">
+                <p class="journey-period">{{ .Params.journeyPeriod }}</p>
+                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                <p>{{ .Description }}</p>
+                {{ with .Params.route }}<p class="journey-route">{{ . }}</p>{{ end }}
+            </div>
+        </article>
+        {{ end }}
+    </div>
+    {{ else }}
+    <div class="intentional-empty journey-empty">
+        <p class="eyebrow">{{ i18n "atlasFirst" }}</p>
+        <p>{{ i18n "atlasFirstText" }}</p>
+    </div>
+    {{ end }}
+    <a class="text-link journey-back-link" href="{{ printf "%sgrand-tour/" .Site.Home.RelPermalink }}">{{ i18n "backToGrandTour" }}</a>
+</div>
+{{ end }}

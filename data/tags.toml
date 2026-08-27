@@ -1,0 +1,223 @@
+[[zh]]
+key = "education"
+label = "教育"
+description = "课堂、教育制度、教学方法与人的成长。"
+group = "work"
+order = 1
+
+[[zh]]
+key = "work-and-organisations"
+label = "职业与组织"
+description = "职业选择、机构运行、工作关系与组织经验。"
+group = "work"
+order = 2
+
+[[zh]]
+key = "risk-and-decisions"
+label = "风险与决策"
+description = "金融、风险判断，以及人在不确定条件下如何选择。"
+group = "work"
+order = 3
+
+[[zh]]
+key = "technology-and-ai"
+label = "技术与 AI"
+description = "计算机、人工智能，以及工具如何重新分配能力。"
+group = "work"
+order = 4
+
+[[zh]]
+key = "language-and-writing"
+label = "语言与写作"
+description = "表达、语言学习、叙事与长期写作。"
+group = "work"
+order = 5
+
+[[zh]]
+key = "attention-and-time"
+label = "注意力与时间"
+description = "ADHD、执行功能、习惯与有限时间的使用。"
+group = "work"
+order = 6
+
+[[zh]]
+key = "china"
+label = "中国"
+description = "故乡、成长经验与中国社会。"
+group = "places"
+order = 7
+
+[[zh]]
+key = "central-asia"
+label = "中亚"
+description = "在中亚工作与生活所留下的观察。"
+group = "places"
+order = 8
+
+[[zh]]
+key = "new-zealand"
+label = "新西兰"
+description = "迁居、教育、社会与在南太平洋重新生活。"
+group = "places"
+order = 9
+
+[[zh]]
+key = "astronomy"
+label = "天文"
+description = "星空、科学教育与人在宇宙中的尺度。"
+group = "curiosities"
+order = 10
+
+[[zh]]
+key = "books-and-reading"
+label = "书与阅读"
+description = "读书札记，以及一本书留下的思想余波。"
+group = "curiosities"
+order = 11
+
+[[zh]]
+key = "history-and-civilisation"
+label = "历史与文明"
+description = "制度、文明与漫长时间如何塑造今天。"
+group = "curiosities"
+order = 12
+
+[[zh]]
+key = "film"
+label = "电影"
+description = "影像、人物、结构与银幕留下的世界。"
+group = "curiosities"
+order = 13
+
+[[zh]]
+key = "music"
+label = "音乐"
+description = "声音、演出与偶然触发的记忆。"
+group = "curiosities"
+order = 14
+
+[[zh]]
+key = "maps-and-geography"
+label = "地图与地理"
+description = "坐标、边界、地方与观看世界的方式。"
+group = "curiosities"
+order = 15
+
+[[zh]]
+key = "comics-and-imagination"
+label = "漫画与想象"
+description = "世界观、招式、群像与虚构秩序。"
+group = "curiosities"
+order = 16
+
+[[en]]
+key = "education"
+label = "Education"
+description = "Classrooms, education systems, teaching, and human growth."
+group = "work"
+order = 1
+
+[[en]]
+key = "work-and-organisations"
+label = "Work and organisations"
+description = "Career choices, institutions, working relationships, and organisational life."
+group = "work"
+order = 2
+
+[[en]]
+key = "risk-and-decisions"
+label = "Risk and decisions"
+description = "Finance, risk, and choosing under conditions of uncertainty."
+group = "work"
+order = 3
+
+[[en]]
+key = "technology-and-ai"
+label = "Technology and AI"
+description = "Computing, artificial intelligence, and how tools redistribute capability."
+group = "work"
+order = 4
+
+[[en]]
+key = "language-and-writing"
+label = "Language and writing"
+description = "Expression, language learning, narrative, and a long writing practice."
+group = "work"
+order = 5
+
+[[en]]
+key = "attention-and-time"
+label = "Attention and time"
+description = "ADHD, executive function, habit, and the use of limited time."
+group = "work"
+order = 6
+
+[[en]]
+key = "china"
+label = "China"
+description = "Home, formative experience, and Chinese society."
+group = "places"
+order = 7
+
+[[en]]
+key = "central-asia"
+label = "Central Asia"
+description = "Observations left by living and working in Central Asia."
+group = "places"
+order = 8
+
+[[en]]
+key = "new-zealand"
+label = "New Zealand"
+description = "Migration, education, society, and rebuilding a life in the South Pacific."
+group = "places"
+order = 9
+
+[[en]]
+key = "astronomy"
+label = "Astronomy"
+description = "The night sky, science education, and the human scale within the universe."
+group = "curiosities"
+order = 10
+
+[[en]]
+key = "books-and-reading"
+label = "Books and reading"
+description = "Reading notes and the afterlife of a book in the mind."
+group = "curiosities"
+order = 11
+
+[[en]]
+key = "history-and-civilisation"
+label = "History and civilisation"
+description = "How institutions, civilisations, and long time shape the present."
+group = "curiosities"
+order = 12
+
+[[en]]
+key = "film"
+label = "Film"
+description = "Images, characters, structure, and worlds encountered on screen."
+group = "curiosities"
+order = 13
+
+[[en]]
+key = "music"
+label = "Music"
+description = "Sound, performance, and the memories they unexpectedly release."
+group = "curiosities"
+order = 14
+
+[[en]]
+key = "maps-and-geography"
+label = "Maps and geography"
+description = "Coordinates, borders, place, and ways of seeing the world."
+group = "curiosities"
+order = 15
+
+[[en]]
+key = "comics-and-imagination"
+label = "Comics and imagination"
+description = "World-building, techniques, ensembles, and the order within fiction."
+group = "curiosities"
+order = 16

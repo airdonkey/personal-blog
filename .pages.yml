@@ -5,10 +5,97 @@ media:
     output: /images/articles
     rename: safe
     categories: [image]
+  - name: travel_images
+    label: 游历照片（网页版本）/ Grand Tour web images
+    input: static/images/travel
+    output: /images/travel
+    rename: safe
+    categories: [image]
+
+components:
+  language:
+    type: select
+    label: 语言 / Language
+    required: true
+    options:
+      values:
+        - name: zh
+          label: 中文
+        - name: en
+          label: English
+
+  url_slug:
+    type: string
+    label: 网址英文短名 / URL slug
+    required: true
+    description: 只用小写英文字母、数字和连字符。发布后尽量不要修改，以保持链接稳定。
+    pattern:
+      regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      message: 请使用小写英文字母、数字和连字符，例如 ai-and-education。
+
+  controlled_tags:
+    type: select
+    label: 具体话题（最多两个）/ Topics (maximum two)
+    required: false
+    description: 标签只回答“具体写了什么”。从固定词表选择；没有合适的可以留空，不要临时创造新标签。
+    options:
+      multiple: true
+      max: 2
+      placeholder: 选择零到两个具体话题
+      values:
+        - name: education
+          label: 专业｜教育 / Education
+        - name: work-and-organisations
+          label: 专业｜职业与组织 / Work and organisations
+        - name: risk-and-decisions
+          label: 专业｜风险与决策 / Risk and decisions
+        - name: technology-and-ai
+          label: 专业｜技术与 AI / Technology and AI
+        - name: language-and-writing
+          label: 方法｜语言与写作 / Language and writing
+        - name: attention-and-time
+          label: 方法｜注意力与时间 / Attention and time
+        - name: china
+          label: 地域｜中国 / China
+        - name: central-asia
+          label: 地域｜中亚 / Central Asia
+        - name: new-zealand
+          label: 地域｜新西兰 / New Zealand
+        - name: astronomy
+          label: 兴趣｜天文 / Astronomy
+        - name: books-and-reading
+          label: 兴趣｜书与阅读 / Books and reading
+        - name: history-and-civilisation
+          label: 兴趣｜历史与文明 / History and civilisation
+        - name: film
+          label: 兴趣｜电影 / Film
+        - name: music
+          label: 兴趣｜音乐 / Music
+        - name: maps-and-geography
+          label: 兴趣｜地图与地理 / Maps and geography
+        - name: comics-and-imagination
+          label: 兴趣｜漫画与想象 / Comics and imagination
+
+  writing_theme:
+    type: select
+    label: 长期母题 / Long-term theme
+    required: true
+    description: 主文只进入一个母题。若现在还无法选择，它更适合先写成“小径”，不必勉强拔高。
+    options:
+      placeholder: 选择这篇文章最终回答的一个长期问题
+      values:
+        - name: self-building
+          label: 无名者的自我建造 / The work of rebuilding
+        - name: migration
+          label: 迁徙与重新命名 / Migration and being renamed
+        - name: work-and-learning
+          label: 职业转换与终身学习 / Career change and lifelong learning
+        - name: education-and-technology
+          label: 教育、技术与人的尺度 / Education, technology, and human scale
 
 content:
   - name: articles
-    label: 文章 / Articles
+    label: 主文（完整论述）/ Essays
     type: collection
     path: content/posts
     format: yaml-frontmatter
@@ -17,14 +104,14 @@ content:
       - _index.en.md
     subfolders: false
     filename:
-      template: "{date}-{urlSlug}.{language}.md"
+      template: "{fields.date}-{fields.slug}.{fields.language}.md"
       field: false
     operations:
       create: true
       rename: true
       delete: true
     view:
-      fields: [title, date, language, draft]
+      fields: [title, date, language, featured, draft]
       primary: title
       sort: [date, title]
       search: [title, description, tags]
@@ -43,23 +130,9 @@ content:
         options:
           format: yyyy-MM-dd
       - name: language
-        label: 语言 / Language
-        type: select
-        required: true
-        options:
-          values:
-            - name: zh
-              label: 中文
-            - name: en
-              label: English
-      - name: urlSlug
-        label: 网址英文短名 / URL slug
-        type: string
-        required: true
-        description: 只用小写英文字母、数字和连字符，例如 ai-and-education。发布后尽量不要修改，以保持链接稳定。
-        pattern:
-          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-          message: 请使用小写英文字母、数字和连字符，例如 ai-and-education。
+        component: language
+      - name: slug
+        component: url_slug
       - name: draft
         label: 草稿 / Draft
         type: boolean
@@ -75,30 +148,18 @@ content:
         label: 这篇只想说清的一句话 / Working thesis
         type: text
         required: false
-        description: 仅供写作时聚焦使用，不会显示在网站上。先写判断，再开始正文。
+        description: 仅供写作时聚焦，不会显示在网站上。先写判断，再开始正文。
         options:
           maxlength: 240
-      - name: tags
-        label: 标签 / Tags
-        type: string
-        list: true
-        required: false
       - name: series
-        label: 长期主题 / Writing theme
-        type: select
-        required: true
-        default: self-building
-        description: 每篇文章只进入一个长期主题，避免栏目越建越多。
-        options:
-          values:
-            - name: self-building
-              label: 无名者的自我建造 / The work of rebuilding
-            - name: migration
-              label: 迁徙与重新命名 / Migration and being renamed
-            - name: work-and-learning
-              label: 职业转换与终身学习 / Career change and lifelong learning
-            - name: education-and-technology
-              label: 教育、技术与人的尺度 / Education, technology, and human scale
+        component: writing_theme
+      - name: tags
+        component: controlled_tags
+      - name: featured
+        label: 首页精选 / Homepage feature
+        type: boolean
+        default: false
+        description: 通常保持关闭。只为最能向新访客介绍你的3至5篇主文打开。
       - name: readerQuestion
         label: 文末读者问题 / Reader question
         type: text
@@ -140,6 +201,233 @@ content:
           format: markdown
           switcher: true
           media: article_images
+          rename: safe
+
+  - name: notes
+    label: 小径（短札记）/ Side Paths
+    type: collection
+    path: content/notes
+    format: yaml-frontmatter
+    exclude:
+      - _index.zh.md
+      - _index.en.md
+    subfolders: false
+    filename:
+      template: "{fields.date}-{fields.slug}.{fields.language}.md"
+      field: false
+    operations:
+      create: true
+      rename: true
+      delete: true
+    view:
+      fields: [title, date, language, draft]
+      primary: title
+      sort: [date, title]
+      search: [title, description, tags]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: 标题 / Title
+        type: string
+        required: true
+      - name: date
+        label: 发布日期 / Publication date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: language
+        component: language
+      - name: slug
+        component: url_slug
+      - name: draft
+        label: 草稿 / Draft
+        type: boolean
+        default: true
+      - name: description
+        label: 一句话说明（可留空）/ One-line summary (optional)
+        type: text
+        required: false
+        options:
+          maxlength: 180
+      - name: tags
+        component: controlled_tags
+      - name: translationKey
+        label: 双语关联键 / Translation key
+        type: string
+        required: false
+        description: 中英文版本填写相同的简短英文键；只有一个语言版本时可留空。
+        pattern: "^[a-z0-9-]*$"
+      - name: body
+        label: 正文 / Body
+        type: rich-text
+        required: true
+        default: |
+          ## 我注意到的细节
+
+          先写下触发这个念头的书、画面、声音、地方或一句话。
+
+          ## 它让我想到
+
+          只向前走一步：它与你的哪段经验或哪个问题发生了联系？写到这里就可以停下。
+        options:
+          format: markdown
+          switcher: true
+          media: article_images
+          rename: safe
+
+  - name: journeys
+    label: 旅程与照片故事 / Journeys and photo stories
+    type: collection
+    path: content/journeys
+    format: yaml-frontmatter
+    exclude:
+      - _index.zh.md
+      - _index.en.md
+    subfolders: false
+    filename:
+      template: "{fields.date}-{fields.slug}.{fields.language}.md"
+      field: false
+    operations:
+      create: true
+      rename: true
+      delete: true
+    view:
+      fields: [title, journeyYear, language, featured, draft]
+      primary: title
+      sort: [journeyYear, title]
+      search: [title, description, route]
+      default:
+        sort: journeyYear
+        order: desc
+    fields:
+      - name: title
+        label: 旅程标题 / Journey title
+        type: string
+        required: true
+      - name: date
+        label: 本页发布日期 / Page publication date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: language
+        component: language
+      - name: slug
+        component: url_slug
+      - name: draft
+        label: 草稿 / Draft
+        type: boolean
+        default: true
+      - name: description
+        label: 这段旅程为什么值得记住 / Why this journey matters
+        type: text
+        required: true
+        options:
+          maxlength: 240
+      - name: journeyYear
+        label: 旅程开始年份 / Journey start year
+        type: number
+        required: true
+        description: 只用于时间轴排序，例如2009。
+      - name: journeyPeriod
+        label: 对外显示的时间 / Public date label
+        type: string
+        required: true
+        description: 可以写“2009年10月”或“2016年1月—2017年5月”，不必编造具体日期。
+      - name: route
+        label: 路线 / Route
+        type: text
+        required: false
+        description: 按顺序填写，例如“曼谷 → 伊斯坦布尔 → 伊兹密尔 → 卡帕多奇亚”。
+        options:
+          maxlength: 320
+      - name: heroImage
+        label: 人工选定的主图 / Curated hero image
+        type: image
+        required: false
+        options:
+          media: travel_images
+          categories: [image]
+          rename: safe
+      - name: featured
+        label: Grand Tour 首页精选 / Feature on Grand Tour
+        type: boolean
+        default: false
+        description: 通常保持关闭；完整度最高、最能代表你的三段旅程才打开。
+      - name: relatedTheme
+        label: 相关长期母题（可留空）/ Related long-term theme (optional)
+        type: select
+        required: false
+        description: 只有联系自然时才选择，不需要把每段旅行强行拔高。
+        options:
+          values:
+            - name: self-building
+              label: 无名者的自我建造 / The work of rebuilding
+            - name: migration
+              label: 迁徙与重新命名 / Migration and being renamed
+            - name: work-and-learning
+              label: 职业转换与终身学习 / Career change and lifelong learning
+            - name: education-and-technology
+              label: 教育、技术与人的尺度 / Education, technology, and human scale
+      - name: gallery
+        label: 精选照片（建议8至20张）/ Curated photographs (8–20 recommended)
+        type: object
+        required: false
+        list:
+          max: 20
+          collapsible:
+            collapsed: true
+            summary: "{place} · {index}"
+        fields:
+          - name: image
+            label: 网页照片 / Web image
+            type: image
+            required: true
+            options:
+              media: travel_images
+              categories: [image]
+              rename: safe
+          - name: alt
+            label: 图片替代文字 / Alt text
+            type: string
+            required: true
+            description: 客观描述画面，供无法看图的读者理解。
+          - name: caption
+            label: 照片说明 / Caption
+            type: text
+            required: false
+          - name: place
+            label: 拍摄地点 / Place
+            type: string
+            required: false
+      - name: translationKey
+        label: 双语关联键 / Translation key
+        type: string
+        required: false
+        pattern: "^[a-z0-9-]*$"
+      - name: body
+        label: 游记正文 / Travelogue
+        type: rich-text
+        required: false
+        default: |
+          ## 抵达
+
+          从一个具体场景开始：光线、声音、天气、身体感受，或者一句当时听见的话。
+
+          ## 沿途
+
+          不必写成景点清单。选择两三个真正改变你观察方式的现场。
+
+          ## 当时的我，今天的我
+
+          当时怎样理解这段旅程？多年以后，又有哪些判断发生了变化？
+        options:
+          format: markdown
+          switcher: true
+          media: travel_images
           rename: safe
 
   - name: site_pages
@@ -227,6 +515,86 @@ content:
               switcher: true
               media: article_images
 
+      - name: tour_zh
+        label: 中文 Grand Tour 说明
+        type: file
+        path: content/grand-tour.zh.md
+        format: yaml-frontmatter
+        fields:
+          - name: title
+            label: 页面标题
+            type: string
+            readonly: true
+          - name: description
+            label: 页面主说明
+            type: text
+            required: true
+          - name: heroImage
+            label: Grand Tour 首页主图（可稍后添加）
+            type: image
+            required: false
+            options:
+              media: travel_images
+              categories: [image]
+              rename: safe
+          - name: type
+            type: string
+            hidden: true
+          - name: layout
+            type: string
+            hidden: true
+          - name: translationKey
+            type: string
+            hidden: true
+          - name: body
+            label: Grand Tour 宣言
+            type: rich-text
+            required: true
+            options:
+              format: markdown
+              switcher: true
+              media: travel_images
+
+      - name: tour_en
+        label: English Grand Tour introduction
+        type: file
+        path: content/grand-tour.en.md
+        format: yaml-frontmatter
+        fields:
+          - name: title
+            label: Page title
+            type: string
+            readonly: true
+          - name: description
+            label: Page introduction
+            type: text
+            required: true
+          - name: heroImage
+            label: Grand Tour hero image (optional for now)
+            type: image
+            required: false
+            options:
+              media: travel_images
+              categories: [image]
+              rename: safe
+          - name: type
+            type: string
+            hidden: true
+          - name: layout
+            type: string
+            hidden: true
+          - name: translationKey
+            type: string
+            hidden: true
+          - name: body
+            label: Grand Tour manifesto
+            type: rich-text
+            required: true
+            options:
+              format: markdown
+              switcher: true
+              media: travel_images
+
       - name: supporting_pages
         label: 其他栏目页面 / Supporting pages
         type: collection
@@ -236,6 +604,8 @@ content:
         exclude:
           - about.zh.md
           - about.en.md
+          - grand-tour.zh.md
+          - grand-tour.en.md
         operations:
           create: false
           rename: false

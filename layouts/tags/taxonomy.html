@@ -1,0 +1,48 @@
+{{ define "main" }}
+{{- $tagData := index hugo.Data.tags .Site.Language.Lang -}}
+{{- $taxonomy := .Site.Taxonomies.tags -}}
+{{- $groups := slice
+    (dict "key" "work" "label" (i18n "workTopics"))
+    (dict "key" "places" "label" (i18n "placeTopics"))
+    (dict "key" "curiosities" "label" (i18n "curiosityTopics"))
+-}}
+<header class="page-header topic-header">
+    <div class="page-frame narrow-header">
+        <p class="eyebrow">{{ i18n "topicIndex" }}</p>
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+    </div>
+</header>
+
+<div class="page-frame topic-shell section-space">
+    {{ partial "writing-lanes.html" (dict "page" . "active" "topics") }}
+    {{ with .Content }}<div class="topic-introduction prose static-prose">{{ . }}</div>{{ end }}
+
+    <div class="topic-groups">
+        {{ range $groups }}
+            {{- $group := . -}}
+            {{- $activeTags := slice -}}
+            {{- range where $tagData "group" $group.key -}}
+                {{- if index $taxonomy .key -}}
+                    {{- $activeTags = $activeTags | append . -}}
+                {{- end -}}
+            {{- end -}}
+            {{ if gt (len $activeTags) 0 }}
+            <section class="topic-group" aria-labelledby="topic-group-{{ $group.key }}">
+                <h2 id="topic-group-{{ $group.key }}">{{ $group.label }}</h2>
+                <div class="topic-card-grid">
+                    {{ range sort $activeTags "order" }}
+                    {{- $pages := index $taxonomy .key -}}
+                    <a class="topic-card" href="{{ printf "%stags/%s/" $.Site.Home.RelPermalink .key }}">
+                        <span>{{ len $pages }} {{ i18n "pieces" }}</span>
+                        <h3>{{ .label }}</h3>
+                        <p>{{ .description }}</p>
+                    </a>
+                    {{ end }}
+                </div>
+            </section>
+            {{ end }}
+        {{ end }}
+    </div>
+</div>
+{{ end }}

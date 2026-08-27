@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{- $key := .Data.Term -}}
+<header class="page-header topic-term-header">
+    <div class="page-frame narrow-header">
+        <p class="eyebrow">{{ i18n "topic" }}</p>
+        <h1>{{ partial "tag-info.html" (dict "key" $key "site" .Site) }}</h1>
+        {{ with partial "tag-info.html" (dict "key" $key "site" .Site "field" "description") }}<p>{{ . }}</p>{{ end }}
+    </div>
+</header>
+
+<div class="page-frame archive-shell section-space">
+    {{ partial "writing-lanes.html" (dict "page" . "active" "topics") }}
+    <div class="topic-result-list">
+        {{ range .Pages.ByDate.Reverse }}
+        <article class="topic-result">
+            <div class="topic-result-meta">
+                <span>{{ partial "content-kind-label.html" . }}</span>
+                {{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ partial "date.html" . }}</time>{{ end }}
+            </div>
+            <div>
+                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                <p>{{ .Summary | plainify | htmlUnescape | truncate 210 }}</p>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

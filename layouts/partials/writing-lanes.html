@@ -1,0 +1,16 @@
+{{- $page := .page -}}
+{{- $active := .active -}}
+<nav class="writing-lanes" aria-label="{{ i18n "writingLanes" }}">
+    <a href="{{ printf "%sposts/" $page.Site.Home.RelPermalink }}"{{ if eq $active "essays" }} class="active" aria-current="page"{{ end }}>
+        <span>{{ i18n "essays" }}</span>
+        <small>{{ i18n "essaysShort" }}</small>
+    </a>
+    <a href="{{ printf "%snotes/" $page.Site.Home.RelPermalink }}"{{ if eq $active "notes" }} class="active" aria-current="page"{{ end }}>
+        <span>{{ i18n "sidePaths" }}</span>
+        <small>{{ i18n "sidePathsShort" }}</small>
+    </a>
+    <a href="{{ printf "%stags/" $page.Site.Home.RelPermalink }}"{{ if eq $active "topics" }} class="active" aria-current="page"{{ end }}>
+        <span>{{ i18n "topicIndex" }}</span>
+        <small>{{ i18n "topicIndexShort" }}</small>
+    </a>
+</nav>

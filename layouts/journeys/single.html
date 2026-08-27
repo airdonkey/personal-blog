@@ -1,0 +1,103 @@
+{{ define "head" }}
+<link rel="stylesheet" href="{{ "css/grand-tour.css" | relURL }}">
+{{ if .Params.gallery }}<script src="{{ "js/journey-gallery.js" | relURL }}" defer></script>{{ end }}
+{{ end }}
+
+{{ define "main" }}
+{{- $relatedTheme := .Params.relatedTheme -}}
+{{- $relatedEssays := slice -}}
+{{- if $relatedTheme -}}
+    {{- $relatedEssays = where (where .Site.RegularPages "Section" "posts") "Params.series" $relatedTheme -}}
+{{- end -}}
+<article class="journey-page">
+    <header class="journey-hero{{ if .Params.heroImage }} has-image{{ end }}">
+        {{ with .Params.heroImage }}
+        <figure class="journey-hero-image">
+            <img src="{{ . | relURL }}" alt="" fetchpriority="high">
+        </figure>
+        {{ end }}
+        <div class="page-frame journey-hero-copy">
+            <a class="back-link" href="{{ printf "%sgrand-tour/" .Site.Home.RelPermalink }}">{{ i18n "backToGrandTour" }}</a>
+            <p class="eyebrow">Grand Tour · {{ .Params.journeyPeriod }}</p>
+            <h1>{{ .Title }}</h1>
+            <p class="journey-deck">{{ .Description }}</p>
+            {{ with .Params.route }}<p class="journey-route-large"><span>{{ i18n "route" }}</span>{{ . }}</p>{{ end }}
+        </div>
+    </header>
+
+    {{ with .Content }}
+    <div class="reading-frame prose journey-prose">
+        {{ . }}
+    </div>
+    {{ end }}
+
+    {{ with .Params.gallery }}
+    <section class="page-frame journey-gallery section-space" aria-labelledby="journey-gallery-title">
+        <header class="section-heading">
+            <div>
+                <p class="eyebrow">{{ i18n "photoEssay" }}</p>
+                <h2 id="journey-gallery-title">{{ i18n "selectedPhotographs" }}</h2>
+            </div>
+            <p>{{ len . }} {{ i18n "photographs" }}</p>
+        </header>
+        <div class="journey-photo-grid" data-journey-gallery>
+            {{ range $index, $photo := . }}
+            <figure class="journey-photo">
+                <a href="{{ $photo.image | relURL }}" class="journey-photo-link" data-gallery-index="{{ $index }}">
+                    <img src="{{ $photo.image | relURL }}" alt="{{ $photo.alt }}" loading="lazy">
+                </a>
+                {{ if or $photo.place $photo.caption }}
+                <figcaption>
+                    {{ with $photo.place }}<strong>{{ . }}</strong>{{ end }}
+                    {{ with $photo.caption }}<span>{{ . }}</span>{{ end }}
+                </figcaption>
+                {{ end }}
+            </figure>
+            {{ end }}
+        </div>
+    </section>
+
+    <dialog class="journey-lightbox" data-journey-lightbox aria-label="{{ i18n "photoViewer" }}">
+        <button class="lightbox-close" type="button" data-lightbox-close aria-label="{{ i18n "closePhoto" }}">×</button>
+        <button class="lightbox-previous" type="button" data-lightbox-previous aria-label="{{ i18n "previousPhoto" }}">←</button>
+        <figure>
+            <img src="" alt="" data-lightbox-image>
+            <figcaption data-lightbox-caption></figcaption>
+        </figure>
+        <button class="lightbox-next" type="button" data-lightbox-next aria-label="{{ i18n "nextPhoto" }}">→</button>
+    </dialog>
+    {{ end }}
+
+    {{ if $relatedTheme }}
+    <aside class="reading-frame journey-theme-link">
+        <p class="eyebrow">{{ i18n "relatedWritingTheme" }}</p>
+        <a href="{{ printf "%sthemes/#%s" .Site.Home.RelPermalink $relatedTheme }}">
+            {{ partial "theme-label-by-key.html" (dict "key" $relatedTheme "site" .Site) }}
+        </a>
+    </aside>
+    {{ end }}
+
+    {{ if gt (len $relatedEssays) 0 }}
+    <section class="reading-frame related-writing journey-related" aria-labelledby="journey-related-title">
+        <p class="eyebrow">{{ i18n "fromJourneyToEssay" }}</p>
+        <h2 id="journey-related-title">{{ i18n "continueInWriting" }}</h2>
+        <div class="related-writing-list">
+            {{ range first 3 $relatedEssays.ByDate.Reverse }}
+            <article>
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ partial "date.html" . }}</time>
+                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            </article>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
+    <nav class="reading-frame article-navigation" aria-label="Grand Tour">
+        <a class="back-link" href="{{ printf "%sgrand-tour/" .Site.Home.RelPermalink }}">{{ i18n "backToGrandTour" }}</a>
+        <div>
+            {{ with .PrevInSection }}<a href="{{ .RelPermalink }}"><span>{{ i18n "previousJourney" }}</span>{{ .Title }}</a>{{ end }}
+            {{ with .NextInSection }}<a href="{{ .RelPermalink }}"><span>{{ i18n "nextJourney" }}</span>{{ .Title }}</a>{{ end }}
+        </div>
+    </nav>
+</article>
+{{ end }}
