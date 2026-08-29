@@ -1,0 +1,7 @@
+{{- if eq .Params.status "working" -}}
+<aside class="working-draft" aria-label="{{ i18n "workingDraft" }}">
+    <p class="eyebrow">{{ i18n "writingWorkbench" }}</p>
+    <p><strong>{{ i18n "workingDraft" }}</strong> {{ i18n "workingDraftText" }}</p>
+    {{ with .Params.nextStep }}<p><span>{{ i18n "nextWritingStep" }}</span>{{ . }}</p>{{ end }}
+</aside>
+{{- end -}}

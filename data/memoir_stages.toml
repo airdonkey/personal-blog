@@ -1,0 +1,71 @@
+[[zh]]
+key = "origins"
+number = "01"
+title = "来处与家庭"
+description = "父母、童年、考试，以及一个普通家庭最早交给我的东西。"
+
+[[zh]]
+key = "beijing-study"
+number = "02"
+title = "北京求学"
+description = "2001年以后，大学、书店、图书馆与一个不断扩大的知识世界。"
+
+[[zh]]
+key = "beijing-life"
+number = "03"
+title = "北京工作与成家"
+description = "第一份工作、出租屋、婚姻，以及两个年轻人在城市里搭起生活。"
+
+[[zh]]
+key = "central-asia"
+number = "04"
+title = "中亚与第一次远迁"
+description = "离开熟悉的城市，在另一种语言、制度与日常中重新辨认自己。"
+
+[[zh]]
+key = "new-zealand"
+number = "05"
+title = "新西兰重新开始"
+description = "移民、转行、教师训练，以及一个成年人重新成为初学者。"
+
+[[zh]]
+key = "returning"
+number = "06"
+title = "重返与回望"
+description = "在中年回到旧地，重新理解家庭、时代以及来时相信过的事情。"
+
+[[en]]
+key = "origins"
+number = "01"
+title = "Origins and family"
+description = "Parents, childhood, examinations, and what an ordinary family first taught me."
+
+[[en]]
+key = "beijing-study"
+number = "02"
+title = "Student years in Beijing"
+description = "University, bookshops, libraries, and a world of knowledge opening after 2001."
+
+[[en]]
+key = "beijing-life"
+number = "03"
+title = "Work and family in Beijing"
+description = "First jobs, rented rooms, marriage, and two young people assembling a life."
+
+[[en]]
+key = "central-asia"
+number = "04"
+title = "Central Asia and the first long move"
+description = "Leaving familiar coordinates and learning to recognise oneself in another system."
+
+[[en]]
+key = "new-zealand"
+number = "05"
+title = "Beginning again in New Zealand"
+description = "Migration, career change, teacher training, and becoming a beginner as an adult."
+
+[[en]]
+key = "returning"
+number = "06"
+title = "Returning and looking back"
+description = "Revisiting old places in midlife and re-reading family, time, and earlier beliefs."

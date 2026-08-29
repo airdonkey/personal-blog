@@ -5,6 +5,10 @@
         <span>{{ i18n "essays" }}</span>
         <small>{{ i18n "essaysShort" }}</small>
     </a>
+    <a href="{{ printf "%smemoir/" $page.Site.Home.RelPermalink }}"{{ if eq $active "memoir" }} class="active" aria-current="page"{{ end }}>
+        <span>{{ i18n "memoir" }}</span>
+        <small>{{ i18n "memoirShort" }}</small>
+    </a>
     <a href="{{ printf "%snotes/" $page.Site.Home.RelPermalink }}"{{ if eq $active "notes" }} class="active" aria-current="page"{{ end }}>
         <span>{{ i18n "sidePaths" }}</span>
         <small>{{ i18n "sidePathsShort" }}</small>

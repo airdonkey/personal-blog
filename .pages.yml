@@ -24,6 +24,19 @@ components:
         - name: en
           label: English
 
+  content_status:
+    type: select
+    label: 公开完成度 / Public status
+    required: true
+    default: working
+    description: “持续写作中”会公开显示工作台提示；文章真正完成后再改为“完成”。
+    options:
+      values:
+        - name: working
+          label: 持续写作中 / Work in progress
+        - name: complete
+          label: 已完成 / Complete
+
   url_slug:
     type: string
     label: 网址英文短名 / URL slug
@@ -91,7 +104,7 @@ components:
         - name: work-and-learning
           label: 职业转换与终身学习 / Career change and lifelong learning
         - name: education-and-technology
-          label: 教育、技术与人的尺度 / Education, technology, and human scale
+          label: 教育、代际与人的尺度 / Education, generations, and human scale
 
 content:
   - name: articles
@@ -111,7 +124,7 @@ content:
       rename: true
       delete: true
     view:
-      fields: [title, date, language, featured, draft]
+      fields: [title, date, language, status, featured, draft]
       primary: title
       sort: [date, title]
       search: [title, description, tags]
@@ -137,6 +150,15 @@ content:
         label: 草稿 / Draft
         type: boolean
         default: true
+      - name: status
+        component: content_status
+      - name: nextStep
+        label: 下一次只补什么 / One next writing step
+        type: text
+        required: false
+        description: 公开显示在工作台提示里。只写一个最小动作，不列完整任务清单。
+        options:
+          maxlength: 180
       - name: description
         label: 摘要 / Summary
         type: text
@@ -203,6 +225,140 @@ content:
           media: article_images
           rename: safe
 
+  - name: memoirs
+    label: 来时路（个人生活史）/ Memoir
+    type: collection
+    path: content/memoir
+    format: yaml-frontmatter
+    exclude:
+      - _index.zh.md
+      - _index.en.md
+    subfolders: false
+    filename:
+      template: "{fields.date}-{fields.slug}.{fields.language}.md"
+      field: false
+    operations:
+      create: true
+      rename: true
+      delete: true
+    view:
+      fields: [title, period, stage, language, status, featured, draft]
+      primary: title
+      sort: [memoryOrder, title]
+      search: [title, description, place]
+      default:
+        sort: memoryOrder
+        order: asc
+    fields:
+      - name: title
+        label: 记忆标题 / Memory title
+        type: string
+        required: true
+      - name: date
+        label: 本页发布日期 / Page publication date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: language
+        component: language
+      - name: slug
+        component: url_slug
+      - name: draft
+        label: 草稿 / Draft
+        type: boolean
+        default: true
+      - name: status
+        component: content_status
+      - name: nextStep
+        label: 下一次只补什么 / One next writing step
+        type: text
+        required: false
+        description: 只指定一个现场、一件物品或一段关系，降低下次启动成本。
+        options:
+          maxlength: 180
+      - name: description
+        label: 这一段记忆为何值得留下 / Why this memory matters
+        type: text
+        required: true
+        options:
+          maxlength: 220
+      - name: stage
+        label: 人生阶段 / Life stage
+        type: select
+        required: true
+        options:
+          values:
+            - name: origins
+              label: 01 来处与家庭 / Origins and family
+            - name: beijing-study
+              label: 02 北京求学 / Studying in Beijing
+            - name: beijing-life
+              label: 03 北京生活与职业 / Life and work in Beijing
+            - name: central-asia
+              label: 04 中亚与远行 / Central Asia and leaving
+            - name: new-zealand
+              label: 05 新西兰重建 / Rebuilding in New Zealand
+            - name: returning
+              label: 06 重返与回望 / Returning and looking back
+      - name: period
+        label: 对外显示的时间 / Public period
+        type: string
+        required: true
+        description: 可以写年份或人生阶段；不必公开精确日期。
+      - name: place
+        label: 地点 / Place
+        type: string
+        required: false
+      - name: memoryOrder
+        label: 阶段内顺序 / Order within stage
+        type: number
+        required: true
+        description: 使用10、20、30，日后可在中间插入新文章。
+      - name: tags
+        component: controlled_tags
+      - name: featured
+        label: 首页展示 / Feature on homepage
+        type: boolean
+        default: false
+        description: 通常只打开一篇最能让新读者认识你的来时路。
+      - name: readerQuestion
+        label: 文末记忆问题 / Closing memory question
+        type: text
+        required: false
+        options:
+          maxlength: 180
+      - name: translationKey
+        label: 双语关联键 / Translation key
+        type: string
+        required: false
+        pattern: "^[a-z0-9-]*$"
+      - name: body
+        label: 正文 / Body
+        type: rich-text
+        required: true
+        default: |
+          ## 我记得的一个现场
+
+          先保存房间、街道、物件、声音或一句原话。不要急着证明它代表一个时代。
+
+          ## 当时的我并不知道
+
+          写下今天回看才看清的变化，但允许当年的自己保留局限。
+
+          ## 这段个人记忆与谁相连
+
+          从“我”走向同代人的共同经验；不替整整一代人下结论。
+
+          ## 待补证据
+
+          列出下一次只需补入的照片、地名、年份或对话。
+        options:
+          format: markdown
+          switcher: true
+          media: article_images
+          rename: safe
+
   - name: notes
     label: 小径（短札记）/ Side Paths
     type: collection
@@ -220,7 +376,7 @@ content:
       rename: true
       delete: true
     view:
-      fields: [title, date, language, draft]
+      fields: [title, date, language, status, draft]
       primary: title
       sort: [date, title]
       search: [title, description, tags]
@@ -246,6 +402,14 @@ content:
         label: 草稿 / Draft
         type: boolean
         default: true
+      - name: status
+        component: content_status
+      - name: nextStep
+        label: 下一次只补什么 / One next writing step
+        type: text
+        required: false
+        options:
+          maxlength: 180
       - name: description
         label: 一句话说明（可留空）/ One-line summary (optional)
         type: text
@@ -295,7 +459,7 @@ content:
       rename: true
       delete: true
     view:
-      fields: [title, journeyYear, language, featured, draft]
+      fields: [title, journeyYear, language, status, featured, draft]
       primary: title
       sort: [journeyYear, title]
       search: [title, description, route]
@@ -321,6 +485,15 @@ content:
         label: 草稿 / Draft
         type: boolean
         default: true
+      - name: status
+        component: content_status
+      - name: nextStep
+        label: 下一次只补什么 / One next writing step
+        type: text
+        required: false
+        description: 例如“到现场补三张同机位照片”，不要把整个旅行计划塞进来。
+        options:
+          maxlength: 180
       - name: description
         label: 这段旅程为什么值得记住 / Why this journey matters
         type: text
@@ -371,7 +544,7 @@ content:
             - name: work-and-learning
               label: 职业转换与终身学习 / Career change and lifelong learning
             - name: education-and-technology
-              label: 教育、技术与人的尺度 / Education, technology, and human scale
+              label: 教育、代际与人的尺度 / Education, generations, and human scale
       - name: gallery
         label: 精选照片（建议8至20张）/ Curated photographs (8–20 recommended)
         type: object

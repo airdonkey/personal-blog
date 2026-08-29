@@ -1,0 +1,8 @@
+{{- $key := .Params.stage -}}
+{{- $stages := index hugo.Data.memoir_stages .Site.Language.Lang -}}
+{{- $match := where $stages "key" $key -}}
+{{- if gt (len $match) 0 -}}
+    {{- (index $match 0).title -}}
+{{- else -}}
+    {{- $key -}}
+{{- end -}}

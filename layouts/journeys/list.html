@@ -25,7 +25,10 @@
             {{ end }}
             <div class="journey-card-copy">
                 <p class="journey-period">{{ .Params.journeyPeriod }}</p>
-                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                <div class="entry-title-line">
+                    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                    {{ if eq .Params.status "working" }}<span class="working-badge">{{ i18n "inProgress" }}</span>{{ end }}
+                </div>
                 <p>{{ .Description }}</p>
                 {{ with .Params.route }}<p class="journey-route">{{ . }}</p>{{ end }}
             </div>

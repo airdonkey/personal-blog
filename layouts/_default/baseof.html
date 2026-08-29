@@ -31,7 +31,7 @@
     <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">
     {{- end }}
 
-    <meta property="og:type" content="{{ if and (in (slice "posts" "notes" "journeys") .Section) (not .IsSection) }}article{{ else }}website{{ end }}">
+    <meta property="og:type" content="{{ if and (in (slice "posts" "memoir" "notes" "journeys") .Section) (not .IsSection) }}article{{ else }}website{{ end }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
     <meta property="og:description" content="{{ $description }}">
