@@ -106,7 +106,1594 @@ components:
         - name: education-and-technology
           label: 教育、代际与人的尺度 / Education, generations, and human scale
 
+  interface_phrase:
+    type: object
+    required: true
+    fields:
+      - name: other
+        label: 显示文字 / Display text
+        type: text
+        required: true
+        description: 只修改真正显示给读者的文字；请保留其中的 {{ .Count }} 等占位符。
+
 content:
+  - name: visible_copy
+    label: 00 网站可见文字 / Visible site copy
+    type: group
+    items:
+      - name: site_identity
+        label: 01 网站身份与首页主文案 / Site identity
+        type: file
+        path: data/site_identity.toml
+        format: toml
+        fields:
+          - name: zh
+            label: 中文
+            type: object
+            required: true
+            fields:
+              - name: author
+                label: 作者姓名
+                type: string
+                required: true
+              - name: site_title
+                label: 浏览器与分享使用的网站标题
+                type: string
+                required: true
+              - name: description
+                label: 作者身份短句
+                type: string
+                required: true
+              - name: tagline
+                label: 首页主标题
+                type: string
+                required: true
+              - name: credo
+                label: 首页信念短句
+                type: text
+                required: true
+              - name: introduction
+                label: 首页开场简介
+                type: text
+                required: true
+              - name: email
+                label: 公开联系邮箱
+                type: string
+                required: true
+          - name: en
+            label: English
+            type: object
+            required: true
+            fields:
+              - name: author
+                label: Author name
+                type: string
+                required: true
+              - name: site_title
+                label: Browser and sharing title
+                type: string
+                required: true
+              - name: description
+                label: Short author identity
+                type: string
+                required: true
+              - name: tagline
+                label: Homepage headline
+                type: string
+                required: true
+              - name: credo
+                label: Homepage credo
+                type: text
+                required: true
+              - name: introduction
+                label: Homepage introduction
+                type: text
+                required: true
+              - name: email
+                label: Public contact email
+                type: string
+                required: true
+
+      - name: section_introductions
+        label: 02 栏目标题与导言 / Section introductions
+        type: group
+        items:
+          - name: posts_index_zh
+            label: 中文｜文章
+            type: file
+            path: content/posts/_index.zh.md
+            format: yaml-frontmatter
+            fields:
+              - name: title
+                label: 栏目标题
+                type: string
+                required: true
+              - name: description
+                label: 栏目短简介
+                type: text
+                required: true
+              - name: translationKey
+                type: string
+                hidden: true
+              - name: body
+                label: 栏目导言
+                type: rich-text
+                required: false
+                options:
+                  format: markdown
+                  switcher: true
+          - name: posts_index_en
+            label: English｜Articles
+            type: file
+            path: content/posts/_index.en.md
+            format: yaml-frontmatter
+            fields:
+              - name: title
+                label: Section title
+                type: string
+                required: true
+              - name: description
+                label: Short introduction
+                type: text
+                required: true
+              - name: translationKey
+                type: string
+                hidden: true
+              - name: body
+                label: Section introduction
+                type: rich-text
+                required: false
+                options:
+                  format: markdown
+                  switcher: true
+          - name: memoir_index_zh
+            label: 中文｜来时路
+            type: file
+            path: content/memoir/_index.zh.md
+            format: yaml-frontmatter
+            fields:
+              - name: title
+                label: 栏目标题
+                type: string
+                required: true
+              - name: description
+                label: 栏目短简介
+                type: text
+                required: true
+              - name: translationKey
+                type: string
+                hidden: true
+              - name: body
+                label: 栏目导言
+                type: rich-text
+                required: false
+                options:
+                  format: markdown
+                  switcher: true
+          - name: memoir_index_en
+            label: English｜Memoir
+            type: file
+            path: content/memoir/_index.en.md
+            format: yaml-frontmatter
+            fields:
+              - name: title
+                label: Section title
+                type: string
+                required: true
+              - name: description
+                label: Short introduction
+                type: text
+                required: true
+              - name: translationKey
+                type: string
+                hidden: true
+              - name: body
+                label: Section introduction
+                type: rich-text
+                required: false
+                options:
+                  format: markdown
+                  switcher: true
+          - name: notes_index_zh
+            label: 中文｜小径
+            type: file
+            path: content/notes/_index.zh.md
+            format: yaml-frontmatter
+            fields:
+              - name: title
+                label: 栏目标题
+                type: string
+                required: true
+              - name: description
+                label: 栏目短简介
+                type: text
+                required: true
+              - name: translationKey
+                type: string
+                hidden: true
+              - name: body
+                label: 栏目导言
+                type: rich-text
+                required: false
+                options:
+                  format: markdown
+                  switcher: true
+          - name: notes_index_en
+            label: English｜Side Paths
+            type: file
+            path: content/notes/_index.en.md
+            format: yaml-frontmatter
+            fields:
+              - name: title
+                label: Section title
+                type: string
+                required: true
+              - name: description
+                label: Short introduction
+                type: text
+                required: true
+              - name: translationKey
+                type: string
+                hidden: true
+              - name: body
+                label: Section introduction
+                type: rich-text
+                required: false
+                options:
+                  format: markdown
+                  switcher: true
+          - name: journeys_index_zh
+            label: 中文｜旅程档案
+            type: file
+            path: content/journeys/_index.zh.md
+            format: yaml-frontmatter
+            fields:
+              - name: title
+                label: 栏目标题
+                type: string
+                required: true
+              - name: description
+                label: 栏目短简介
+                type: text
+                required: true
+              - name: translationKey
+                type: string
+                hidden: true
+              - name: body
+                label: 栏目导言
+                type: rich-text
+                required: false
+                options:
+                  format: markdown
+                  switcher: true
+          - name: journeys_index_en
+            label: English｜Journey Archive
+            type: file
+            path: content/journeys/_index.en.md
+            format: yaml-frontmatter
+            fields:
+              - name: title
+                label: Section title
+                type: string
+                required: true
+              - name: description
+                label: Short introduction
+                type: text
+                required: true
+              - name: translationKey
+                type: string
+                hidden: true
+              - name: body
+                label: Section introduction
+                type: rich-text
+                required: false
+                options:
+                  format: markdown
+                  switcher: true
+          - name: tags_index_zh
+            label: 中文｜话题索引
+            type: file
+            path: content/tags/_index.zh.md
+            format: yaml-frontmatter
+            fields:
+              - name: title
+                label: 栏目标题
+                type: string
+                required: true
+              - name: description
+                label: 栏目短简介
+                type: text
+                required: true
+              - name: translationKey
+                type: string
+                hidden: true
+              - name: body
+                label: 栏目导言
+                type: rich-text
+                required: false
+                options:
+                  format: markdown
+                  switcher: true
+          - name: tags_index_en
+            label: English｜Topic Index
+            type: file
+            path: content/tags/_index.en.md
+            format: yaml-frontmatter
+            fields:
+              - name: title
+                label: Section title
+                type: string
+                required: true
+              - name: description
+                label: Short introduction
+                type: text
+                required: true
+              - name: translationKey
+                type: string
+                hidden: true
+              - name: body
+                label: Section introduction
+                type: rich-text
+                required: false
+                options:
+                  format: markdown
+                  switcher: true
+
+      - name: editorial_structure
+        label: 03 母题、人生阶段与标签 / Editorial structure
+        type: group
+        items:
+          - name: themes_data
+            label: 长期母题 / Long-term themes
+            type: file
+            path: data/themes.toml
+            format: toml
+            fields:
+              - name: zh
+                label: 中文母题
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{number} · {title}"
+                fields:
+                  - name: key
+                    label: 稳定标识（请勿修改）
+                    type: string
+                    readonly: true
+                  - name: number
+                    label: 显示编号
+                    type: string
+                    required: true
+                  - name: title
+                    label: 母题名称
+                    type: string
+                    required: true
+                  - name: description
+                    label: 卡片简介
+                    type: text
+                    required: true
+                  - name: question
+                    label: 核心问题
+                    type: text
+                    required: true
+                  - name: foundation
+                    label: 母题说明
+                    type: text
+                    required: true
+                  - name: angles
+                    label: 可持续追问的角度
+                    type: text
+                    list: true
+              - name: en
+                label: English themes
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{number} · {title}"
+                fields:
+                  - name: key
+                    label: Stable key (do not edit)
+                    type: string
+                    readonly: true
+                  - name: number
+                    label: Display number
+                    type: string
+                    required: true
+                  - name: title
+                    label: Theme title
+                    type: string
+                    required: true
+                  - name: description
+                    label: Card introduction
+                    type: text
+                    required: true
+                  - name: question
+                    label: Core question
+                    type: text
+                    required: true
+                  - name: foundation
+                    label: Theme statement
+                    type: text
+                    required: true
+                  - name: angles
+                    label: Recurring angles
+                    type: text
+                    list: true
+
+          - name: memoir_stages_data
+            label: 来时路的人生阶段 / Memoir stages
+            type: file
+            path: data/memoir_stages.toml
+            format: toml
+            fields:
+              - name: zh
+                label: 中文阶段
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{number} · {title}"
+                fields:
+                  - name: key
+                    label: 稳定标识（请勿修改）
+                    type: string
+                    readonly: true
+                  - name: number
+                    label: 显示编号
+                    type: string
+                    required: true
+                  - name: title
+                    label: 阶段名称
+                    type: string
+                    required: true
+                  - name: description
+                    label: 阶段说明
+                    type: text
+                    required: true
+              - name: en
+                label: English stages
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{number} · {title}"
+                fields:
+                  - name: key
+                    label: Stable key (do not edit)
+                    type: string
+                    readonly: true
+                  - name: number
+                    label: Display number
+                    type: string
+                    required: true
+                  - name: title
+                    label: Stage title
+                    type: string
+                    required: true
+                  - name: description
+                    label: Stage introduction
+                    type: text
+                    required: true
+
+          - name: tags_data
+            label: 话题标签词表 / Topic labels
+            type: file
+            path: data/tags.toml
+            format: toml
+            fields:
+              - name: zh
+                label: 中文标签
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{label}"
+                fields:
+                  - name: key
+                    label: 稳定标识（请勿修改）
+                    type: string
+                    readonly: true
+                  - name: label
+                    label: 对外显示名称
+                    type: string
+                    required: true
+                  - name: description
+                    label: 标签说明
+                    type: text
+                    required: true
+                  - name: group
+                    label: 分组
+                    type: select
+                    required: true
+                    options:
+                      values:
+                        - name: work
+                          label: 专业与方法
+                        - name: places
+                          label: 地域
+                        - name: curiosities
+                          label: 兴趣
+                  - name: order
+                    label: 显示顺序
+                    type: number
+                    required: true
+              - name: en
+                label: English labels
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{label}"
+                fields:
+                  - name: key
+                    label: Stable key (do not edit)
+                    type: string
+                    readonly: true
+                  - name: label
+                    label: Public label
+                    type: string
+                    required: true
+                  - name: description
+                    label: Label description
+                    type: text
+                    required: true
+                  - name: group
+                    label: Group
+                    type: select
+                    required: true
+                    options:
+                      values:
+                        - name: work
+                          label: Work and methods
+                        - name: places
+                          label: Places
+                        - name: curiosities
+                          label: Curiosities
+                  - name: order
+                    label: Display order
+                    type: number
+                    required: true
+
+      - name: grand_tour_places
+        label: 04 Grand Tour 国家、城市与地点
+        type: file
+        path: data/countries.json
+        format: json
+        list: true
+        fields:
+          - name: country
+            label: 国家（中文）
+            type: string
+            required: true
+          - name: country_en
+            label: Country (English)
+            type: string
+            required: true
+          - name: country_code
+            label: 三字国家代码（请勿修改）
+            type: string
+            readonly: true
+          - name: region
+            label: 所属区域
+            type: select
+            required: true
+            options:
+              values:
+                - 中亚
+                - 亚洲
+                - 欧洲
+                - 北美洲
+                - 南美洲
+                - 大洋洲
+          - name: region_en
+            label: Region (English)
+            type: select
+            required: true
+            options:
+              values:
+                - Central Asia
+                - Asia
+                - Europe
+                - North America
+                - South America
+                - Oceania
+          - name: latitude
+            label: 国家地图纬度
+            type: number
+            required: true
+          - name: longitude
+            label: 国家地图经度
+            type: number
+            required: true
+          - name: visit_date
+            label: 对外显示的到访时间
+            type: string
+            required: true
+          - name: cities
+            label: 城市
+            type: object
+            required: false
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{name} / {name_en}"
+            fields:
+              - name: name
+                label: 城市（中文）
+                type: string
+                required: true
+              - name: name_en
+                label: City (English)
+                type: string
+                required: true
+              - name: latitude
+                label: 纬度
+                type: number
+                required: true
+              - name: longitude
+                label: 经度
+                type: number
+                required: true
+              - name: show_on_map
+                label: 在地图上显示
+                type: boolean
+                default: true
+              - name: note
+                label: 城市说明（中文）
+                type: text
+                required: false
+              - name: note_en
+                label: City note (English)
+                type: text
+                required: false
+              - name: marker_image
+                label: 旧版标记图片文件名（可留空）
+                type: string
+                required: false
+          - name: featured_places
+            label: 精选地点
+            type: object
+            required: false
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{name} / {name_en}"
+            fields:
+              - name: name
+                label: 地点（中文）
+                type: string
+                required: true
+              - name: name_en
+                label: Place (English)
+                type: string
+                required: true
+              - name: description
+                label: 地点说明（中文）
+                type: text
+                required: false
+              - name: description_en
+                label: Place description (English)
+                type: text
+                required: false
+              - name: visit_date
+                label: 到访时间
+                type: string
+                required: false
+              - name: latitude
+                label: 纬度
+                type: number
+                required: true
+              - name: longitude
+                label: 经度
+                type: number
+                required: true
+              - name: marker_image
+                label: 旧版标记图片文件名（可留空）
+                type: string
+                required: false
+
+      # Interface phrases remain in Hugo's native i18n files, but every value is
+      # presented here as a normal Pages CMS field.
+      - name: interface_zh
+        label: 05 中文按钮、提示语与导航（高级）
+        type: file
+        path: i18n/zh.toml
+        format: toml
+        fields:
+          - name: readingTime
+            label: "{{ .Count }} 分钟阅读 · readingTime"
+            component: interface_phrase
+          - name: tags
+            label: "标签 · tags"
+            component: interface_phrase
+          - name: backToArticles
+            label: "返回文章列表 · backToArticles"
+            component: interface_phrase
+          - name: subscribe
+            label: "订阅 · subscribe"
+            component: interface_phrase
+          - name: subscribeDescription
+            label: "订阅以获取战略与技术洞察 · subscribeDescription"
+            component: interface_phrase
+          - name: emailPlaceholder
+            label: "你的邮箱 · emailPlaceholder"
+            component: interface_phrase
+          - name: subscribeButton
+            label: "订阅 · subscribeButton"
+            component: interface_phrase
+          - name: archive
+            label: "归档 · archive"
+            component: interface_phrase
+          - name: recentPosts
+            label: "最新文章 · recentPosts"
+            component: interface_phrase
+          - name: aboutAuthor
+            label: "关于作者 · aboutAuthor"
+            component: interface_phrase
+          - name: skipToContent
+            label: "跳到主要内容 · skipToContent"
+            component: interface_phrase
+          - name: primaryNavigation
+            label: "主要导航 · primaryNavigation"
+            component: interface_phrase
+          - name: openMenu
+            label: "打开菜单 · openMenu"
+            component: interface_phrase
+          - name: closeMenu
+            label: "关闭菜单 · closeMenu"
+            component: interface_phrase
+          - name: languageSwitcher
+            label: "语言选择 · languageSwitcher"
+            component: interface_phrase
+          - name: latestWriting
+            label: "主文 · latestWriting"
+            component: interface_phrase
+          - name: latestWritingIntro
+            label: "关于迁徙、职业转换、努力与自我建造的长期写作。 · latestWritingIntro"
+            component: interface_phrase
+          - name: featuredArticle
+            label: "首页选读 · featuredArticle"
+            component: interface_phrase
+          - name: readArticle
+            label: "阅读全文 · readArticle"
+            component: interface_phrase
+          - name: viewAllArticles
+            label: "浏览全部文章 · viewAllArticles"
+            component: interface_phrase
+          - name: aboutThisSite
+            label: "关于这个网站 · aboutThisSite"
+            component: interface_phrase
+          - name: learnMore
+            label: "了解更多 · learnMore"
+            component: interface_phrase
+          - name: grandTourIntro
+            label: "把有限的积蓄换成距离、陌生语言与亲眼所见。 · grandTourIntro"
+            component: interface_phrase
+          - name: exploreGrandTour
+            label: "查看游历地图 · exploreGrandTour"
+            component: interface_phrase
+          - name: articlesArchive
+            label: "按时间整理的文章目录。 · articlesArchive"
+            component: interface_phrase
+          - name: publishedOn
+            label: "发表于 · publishedOn"
+            component: interface_phrase
+          - name: previousArticle
+            label: "上一篇 · previousArticle"
+            component: interface_phrase
+          - name: nextArticle
+            label: "下一篇 · nextArticle"
+            component: interface_phrase
+          - name: email
+            label: "电子邮件 · email"
+            component: interface_phrase
+          - name: rss
+            label: "RSS · rss"
+            component: interface_phrase
+          - name: countriesVisited
+            label: "访问国家 · countriesVisited"
+            component: interface_phrase
+          - name: featuredPlaces
+            label: "特色地点 · featuredPlaces"
+            component: interface_phrase
+          - name: citiesExplored
+            label: "探访城市 · citiesExplored"
+            component: interface_phrase
+          - name: loadMap
+            label: "加载互动地图 · loadMap"
+            component: interface_phrase
+          - name: mapLoading
+            label: "正在加载地图…… · mapLoading"
+            component: interface_phrase
+          - name: mapExplanation
+            label: "地图仅在您选择后加载。下方的文字目录无需地图或 JavaScript 即可阅读。 · mapExplanation"
+            component: interface_phrase
+          - name: mapUnavailable
+            label: "互动地图暂时无法加载；您仍可浏览下方的完整文字目录。 · mapUnavailable"
+            component: interface_phrase
+          - name: placesByRegion
+            label: "按地区浏览 · placesByRegion"
+            component: interface_phrase
+          - name: countries
+            label: "个国家 · countries"
+            component: interface_phrase
+          - name: cities
+            label: "城市 · cities"
+            component: interface_phrase
+          - name: visited
+            label: "到访 · visited"
+            component: interface_phrase
+          - name: authorJournal
+            label: "个人写作 · authorJournal"
+            component: interface_phrase
+          - name: readLatestWriting
+            label: "开始阅读 · readLatestWriting"
+            component: interface_phrase
+          - name: exploreThemes
+            label: "查看写作主题 · exploreThemes"
+            component: interface_phrase
+          - name: editorialPromise
+            label: "这项写作 · editorialPromise"
+            component: interface_phrase
+          - name: editorialPromiseText
+            label: "从真实经历出发，每次只回答一个值得反复追问的问题。 · editorialPromiseText"
+            component: interface_phrase
+          - name: writingMap
+            label: "写作地图 · writingMap"
+            component: interface_phrase
+          - name: recurringQuestions
+            label: "我反复追问的四个问题 · recurringQuestions"
+            component: interface_phrase
+          - name: viewAllThemes
+            label: "进入主题页 · viewAllThemes"
+            component: interface_phrase
+          - name: livedExperience
+            label: "履历背后的现场 · livedExperience"
+            component: interface_phrase
+          - name: workBehindWriting
+            label: "写作从真实工作与迁徙中生长 · workBehindWriting"
+            component: interface_phrase
+          - name: workBehindWritingText
+            label: "从北京的金融机构、中亚的国际发展工作，到新西兰的学校、天文组织与计算机课堂；这些经历不是栏目清单，而是我理解普通人如何被时代塑造、又如何重新选择自己的材料。 · workBehindWritingText"
+            component: interface_phrase
+          - name: viewPractice
+            label: "查看实践与经历 · viewPractice"
+            component: interface_phrase
+          - name: themeInProgress
+            label: "这个主题正在持续写作中。 · themeInProgress"
+            component: interface_phrase
+          - name: questionsAhead
+            label: "接下来的文章将从这些问题展开 · questionsAhead"
+            component: interface_phrase
+          - name: publishedInTheme
+            label: "已经写下 · publishedInTheme"
+            component: interface_phrase
+          - name: continueConversation
+            label: "继续对话 · continueConversation"
+            component: interface_phrase
+          - name: defaultReaderQuestion
+            label: "这篇文章让你想起了自己的哪段经历？ · defaultReaderQuestion"
+            component: interface_phrase
+          - name: conversationInvitation
+            label: "如果你愿意分享，欢迎写信给我。真正的读者回应，也会帮助我决定下一步写什么。 · conversationInvitation"
+            component: interface_phrase
+          - name: writeToMe
+            label: "写信给我 · writeToMe"
+            component: interface_phrase
+          - name: sameTheme
+            label: "继续阅读这个主题 · sameTheme"
+            component: interface_phrase
+          - name: themes
+            label: "主题 · themes"
+            component: interface_phrase
+          - name: practice
+            label: "实践 · practice"
+            component: interface_phrase
+          - name: contact
+            label: "联系 · contact"
+            component: interface_phrase
+          - name: recentEssays
+            label: "最近主文 · recentEssays"
+            component: interface_phrase
+          - name: writingLanes
+            label: "写作入口 · writingLanes"
+            component: interface_phrase
+          - name: essays
+            label: "主文 · essays"
+            component: interface_phrase
+          - name: essaysShort
+            label: "完整论述 · essaysShort"
+            component: interface_phrase
+          - name: sidePaths
+            label: "小径 · sidePaths"
+            component: interface_phrase
+          - name: sidePathsShort
+            label: "短札记与兴趣 · sidePathsShort"
+            component: interface_phrase
+          - name: topicIndex
+            label: "话题 · topicIndex"
+            component: interface_phrase
+          - name: topicIndexShort
+            label: "按具体事物相遇 · topicIndexShort"
+            component: interface_phrase
+          - name: essaySingular
+            label: "主文 · essaySingular"
+            component: interface_phrase
+          - name: sidePathSingular
+            label: "小径 · sidePathSingular"
+            component: interface_phrase
+          - name: journeySingular
+            label: "旅程 · journeySingular"
+            component: interface_phrase
+          - name: backToSidePaths
+            label: "返回小径 · backToSidePaths"
+            component: interface_phrase
+          - name: firstNotes
+            label: "第一块路标已经立好 · firstNotes"
+            component: interface_phrase
+          - name: firstNotesText
+            label: "这里已经为读书、影像、天文、地图与偶然想到的事留出位置。第一则札记不必完整，只需留下一个值得记住的细节。 · firstNotesText"
+            component: interface_phrase
+          - name: noteAfterword
+            label: "小径保存念头刚刚发生的时刻。如果它也碰到了你的经验，欢迎写信告诉我。 · noteAfterword"
+            component: interface_phrase
+          - name: previousNote
+            label: "上一篇小径 · previousNote"
+            component: interface_phrase
+          - name: nextNote
+            label: "下一篇小径 · nextNote"
+            component: interface_phrase
+          - name: workTopics
+            label: "工作与方法 · workTopics"
+            component: interface_phrase
+          - name: placeTopics
+            label: "生活过的地方 · placeTopics"
+            component: interface_phrase
+          - name: curiosityTopics
+            label: "兴趣与好奇 · curiosityTopics"
+            component: interface_phrase
+          - name: pieces
+            label: "篇 · pieces"
+            component: interface_phrase
+          - name: topic
+            label: "话题 · topic"
+            component: interface_phrase
+          - name: sidePathsHomeTitle
+            label: "思想发生的现场 · sidePathsHomeTitle"
+            component: interface_phrase
+          - name: sidePathsHomeText
+            label: "不是每个念头都需要成为长文。这里保存读书、影像、天文、地图与日常兴趣留下的短札记。 · sidePathsHomeText"
+            component: interface_phrase
+          - name: viewAllNotes
+            label: "进入小径 · viewAllNotes"
+            component: interface_phrase
+          - name: grandTourHomeText
+            label: "地图保存抵达，照片保存现场，游记保存看见以后发生的变化。 · grandTourHomeText"
+            component: interface_phrase
+          - name: atlasFirst
+            label: "先有坐标，再慢慢写成故事 · atlasFirst"
+            component: interface_phrase
+          - name: atlasFirstText
+            label: "旅程档案的结构已经准备好。每段经历都可以先留下一条记录，再逐步补成照片故事与完整游记。 · atlasFirstText"
+            component: interface_phrase
+          - name: backToGrandTour
+            label: "返回 Grand Tour · backToGrandTour"
+            component: interface_phrase
+          - name: route
+            label: "路线 · route"
+            component: interface_phrase
+          - name: photoEssay
+            label: "照片故事 · photoEssay"
+            component: interface_phrase
+          - name: selectedPhotographs
+            label: "精选现场 · selectedPhotographs"
+            component: interface_phrase
+          - name: photographs
+            label: "张照片 · photographs"
+            component: interface_phrase
+          - name: photoViewer
+            label: "照片查看器 · photoViewer"
+            component: interface_phrase
+          - name: closePhoto
+            label: "关闭照片 · closePhoto"
+            component: interface_phrase
+          - name: previousPhoto
+            label: "上一张照片 · previousPhoto"
+            component: interface_phrase
+          - name: nextPhoto
+            label: "下一张照片 · nextPhoto"
+            component: interface_phrase
+          - name: relatedWritingTheme
+            label: "这段旅程通向的长期母题 · relatedWritingTheme"
+            component: interface_phrase
+          - name: fromJourneyToEssay
+            label: "从旅程继续思考 · fromJourneyToEssay"
+            component: interface_phrase
+          - name: continueInWriting
+            label: "相关主文 · continueInWriting"
+            component: interface_phrase
+          - name: previousJourney
+            label: "上一段旅程 · previousJourney"
+            component: interface_phrase
+          - name: nextJourney
+            label: "下一段旅程 · nextJourney"
+            component: interface_phrase
+          - name: whyTravel
+            label: "为什么出发 · whyTravel"
+            component: interface_phrase
+          - name: memoir
+            label: "来时路 · memoir"
+            component: interface_phrase
+          - name: memoirShort
+            label: "个人生活史 · memoirShort"
+            component: interface_phrase
+          - name: personalHistory
+            label: "个人生活史 · personalHistory"
+            component: interface_phrase
+          - name: memoirHomeTitle
+            label: "那些把我带到今天的地方 · memoirHomeTitle"
+            component: interface_phrase
+          - name: memoirHomeText
+            label: "不把来路包装成成功故事，只保存家庭、求学、工作、迁徙与安家留下的真实痕迹。 · memoirHomeText"
+            component: interface_phrase
+          - name: enterMemoir
+            label: "进入来时路 · enterMemoir"
+            component: interface_phrase
+          - name: openMemory
+            label: "打开这段记忆 · openMemory"
+            component: interface_phrase
+          - name: workingDraft
+            label: "这是一篇公开的未完成稿。 · workingDraft"
+            component: interface_phrase
+          - name: workingDraftText
+            label: "结构和中心已经放好，我会继续补入真实场景、事实与个人语言。 · workingDraftText"
+            component: interface_phrase
+          - name: writingWorkbench
+            label: "写作工作台 · writingWorkbench"
+            component: interface_phrase
+          - name: nextWritingStep
+            label: "下一步： · nextWritingStep"
+            component: interface_phrase
+          - name: inProgress
+            label: "补写中 · inProgress"
+            component: interface_phrase
+          - name: lifeStages
+            label: "人生阶段 · lifeStages"
+            component: interface_phrase
+          - name: memoriesToCome
+            label: "这一阶段的位置已经留好，具体文章将逐步补入。 · memoriesToCome"
+            component: interface_phrase
+          - name: backToMemoir
+            label: "返回来时路 · backToMemoir"
+            component: interface_phrase
+          - name: sharedMemory
+            label: "共同记忆 · sharedMemory"
+            component: interface_phrase
+          - name: defaultMemoirQuestion
+            label: "这段生活是否也唤起了你的某个旧房间或旧地方？ · defaultMemoirQuestion"
+            component: interface_phrase
+          - name: sameLifeStage
+            label: "同一段来时路 · sameLifeStage"
+            component: interface_phrase
+          - name: previousMemory
+            label: "上一段 · previousMemory"
+            component: interface_phrase
+          - name: nextMemory
+            label: "下一段 · nextMemory"
+            component: interface_phrase
+          - name: enlargingTheWorld
+            label: "把有限的积蓄换成更大的世界 · enlargingTheWorld"
+            component: interface_phrase
+          - name: journeysWritten
+            label: "已写旅程 · journeysWritten"
+            component: interface_phrase
+          - name: curatedJourneys
+            label: "精选旅程 · curatedJourneys"
+            component: interface_phrase
+          - name: journeysThatChangedScale
+            label: "改变我观看尺度的旅程 · journeysThatChangedScale"
+            component: interface_phrase
+          - name: viewJourneyArchive
+            label: "浏览全部旅程 · viewJourneyArchive"
+            component: interface_phrase
+          - name: chronology
+            label: "时间轴 · chronology"
+            component: interface_phrase
+          - name: journeysThroughTime
+            label: "沿时间重走这些路 · journeysThroughTime"
+            component: interface_phrase
+          - name: atlas
+            label: "坐标档案 · atlas"
+            component: interface_phrase
+          - name: completeIndex
+            label: "完整地名索引 · completeIndex"
+            component: interface_phrase
+          - name: navArticles
+            label: "文章 · navArticles"
+            component: interface_phrase
+          - name: navMemoir
+            label: "来时路 · navMemoir"
+            component: interface_phrase
+          - name: navThemes
+            label: "主题 · navThemes"
+            component: interface_phrase
+          - name: navPractice
+            label: "实践 · navPractice"
+            component: interface_phrase
+          - name: navAbout
+            label: "关于 · navAbout"
+            component: interface_phrase
+          - name: grandTour
+            label: "Grand Tour · grandTour"
+            component: interface_phrase
+          - name: rightsReserved
+            label: "保留所有权利 · rightsReserved"
+            component: interface_phrase
+          - name: footerNavigation
+            label: "页脚导航 · footerNavigation"
+            component: interface_phrase
+          - name: articleNavigation
+            label: "文章导航 · articleNavigation"
+            component: interface_phrase
+          - name: languageShortZh
+            label: "中 · languageShortZh"
+            component: interface_phrase
+          - name: languageShortEn
+            label: "EN · languageShortEn"
+            component: interface_phrase
+
+      - name: interface_en
+        label: 06 English buttons, prompts and navigation (advanced)
+        type: file
+        path: i18n/en.toml
+        format: toml
+        fields:
+          - name: readingTime
+            label: "{{ .Count }} min read · readingTime"
+            component: interface_phrase
+          - name: tags
+            label: "Tags · tags"
+            component: interface_phrase
+          - name: backToArticles
+            label: "Back to articles · backToArticles"
+            component: interface_phrase
+          - name: subscribe
+            label: "Subscribe · subscribe"
+            component: interface_phrase
+          - name: subscribeDescription
+            label: "Get insights on strategy and technology · subscribeDescription"
+            component: interface_phrase
+          - name: emailPlaceholder
+            label: "your@email.com · emailPlaceholder"
+            component: interface_phrase
+          - name: subscribeButton
+            label: "Subscribe · subscribeButton"
+            component: interface_phrase
+          - name: archive
+            label: "Archive · archive"
+            component: interface_phrase
+          - name: recentPosts
+            label: "Recent Posts · recentPosts"
+            component: interface_phrase
+          - name: aboutAuthor
+            label: "About the Author · aboutAuthor"
+            component: interface_phrase
+          - name: skipToContent
+            label: "Skip to main content · skipToContent"
+            component: interface_phrase
+          - name: primaryNavigation
+            label: "Primary navigation · primaryNavigation"
+            component: interface_phrase
+          - name: openMenu
+            label: "Open menu · openMenu"
+            component: interface_phrase
+          - name: closeMenu
+            label: "Close menu · closeMenu"
+            component: interface_phrase
+          - name: languageSwitcher
+            label: "Language selection · languageSwitcher"
+            component: interface_phrase
+          - name: latestWriting
+            label: "Essays · latestWriting"
+            component: interface_phrase
+          - name: latestWritingIntro
+            label: "Long-form writing on migration, career change, effort, and rebuilding a life. · latestWritingIntro"
+            component: interface_phrase
+          - name: featuredArticle
+            label: "Selected essay · featuredArticle"
+            component: interface_phrase
+          - name: readArticle
+            label: "Read article · readArticle"
+            component: interface_phrase
+          - name: viewAllArticles
+            label: "Browse all articles · viewAllArticles"
+            component: interface_phrase
+          - name: aboutThisSite
+            label: "About this site · aboutThisSite"
+            component: interface_phrase
+          - name: learnMore
+            label: "Learn more · learnMore"
+            component: interface_phrase
+          - name: grandTourIntro
+            label: "Turning limited savings into distance, unfamiliar languages, and things seen first-hand. · grandTourIntro"
+            component: interface_phrase
+          - name: exploreGrandTour
+            label: "Explore the Grand Tour · exploreGrandTour"
+            component: interface_phrase
+          - name: articlesArchive
+            label: "A chronological index of published writing. · articlesArchive"
+            component: interface_phrase
+          - name: publishedOn
+            label: "Published · publishedOn"
+            component: interface_phrase
+          - name: previousArticle
+            label: "Previous · previousArticle"
+            component: interface_phrase
+          - name: nextArticle
+            label: "Next · nextArticle"
+            component: interface_phrase
+          - name: email
+            label: "Email · email"
+            component: interface_phrase
+          - name: rss
+            label: "RSS · rss"
+            component: interface_phrase
+          - name: countriesVisited
+            label: "Countries visited · countriesVisited"
+            component: interface_phrase
+          - name: featuredPlaces
+            label: "Featured places · featuredPlaces"
+            component: interface_phrase
+          - name: citiesExplored
+            label: "Cities explored · citiesExplored"
+            component: interface_phrase
+          - name: loadMap
+            label: "Load interactive map · loadMap"
+            component: interface_phrase
+          - name: mapLoading
+            label: "Loading the map… · mapLoading"
+            component: interface_phrase
+          - name: mapExplanation
+            label: "The map loads only when you choose it. The complete text index below works without a map or JavaScript. · mapExplanation"
+            component: interface_phrase
+          - name: mapUnavailable
+            label: "The interactive map could not load. You can still use the complete text index below. · mapUnavailable"
+            component: interface_phrase
+          - name: placesByRegion
+            label: "Browse by region · placesByRegion"
+            component: interface_phrase
+          - name: countries
+            label: "countries · countries"
+            component: interface_phrase
+          - name: cities
+            label: "Cities · cities"
+            component: interface_phrase
+          - name: visited
+            label: "Visited · visited"
+            component: interface_phrase
+          - name: authorJournal
+            label: "Personal writing · authorJournal"
+            component: interface_phrase
+          - name: readLatestWriting
+            label: "Start reading · readLatestWriting"
+            component: interface_phrase
+          - name: exploreThemes
+            label: "Explore the themes · exploreThemes"
+            component: interface_phrase
+          - name: editorialPromise
+            label: "This writing practice · editorialPromise"
+            component: interface_phrase
+          - name: editorialPromiseText
+            label: "Each essay begins with lived experience and stays with one question worth asking more than once. · editorialPromiseText"
+            component: interface_phrase
+          - name: writingMap
+            label: "Writing map · writingMap"
+            component: interface_phrase
+          - name: recurringQuestions
+            label: "Four questions I keep returning to · recurringQuestions"
+            component: interface_phrase
+          - name: viewAllThemes
+            label: "Enter the themes · viewAllThemes"
+            component: interface_phrase
+          - name: livedExperience
+            label: "The work behind the writing · livedExperience"
+            component: interface_phrase
+          - name: workBehindWriting
+            label: "Writing grounded in work and migration · workBehindWriting"
+            component: interface_phrase
+          - name: workBehindWritingText
+            label: "From financial institutions in Beijing and international development work in Central Asia to New Zealand classrooms, astronomy organisations, and computing study—these are not a list of topics, but the material through which I examine how ordinary people are shaped by their times and learn to choose again. · workBehindWritingText"
+            component: interface_phrase
+          - name: viewPractice
+            label: "View practice and experience · viewPractice"
+            component: interface_phrase
+          - name: themeInProgress
+            label: "Writing in this theme is in progress. · themeInProgress"
+            component: interface_phrase
+          - name: questionsAhead
+            label: "Questions this theme will continue to explore · questionsAhead"
+            component: interface_phrase
+          - name: publishedInTheme
+            label: "Published in this theme · publishedInTheme"
+            component: interface_phrase
+          - name: continueConversation
+            label: "Continue the conversation · continueConversation"
+            component: interface_phrase
+          - name: defaultReaderQuestion
+            label: "Which part of your own life did this essay bring back to you? · defaultReaderQuestion"
+            component: interface_phrase
+          - name: conversationInvitation
+            label: "If you would like to share it, write to me. Thoughtful reader responses also help shape what I write next. · conversationInvitation"
+            component: interface_phrase
+          - name: writeToMe
+            label: "Write to me · writeToMe"
+            component: interface_phrase
+          - name: sameTheme
+            label: "Continue with this theme · sameTheme"
+            component: interface_phrase
+          - name: themes
+            label: "Themes · themes"
+            component: interface_phrase
+          - name: practice
+            label: "Practice · practice"
+            component: interface_phrase
+          - name: contact
+            label: "Contact · contact"
+            component: interface_phrase
+          - name: recentEssays
+            label: "Recent essays · recentEssays"
+            component: interface_phrase
+          - name: writingLanes
+            label: "Writing pathways · writingLanes"
+            component: interface_phrase
+          - name: essays
+            label: "Essays · essays"
+            component: interface_phrase
+          - name: essaysShort
+            label: "Developed arguments · essaysShort"
+            component: interface_phrase
+          - name: sidePaths
+            label: "Side Paths · sidePaths"
+            component: interface_phrase
+          - name: sidePathsShort
+            label: "Notes and curiosities · sidePathsShort"
+            component: interface_phrase
+          - name: topicIndex
+            label: "Topics · topicIndex"
+            component: interface_phrase
+          - name: topicIndexShort
+            label: "Meet through particulars · topicIndexShort"
+            component: interface_phrase
+          - name: essaySingular
+            label: "Essay · essaySingular"
+            component: interface_phrase
+          - name: sidePathSingular
+            label: "Side Path · sidePathSingular"
+            component: interface_phrase
+          - name: journeySingular
+            label: "Journey · journeySingular"
+            component: interface_phrase
+          - name: backToSidePaths
+            label: "Back to Side Paths · backToSidePaths"
+            component: interface_phrase
+          - name: firstNotes
+            label: "The first signpost is in place · firstNotes"
+            component: interface_phrase
+          - name: firstNotesText
+            label: "The structure is ready for books, film, astronomy, maps, and passing observations. The first note need not be complete; it only needs to preserve one detail worth keeping. · firstNotesText"
+            component: interface_phrase
+          - name: noteAfterword
+            label: "Side Paths preserve thoughts close to the moment they occur. If this one touched something in your own experience, you are welcome to write. · noteAfterword"
+            component: interface_phrase
+          - name: previousNote
+            label: "Previous Side Path · previousNote"
+            component: interface_phrase
+          - name: nextNote
+            label: "Next Side Path · nextNote"
+            component: interface_phrase
+          - name: workTopics
+            label: "Work and methods · workTopics"
+            component: interface_phrase
+          - name: placeTopics
+            label: "Places lived · placeTopics"
+            component: interface_phrase
+          - name: curiosityTopics
+            label: "Interests and curiosities · curiosityTopics"
+            component: interface_phrase
+          - name: pieces
+            label: "pieces · pieces"
+            component: interface_phrase
+          - name: topic
+            label: "Topic · topic"
+            component: interface_phrase
+          - name: sidePathsHomeTitle
+            label: "Where thoughts first take shape · sidePathsHomeTitle"
+            component: interface_phrase
+          - name: sidePathsHomeText
+            label: "Not every thought needs to become an essay. These shorter notes keep traces left by books, film, astronomy, maps, and everyday interests. · sidePathsHomeText"
+            component: interface_phrase
+          - name: viewAllNotes
+            label: "Enter Side Paths · viewAllNotes"
+            component: interface_phrase
+          - name: grandTourHomeText
+            label: "The map preserves arrival, photographs preserve the scene, and travel writing preserves what changed after seeing it. · grandTourHomeText"
+            component: interface_phrase
+          - name: atlasFirst
+            label: "Coordinates first; stories can grow later · atlasFirst"
+            component: interface_phrase
+          - name: atlasFirstText
+            label: "The journey archive is ready. Each experience can begin as a record, then gradually become a photo story or a complete travelogue. · atlasFirstText"
+            component: interface_phrase
+          - name: backToGrandTour
+            label: "Back to Grand Tour · backToGrandTour"
+            component: interface_phrase
+          - name: route
+            label: "Route · route"
+            component: interface_phrase
+          - name: photoEssay
+            label: "Photo story · photoEssay"
+            component: interface_phrase
+          - name: selectedPhotographs
+            label: "Selected scenes · selectedPhotographs"
+            component: interface_phrase
+          - name: photographs
+            label: "photographs · photographs"
+            component: interface_phrase
+          - name: photoViewer
+            label: "Photo viewer · photoViewer"
+            component: interface_phrase
+          - name: closePhoto
+            label: "Close photograph · closePhoto"
+            component: interface_phrase
+          - name: previousPhoto
+            label: "Previous photograph · previousPhoto"
+            component: interface_phrase
+          - name: nextPhoto
+            label: "Next photograph · nextPhoto"
+            component: interface_phrase
+          - name: relatedWritingTheme
+            label: "The longer theme this journey opens into · relatedWritingTheme"
+            component: interface_phrase
+          - name: fromJourneyToEssay
+            label: "Thinking beyond the journey · fromJourneyToEssay"
+            component: interface_phrase
+          - name: continueInWriting
+            label: "Related essays · continueInWriting"
+            component: interface_phrase
+          - name: previousJourney
+            label: "Previous journey · previousJourney"
+            component: interface_phrase
+          - name: nextJourney
+            label: "Next journey · nextJourney"
+            component: interface_phrase
+          - name: whyTravel
+            label: "Why leave · whyTravel"
+            component: interface_phrase
+          - name: memoir
+            label: "Memoir · memoir"
+            component: interface_phrase
+          - name: memoirShort
+            label: "A personal history · memoirShort"
+            component: interface_phrase
+          - name: personalHistory
+            label: "Personal history · personalHistory"
+            component: interface_phrase
+          - name: memoirHomeTitle
+            label: "The places that carried me here · memoirHomeTitle"
+            component: interface_phrase
+          - name: memoirHomeText
+            label: "Not a polished success story, but a record of family, study, work, migration, and making a home. · memoirHomeText"
+            component: interface_phrase
+          - name: enterMemoir
+            label: "Enter the memoir · enterMemoir"
+            component: interface_phrase
+          - name: openMemory
+            label: "Open this memory · openMemory"
+            component: interface_phrase
+          - name: workingDraft
+            label: "This is a public work in progress. · workingDraft"
+            component: interface_phrase
+          - name: workingDraftText
+            label: "The structure and central question are in place; scenes, evidence, and final language will continue to be added. · workingDraftText"
+            component: interface_phrase
+          - name: writingWorkbench
+            label: "Writing workbench · writingWorkbench"
+            component: interface_phrase
+          - name: nextWritingStep
+            label: "Next: · nextWritingStep"
+            component: interface_phrase
+          - name: inProgress
+            label: "In progress · inProgress"
+            component: interface_phrase
+          - name: lifeStages
+            label: "Life stages · lifeStages"
+            component: interface_phrase
+          - name: memoriesToCome
+            label: "Space has been reserved for this stage; individual pieces will be added gradually. · memoriesToCome"
+            component: interface_phrase
+          - name: backToMemoir
+            label: "Back to memoir · backToMemoir"
+            component: interface_phrase
+          - name: sharedMemory
+            label: "Shared memory · sharedMemory"
+            component: interface_phrase
+          - name: defaultMemoirQuestion
+            label: "Did this piece bring back a room or place from your own past? · defaultMemoirQuestion"
+            component: interface_phrase
+          - name: sameLifeStage
+            label: "From the same life stage · sameLifeStage"
+            component: interface_phrase
+          - name: previousMemory
+            label: "Previous memory · previousMemory"
+            component: interface_phrase
+          - name: nextMemory
+            label: "Next memory · nextMemory"
+            component: interface_phrase
+          - name: enlargingTheWorld
+            label: "Turning limited savings into a larger world · enlargingTheWorld"
+            component: interface_phrase
+          - name: journeysWritten
+            label: "Journeys written · journeysWritten"
+            component: interface_phrase
+          - name: curatedJourneys
+            label: "Selected journeys · curatedJourneys"
+            component: interface_phrase
+          - name: journeysThatChangedScale
+            label: "Journeys that changed my sense of scale · journeysThatChangedScale"
+            component: interface_phrase
+          - name: viewJourneyArchive
+            label: "Browse all journeys · viewJourneyArchive"
+            component: interface_phrase
+          - name: chronology
+            label: "Chronology · chronology"
+            component: interface_phrase
+          - name: journeysThroughTime
+            label: "Retracing these routes through time · journeysThroughTime"
+            component: interface_phrase
+          - name: atlas
+            label: "Atlas · atlas"
+            component: interface_phrase
+          - name: completeIndex
+            label: "Complete place index · completeIndex"
+            component: interface_phrase
+          - name: navArticles
+            label: "Articles · navArticles"
+            component: interface_phrase
+          - name: navMemoir
+            label: "Memoir · navMemoir"
+            component: interface_phrase
+          - name: navThemes
+            label: "Themes · navThemes"
+            component: interface_phrase
+          - name: navPractice
+            label: "Practice · navPractice"
+            component: interface_phrase
+          - name: navAbout
+            label: "About · navAbout"
+            component: interface_phrase
+          - name: grandTour
+            label: "Grand Tour · grandTour"
+            component: interface_phrase
+          - name: rightsReserved
+            label: "All rights reserved · rightsReserved"
+            component: interface_phrase
+          - name: footerNavigation
+            label: "Footer navigation · footerNavigation"
+            component: interface_phrase
+          - name: articleNavigation
+            label: "Article navigation · articleNavigation"
+            component: interface_phrase
+          - name: languageShortZh
+            label: "中 · languageShortZh"
+            component: interface_phrase
+          - name: languageShortEn
+            label: "EN · languageShortEn"
+            component: interface_phrase
+
+
+
   - name: articles
     label: 主文（完整论述）/ Essays
     type: collection
@@ -616,7 +2203,7 @@ content:
           - name: title
             label: 页面标题
             type: string
-            readonly: true
+            required: true
           - name: description
             label: 搜索与分享摘要
             type: text
@@ -657,7 +2244,7 @@ content:
           - name: title
             label: Page title
             type: string
-            readonly: true
+            required: true
           - name: description
             label: Search and sharing summary
             type: text
@@ -697,7 +2284,7 @@ content:
           - name: title
             label: 页面标题
             type: string
-            readonly: true
+            required: true
           - name: description
             label: 页面主说明
             type: text
@@ -737,7 +2324,7 @@ content:
           - name: title
             label: Page title
             type: string
-            readonly: true
+            required: true
           - name: description
             label: Page introduction
             type: text
@@ -792,7 +2379,7 @@ content:
           - name: title
             label: 标题 / Title
             type: string
-            readonly: true
+            required: true
           - name: description
             label: 页面简介 / Description
             type: text

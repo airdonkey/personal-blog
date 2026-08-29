@@ -405,3 +405,36 @@ other = "Atlas"
 
 [completeIndex]
 other = "Complete place index"
+
+[navArticles]
+other = "Articles"
+
+[navMemoir]
+other = "Memoir"
+
+[navThemes]
+other = "Themes"
+
+[navPractice]
+other = "Practice"
+
+[navAbout]
+other = "About"
+
+[grandTour]
+other = "Grand Tour"
+
+[rightsReserved]
+other = "All rights reserved"
+
+[footerNavigation]
+other = "Footer navigation"
+
+[articleNavigation]
+other = "Article navigation"
+
+[languageShortZh]
+other = "中"
+
+[languageShortEn]
+other = "EN"

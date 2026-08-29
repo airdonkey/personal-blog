@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{- $description := .Site.Params.description -}}
+    {{- $author := partial "identity.html" "author" -}}
+    {{- $siteTitle := partial "identity.html" "site_title" -}}
+    {{- $description := partial "identity.html" "description" -}}
     {{- $socialImage := "images/profile.jpg" | absURL -}}
     {{- with .Params.heroImage -}}
         {{- $socialImage = . | absURL -}}
@@ -17,9 +19,9 @@
         {{- end -}}
     {{- end -}}
 
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Params.author }}{{ end }}</title>
+    <title>{{ if .IsHome }}{{ $siteTitle }}{{ else }}{{ .Title }} | {{ $author }}{{ end }}</title>
     <meta name="description" content="{{ $description }}">
-    <meta name="author" content="{{ .Site.Params.author }}">
+    <meta name="author" content="{{ $author }}">
     <link rel="canonical" href="{{ .Permalink }}">
 
     {{- range .AllTranslations }}
@@ -28,18 +30,18 @@
     <link rel="alternate" hreflang="x-default" href="{{ .Site.BaseURL }}">
 
     {{- with .OutputFormats.Get "RSS" }}
-    <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ $siteTitle }}" href="{{ .Permalink }}">
     {{- end }}
 
     <meta property="og:type" content="{{ if and (in (slice "posts" "memoir" "notes" "journeys") .Section) (not .IsSection) }}article{{ else }}website{{ end }}">
-    <meta property="og:site_name" content="{{ .Site.Title }}">
-    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:site_name" content="{{ $siteTitle }}">
+    <meta property="og:title" content="{{ if .IsHome }}{{ $siteTitle }}{{ else }}{{ .Title }}{{ end }}">
     <meta property="og:description" content="{{ $description }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:locale" content="{{ replace .Site.Language.Locale "-" "_" }}">
     <meta property="og:image" content="{{ $socialImage }}">
     <meta name="twitter:card" content="{{ if .Params.heroImage }}summary_large_image{{ else }}summary{{ end }}">
-    <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta name="twitter:title" content="{{ if .IsHome }}{{ $siteTitle }}{{ else }}{{ .Title }}{{ end }}">
     <meta name="twitter:description" content="{{ $description }}">
     <meta name="twitter:image" content="{{ $socialImage }}">
 
@@ -51,10 +53,10 @@
     {{- $personData := dict
         "@context" "https://schema.org"
         "@type" "Person"
-        "name" .Site.Params.author
+        "name" $author
         "url" .Site.BaseURL
         "image" ("images/profile.jpg" | absURL)
-        "description" .Site.Params.description
+        "description" $description
     -}}
     <script type="application/ld+json">{{ $personData | jsonify | safeJS }}</script>
     <script src="{{ "js/site.js" | relURL }}" defer></script>

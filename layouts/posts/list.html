@@ -1,7 +1,7 @@
 {{ define "main" }}
 <header class="page-header">
     <div class="page-frame narrow-header">
-        <p class="eyebrow">{{ .Site.Params.author }}</p>
+        <p class="eyebrow">{{ partial "identity.html" "author" }}</p>
         <h1>{{ .Title }}</h1>
         <p>{{ with .Description }}{{ . }}{{ else }}{{ i18n "articlesArchive" }}{{ end }}</p>
     </div>

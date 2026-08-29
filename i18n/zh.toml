@@ -405,3 +405,36 @@ other = "坐标档案"
 
 [completeIndex]
 other = "完整地名索引"
+
+[navArticles]
+other = "文章"
+
+[navMemoir]
+other = "来时路"
+
+[navThemes]
+other = "主题"
+
+[navPractice]
+other = "实践"
+
+[navAbout]
+other = "关于"
+
+[grandTour]
+other = "Grand Tour"
+
+[rightsReserved]
+other = "保留所有权利"
+
+[footerNavigation]
+other = "页脚导航"
+
+[articleNavigation]
+other = "文章导航"
+
+[languageShortZh]
+other = "中"
+
+[languageShortEn]
+other = "EN"

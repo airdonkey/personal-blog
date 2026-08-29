@@ -28,7 +28,7 @@
         <p class="eyebrow">{{ i18n "sharedMemory" }}</p>
         <h2 id="memoir-conversation-title">{{ with .Params.readerQuestion }}{{ . }}{{ else }}{{ i18n "defaultMemoirQuestion" }}{{ end }}</h2>
         <p>{{ i18n "conversationInvitation" }}</p>
-        <a class="text-link" href="mailto:{{ .Site.Params.email }}?subject={{ .Title | urlquery }}">{{ i18n "writeToMe" }}</a>
+        <a class="text-link" href="mailto:{{ partial "identity.html" "email" }}?subject={{ .Title | urlquery }}">{{ i18n "writeToMe" }}</a>
     </aside>
 
     {{ if gt (len $related) 0 }}
@@ -46,7 +46,7 @@
     </section>
     {{ end }}
 
-    <nav class="reading-frame article-navigation" aria-label="Article navigation">
+    <nav class="reading-frame article-navigation" aria-label="{{ i18n "articleNavigation" }}">
         <a class="back-link" href="{{ .CurrentSection.RelPermalink }}">{{ i18n "backToMemoir" }}</a>
         <div>
             {{ with .PrevInSection }}<a href="{{ .RelPermalink }}"><span>{{ i18n "previousMemory" }}</span>{{ .Title }}</a>{{ end }}

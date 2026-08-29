@@ -8,7 +8,7 @@
                 {{- $target = .RelPermalink -}}
             {{- end -}}
         {{- end -}}
-        {{- $label := cond (eq $language "zh") "中" "EN" -}}
+        {{- $label := cond (eq $language "zh") (i18n "languageShortZh") (i18n "languageShortEn") -}}
         {{- if eq $language $page.Language.Lang }}
             <span class="language-current" lang="{{ .Language.Locale }}" aria-current="true">{{ $label }}</span>
         {{- else }}
