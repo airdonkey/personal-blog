@@ -21,26 +21,31 @@ summaryLength = 36
       email = "contact@zhoupenglong.com"
     
     [[languages.zh.menu.main]]
+      identifier = "navArticles"
       name = "文章"
       url = "/zh/posts/"
       weight = 1
 
     [[languages.zh.menu.main]]
+      identifier = "navMemoir"
       name = "来时路"
       url = "/zh/memoir/"
       weight = 2
     
     [[languages.zh.menu.main]]
+      identifier = "navThemes"
       name = "主题"
       url = "/zh/themes/"
       weight = 3
     
     [[languages.zh.menu.main]]
+      identifier = "navPractice"
       name = "实践"
       url = "/zh/work/"
       weight = 4
     
     [[languages.zh.menu.main]]
+      identifier = "navAbout"
       name = "关于"
       url = "/zh/about/"
       weight = 5
@@ -66,26 +71,31 @@ summaryLength = 36
       email = "contact@zhoupenglong.com"
     
     [[languages.en.menu.main]]
+      identifier = "navArticles"
       name = "Articles"
       url = "/en/posts/"
       weight = 1
 
     [[languages.en.menu.main]]
+      identifier = "navMemoir"
       name = "Memoir"
       url = "/en/memoir/"
       weight = 2
     
     [[languages.en.menu.main]]
+      identifier = "navThemes"
       name = "Themes"
       url = "/en/themes/"
       weight = 3
     
     [[languages.en.menu.main]]
+      identifier = "navPractice"
       name = "Practice"
       url = "/en/work/"
       weight = 4
     
     [[languages.en.menu.main]]
+      identifier = "navAbout"
       name = "About"
       url = "/en/about/"
       weight = 5

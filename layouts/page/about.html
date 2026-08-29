@@ -3,10 +3,10 @@
     <div class="page-frame about-grid">
         <picture class="about-photo-wrap">
             <source srcset="{{ "images/profile.webp" | relURL }}" type="image/webp">
-            <img class="about-photo" src="{{ "images/profile.jpg" | relURL }}" width="720" height="946" alt="{{ .Site.Params.author }}">
+            <img class="about-photo" src="{{ "images/profile.jpg" | relURL }}" width="720" height="946" alt="{{ partial "identity.html" "author" }}">
         </picture>
         <div class="about-intro">
-            <p class="eyebrow">{{ .Site.Params.description }}</p>
+            <p class="eyebrow">{{ partial "identity.html" "description" }}</p>
             <h1>{{ .Title }}</h1>
             {{ with .Description }}<p>{{ . }}</p>{{ end }}
         </div>

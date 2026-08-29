@@ -1,11 +1,13 @@
 {{- $pages := where site.RegularPages "Section" "posts" -}}
 {{- $pages = first 20 $pages.ByDate.Reverse -}}
+{{- $siteTitle := partial "identity.html" "site_title" -}}
+{{- $introduction := partial "identity.html" "introduction" -}}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.Title | transform.XMLEscape }}</title>
+    <title>{{ $siteTitle | transform.XMLEscape }}</title>
     <link>{{ site.Home.Permalink }}</link>
-    <description>{{ site.Params.introduction | transform.XMLEscape }}</description>
+    <description>{{ $introduction | transform.XMLEscape }}</description>
     <generator>Hugo</generator>
     <language>{{ site.Language.Locale }}</language>
     {{- with index $pages 0 }}

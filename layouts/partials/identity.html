@@ -1,0 +1,17 @@
+{{- $field := . -}}
+{{- $language := site.Language.Lang -}}
+{{- $identity := index hugo.Data.site_identity $language -}}
+{{- $value := "" -}}
+{{- with $identity -}}
+  {{- with index . $field -}}
+    {{- $value = . -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $value -}}
+  {{- if eq $field "site_title" -}}
+    {{- $value = site.Title -}}
+  {{- else -}}
+    {{- with index site.Params $field -}}{{- $value = . -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $value -}}

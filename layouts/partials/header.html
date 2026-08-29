@@ -1,11 +1,13 @@
 <header class="site-header">
+    {{- $author := partial "identity.html" "author" -}}
+    {{- $tagline := partial "identity.html" "tagline" -}}
     <div class="page-frame header-inner">
-        <a class="site-brand" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ .Site.Params.author }} — {{ .Site.Params.tagline }}">
+        <a class="site-brand" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ $author }} — {{ $tagline }}">
             <picture>
                 <source srcset="{{ "images/badge-96.webp" | relURL }}" type="image/webp">
                 <img class="brand-mark" src="{{ "images/badge-96.png" | relURL }}" width="42" height="42" alt="">
             </picture>
-            <span>{{ .Site.Params.author }}</span>
+            <span>{{ $author }}</span>
         </a>
 
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="{{ i18n "openMenu" }}" data-open-label="{{ i18n "openMenu" }}" data-close-label="{{ i18n "closeMenu" }}">
@@ -20,7 +22,9 @@
                     {{- $current := .RelPermalink -}}
                     {{- range .Site.Menus.main }}
                     {{- $active := or (eq $current .URL) (and (ne .URL $.Site.Home.RelPermalink) (hasPrefix $current .URL)) -}}
-                    <li><a href="{{ .URL }}"{{ if $active }} class="active" aria-current="page"{{ end }}>{{ .Name }}</a></li>
+                    {{- $label := .Name -}}
+                    {{- with .Identifier }}{{ $label = i18n . }}{{ end -}}
+                    <li><a href="{{ .URL }}"{{ if $active }} class="active" aria-current="page"{{ end }}>{{ $label }}</a></li>
                     {{- end }}
                 </ul>
             </nav>

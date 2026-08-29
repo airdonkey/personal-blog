@@ -16,12 +16,13 @@
 
 网站以中文持续更新；英文只收录选择性翻译，不要求逐篇同步。
 
-发布时如何在四条路径中选择、公开工作稿与私人草稿如何区分、标签何时留空，以及 Grand Tour 如何从一条记录逐步长成照片游记，统一写在 [`CONTENT_SYSTEM.md`](CONTENT_SYSTEM.md)。
+发布时如何在四条路径中选择、公开工作稿与私人草稿如何区分、标签何时留空，以及 Grand Tour 如何从一条记录逐步长成照片游记，统一写在 [`CONTENT_SYSTEM.md`](CONTENT_SYSTEM.md)。后台具体从哪里修改每一类文字，见 [`CMS_EDITING_GUIDE.md`](CMS_EDITING_GUIDE.md)。
 
 ## 降低写作启动难度
 
 - 四个长期主题已经各自包含主题导言和四个可继续追问的问题，因此即使尚无文章也不是空栏目。
-- 可视化编辑器中的“固定页面”可以直接修改中文/英文个人简介、主题说明、实践页和联系页。
+- 可视化编辑器中的“网站可见文字”集中管理首页身份文案、栏目导言、母题、人生阶段、标签、Grand Tour 地点，以及中英文导航、按钮和提示语。
+- “固定页面”可以直接修改中文/英文个人简介、主题说明、实践页、联系页和 Grand Tour 总说明；页面标题也可直接修改。
 - 新建文章时，正文会自动带入“场景—核心判断—反面与边界—读者关联—文末问题”的写作骨架。
 - 新建来时路时，后台只要求选择人生阶段和阶段内顺序；每篇围绕一个现场、一段回看和一个待补证据继续生长。
 - 新建小径时，只需记录触发念头的细节，以及它向前引出的一步联想。
@@ -135,6 +136,8 @@ Windows 用户也可运行 `publish.bat`。脚本会先构建、显示待提交�
 
 ```text
 config.toml                 # 双语站点配置与导航
+.pages.yml                  # Pages CMS 后台字段与防误操作规则
+CMS_EDITING_GUIDE.md        # 后台修改入口速查
 content/                    # 文章及静态页面内容
 layouts/                    # 首页、文章、列表、About、Grand Tour templates
 i18n/                       # 中英文界面文本
@@ -143,6 +146,7 @@ static/css/grand-tour.css   # Grand Tour 样式
 static/js/site.js           # 移动导航
 static/js/grand-tour.js     # 按需加载的互动地图
 data/countries.json         # Hugo 构建时使用的游历数据
+data/site_identity.toml     # 后台可改的作者身份与首页主文案
 static/images/profile.*     # 头像
 static/images/travel/       # Grand Tour 网页衍生图（不保存原片）
 assets/brand/               # 不直接发布的品牌源文件

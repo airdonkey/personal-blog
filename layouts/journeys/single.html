@@ -18,7 +18,7 @@
         {{ end }}
         <div class="page-frame journey-hero-copy">
             <a class="back-link" href="{{ printf "%sgrand-tour/" .Site.Home.RelPermalink }}">{{ i18n "backToGrandTour" }}</a>
-            <p class="eyebrow">Grand Tour · {{ .Params.journeyPeriod }}</p>
+            <p class="eyebrow">{{ i18n "grandTour" }} · {{ .Params.journeyPeriod }}</p>
             <h1>{{ .Title }}</h1>
             <p class="journey-deck">{{ .Description }}</p>
             {{ with .Params.route }}<p class="journey-route-large"><span>{{ i18n "route" }}</span>{{ . }}</p>{{ end }}
@@ -93,7 +93,7 @@
     </section>
     {{ end }}
 
-    <nav class="reading-frame article-navigation" aria-label="Grand Tour">
+    <nav class="reading-frame article-navigation" aria-label="{{ i18n "grandTour" }}">
         <a class="back-link" href="{{ printf "%sgrand-tour/" .Site.Home.RelPermalink }}">{{ i18n "backToGrandTour" }}</a>
         <div>
             {{ with .PrevInSection }}<a href="{{ .RelPermalink }}"><span>{{ i18n "previousJourney" }}</span>{{ .Title }}</a>{{ end }}

@@ -29,7 +29,7 @@
 
     <aside class="reading-frame note-afterword">
         <p>{{ i18n "noteAfterword" }}</p>
-        <a class="text-link" href="mailto:{{ .Site.Params.email }}?subject={{ .Title | urlquery }}">{{ i18n "writeToMe" }}</a>
+        <a class="text-link" href="mailto:{{ partial "identity.html" "email" }}?subject={{ .Title | urlquery }}">{{ i18n "writeToMe" }}</a>
     </aside>
 
     <nav class="reading-frame article-navigation" aria-label="{{ i18n "sidePaths" }}">

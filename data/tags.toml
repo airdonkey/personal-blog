@@ -36,7 +36,7 @@ order = 5
 [[zh]]
 key = "attention-and-time"
 label = "注意力与时间"
-description = "ADHD、执行功能、习惯与有限时间的使用。"
+description = "注意力、执行功能、习惯与有限时间的使用。"
 group = "work"
 order = 6
 
@@ -148,7 +148,7 @@ order = 5
 [[en]]
 key = "attention-and-time"
 label = "Attention and time"
-description = "ADHD, executive function, habit, and the use of limited time."
+description = "Attention, executive function, habit, and the use of limited time."
 group = "work"
 order = 6
 
