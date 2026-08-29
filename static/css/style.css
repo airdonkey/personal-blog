@@ -801,13 +801,204 @@ html[lang^="zh"] .eyebrow {
   color: var(--muted);
 }
 
-/* Three publishing paths: essays, short notes, and a shared topic index */
+/* Four stable doors into the archive: essays, memoir, short notes, and topics */
 .writing-lanes {
   margin-bottom: var(--space-7);
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   border-top: 1px solid var(--border);
   border-left: 1px solid var(--border);
+}
+
+/* Public workbench and memoir archive */
+.entry-title-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.entry-title-line h3 {
+  margin: 0;
+}
+
+.working-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.16rem 0.48rem;
+  border: 1px solid rgba(112, 72, 19, 0.3);
+  border-radius: 999px;
+  color: var(--accent-dark);
+  background: rgba(138, 93, 31, 0.08);
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.working-draft {
+  margin: 0 0 2rem;
+  padding: 1.2rem 1.35rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(138, 93, 31, 0.07);
+}
+
+.working-draft p {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}
+
+.working-draft p:first-child {
+  margin-top: 0;
+}
+
+.working-draft span {
+  margin-right: 0.35rem;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.home-memoir {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.home-memoir-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(2.5rem, 7vw, 7rem);
+  align-items: start;
+}
+
+.home-memoir-grid > header h2 {
+  max-width: 11em;
+  margin: 0.45rem 0 1rem;
+}
+
+.home-memoir-grid > header > p:not(.eyebrow) {
+  max-width: 38rem;
+  color: var(--muted);
+}
+
+.home-memoir-feature {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-top: 3px solid var(--accent);
+  background: var(--paper);
+  box-shadow: 0 16px 45px rgba(34, 39, 35, 0.07);
+}
+
+.home-memoir-feature h3 {
+  margin: 0;
+  font-size: clamp(1.45rem, 3vw, 2.05rem);
+}
+
+.home-memoir-feature > p:not(.memoir-period) {
+  color: var(--muted);
+}
+
+.memoir-introduction {
+  max-width: 50rem;
+  margin-bottom: clamp(3rem, 8vw, 6rem);
+}
+
+.memoir-timeline {
+  position: relative;
+}
+
+.memoir-stage {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(2rem, 6vw, 5.5rem);
+  padding: clamp(2.7rem, 7vw, 5rem) 0;
+  border-top: 1px solid var(--border);
+}
+
+.memoir-stage-heading {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-content: start;
+}
+
+.memoir-stage-heading > span {
+  color: var(--accent-dark);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.memoir-stage-heading h2 {
+  margin: -0.25rem 0 0.65rem;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+.memoir-stage-heading p,
+.memoir-stage-empty {
+  margin: 0;
+  color: var(--muted);
+}
+
+.memoir-entry-list {
+  display: grid;
+  gap: 0;
+}
+
+.memoir-entry {
+  display: grid;
+  grid-template-columns: minmax(7.5rem, 0.35fr) minmax(0, 1fr);
+  gap: 1.4rem;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.memoir-entry:first-child {
+  padding-top: 0;
+}
+
+.memoir-entry h3 {
+  font-size: clamp(1.08rem, 2.2vw, 1.34rem);
+}
+
+.memoir-entry h3 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.memoir-entry h3 a:hover {
+  color: var(--accent-dark);
+}
+
+.memoir-entry p {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+}
+
+.memoir-period {
+  margin: 0 0 0.7rem;
+  color: var(--accent-dark);
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+}
+
+.memoir-period span,
+.memoir-period small {
+  display: block;
+}
+
+.memoir-period small {
+  margin-top: 0.28rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+
+.memoir-hero .article-series {
+  cursor: default;
 }
 
 .writing-lanes a {
@@ -1707,6 +1898,17 @@ html[lang^="zh"] .theme-question {
   .writing-lanes,
   .topic-card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .home-memoir-grid,
+  .memoir-stage,
+  .memoir-entry {
+    grid-template-columns: 1fr;
+  }
+
+  .memoir-stage,
+  .memoir-entry {
+    gap: var(--space-3);
   }
 
   .writing-lanes a {

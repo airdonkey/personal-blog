@@ -319,6 +319,66 @@ other = "Next journey"
 [whyTravel]
 other = "Why leave"
 
+[memoir]
+other = "Memoir"
+
+[memoirShort]
+other = "A personal history"
+
+[personalHistory]
+other = "Personal history"
+
+[memoirHomeTitle]
+other = "The places that carried me here"
+
+[memoirHomeText]
+other = "Not a polished success story, but a record of family, study, work, migration, and making a home."
+
+[enterMemoir]
+other = "Enter the memoir"
+
+[openMemory]
+other = "Open this memory"
+
+[workingDraft]
+other = "This is a public work in progress."
+
+[workingDraftText]
+other = "The structure and central question are in place; scenes, evidence, and final language will continue to be added."
+
+[writingWorkbench]
+other = "Writing workbench"
+
+[nextWritingStep]
+other = "Next:"
+
+[inProgress]
+other = "In progress"
+
+[lifeStages]
+other = "Life stages"
+
+[memoriesToCome]
+other = "Space has been reserved for this stage; individual pieces will be added gradually."
+
+[backToMemoir]
+other = "Back to memoir"
+
+[sharedMemory]
+other = "Shared memory"
+
+[defaultMemoirQuestion]
+other = "Did this piece bring back a room or place from your own past?"
+
+[sameLifeStage]
+other = "From the same life stage"
+
+[previousMemory]
+other = "Previous memory"
+
+[nextMemory]
+other = "Next memory"
+
 [enlargingTheWorld]
 other = "Turning limited savings into a larger world"
 

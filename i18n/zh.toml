@@ -319,6 +319,66 @@ other = "下一段旅程"
 [whyTravel]
 other = "为什么出发"
 
+[memoir]
+other = "来时路"
+
+[memoirShort]
+other = "个人生活史"
+
+[personalHistory]
+other = "个人生活史"
+
+[memoirHomeTitle]
+other = "那些把我带到今天的地方"
+
+[memoirHomeText]
+other = "不把来路包装成成功故事，只保存家庭、求学、工作、迁徙与安家留下的真实痕迹。"
+
+[enterMemoir]
+other = "进入来时路"
+
+[openMemory]
+other = "打开这段记忆"
+
+[workingDraft]
+other = "这是一篇公开的未完成稿。"
+
+[workingDraftText]
+other = "结构和中心已经放好，我会继续补入真实场景、事实与个人语言。"
+
+[writingWorkbench]
+other = "写作工作台"
+
+[nextWritingStep]
+other = "下一步："
+
+[inProgress]
+other = "补写中"
+
+[lifeStages]
+other = "人生阶段"
+
+[memoriesToCome]
+other = "这一阶段的位置已经留好，具体文章将逐步补入。"
+
+[backToMemoir]
+other = "返回来时路"
+
+[sharedMemory]
+other = "共同记忆"
+
+[defaultMemoirQuestion]
+other = "这段生活是否也唤起了你的某个旧房间或旧地方？"
+
+[sameLifeStage]
+other = "同一段来时路"
+
+[previousMemory]
+other = "上一段"
+
+[nextMemory]
+other = "下一段"
+
 [enlargingTheWorld]
 other = "把有限的积蓄换成更大的世界"
 

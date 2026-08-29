@@ -1,0 +1,52 @@
+{{ define "main" }}
+{{- $stages := index hugo.Data.memoir_stages .Site.Language.Lang -}}
+<header class="page-header memoir-header">
+    <div class="page-frame narrow-header">
+        <p class="eyebrow">{{ i18n "personalHistory" }}</p>
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+    </div>
+</header>
+
+<div class="page-frame memoir-shell section-space">
+    {{ partial "writing-lanes.html" (dict "page" . "active" "memoir") }}
+    {{ with .Content }}<div class="memoir-introduction prose static-prose">{{ . }}</div>{{ end }}
+
+    <div class="memoir-timeline" aria-label="{{ i18n "lifeStages" }}">
+        {{ range $stages }}
+        {{- $stage := . -}}
+        {{- $pages := where $.Pages "Params.stage" $stage.key -}}
+        <section class="memoir-stage" id="{{ $stage.key }}">
+            <header class="memoir-stage-heading">
+                <span>{{ $stage.number }}</span>
+                <div>
+                    <h2>{{ $stage.title }}</h2>
+                    <p>{{ $stage.description }}</p>
+                </div>
+            </header>
+            {{ if gt (len $pages) 0 }}
+            <div class="memoir-entry-list">
+                {{ range sort $pages "Params.memoryOrder" "asc" }}
+                <article class="memoir-entry">
+                    <div class="memoir-period">
+                        {{ with .Params.period }}<span>{{ . }}</span>{{ end }}
+                        {{ with .Params.place }}<small>{{ . }}</small>{{ end }}
+                    </div>
+                    <div>
+                        <div class="entry-title-line">
+                            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                            {{ if eq .Params.status "working" }}<span class="working-badge">{{ i18n "inProgress" }}</span>{{ end }}
+                        </div>
+                        <p>{{ .Description }}</p>
+                    </div>
+                </article>
+                {{ end }}
+            </div>
+            {{ else }}
+            <p class="memoir-stage-empty">{{ i18n "memoriesToCome" }}</p>
+            {{ end }}
+        </section>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

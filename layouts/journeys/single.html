@@ -27,6 +27,7 @@
 
     {{ with .Content }}
     <div class="reading-frame prose journey-prose">
+        {{ partial "working-draft.html" $ }}
         {{ . }}
     </div>
     {{ end }}

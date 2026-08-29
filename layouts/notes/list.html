@@ -20,7 +20,10 @@
                 <article class="note-entry">
                     <time datetime="{{ .Date.Format "2006-01-02" }}">{{ partial "date.html" . }}</time>
                     <div>
-                        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                        <div class="entry-title-line">
+                            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                            {{ if eq .Params.status "working" }}<span class="working-badge">{{ i18n "inProgress" }}</span>{{ end }}
+                        </div>
                         <p>{{ .Summary | plainify | htmlUnescape | truncate 160 }}</p>
                         {{ with .GetTerms "tags" }}
                         <ul class="entry-tags" aria-label="{{ i18n "tags" }}">
