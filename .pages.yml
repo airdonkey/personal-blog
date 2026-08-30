@@ -144,6 +144,10 @@ content:
                 label: 作者身份短句
                 type: string
                 required: true
+              - name: meta_description
+                label: 首页搜索与分享摘要
+                type: text
+                required: true
               - name: tagline
                 label: 首页主标题
                 type: string
@@ -176,6 +180,10 @@ content:
               - name: description
                 label: Short author identity
                 type: string
+                required: true
+              - name: meta_description
+                label: Homepage search and sharing summary
+                type: text
                 required: true
               - name: tagline
                 label: Homepage headline
@@ -1782,6 +1790,12 @@ content:
         required: false
         description: 中英文版本填写相同的简短英文键；只有一个语言版本时可留空。
         pattern: "^[a-z0-9-]*$"
+      - name: images
+        label: 社交分享图路径 / Social sharing image paths
+        type: string
+        required: false
+        list: true
+        description: 第一张用于 LinkedIn、Open Graph 和 Twitter；请使用 1200×630 图片，例如 /images/social/article-name.png。
       - name: body
         label: 正文 / Body
         type: rich-text

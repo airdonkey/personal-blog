@@ -7,7 +7,7 @@ draft: false
 description: "Where this site began, and why I want to keep writing about cross-cultural education, learning, and an ordinary life in motion."
 tags: ["language-and-writing", "education"]
 series: "self-building"
-featured: true
+featured: false
 readerQuestion: "If you began documenting your own life for the long term, what would you most want to preserve?"
 translationKey: about-website
 ---
