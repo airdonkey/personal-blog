@@ -6,10 +6,22 @@
 
     {{- $author := partial "identity.html" "author" -}}
     {{- $siteTitle := partial "identity.html" "site_title" -}}
-    {{- $description := partial "identity.html" "description" -}}
-    {{- $socialImage := "images/profile.jpg" | absURL -}}
-    {{- with .Params.heroImage -}}
-        {{- $socialImage = . | absURL -}}
+    {{- $description := partial "identity.html" "meta_description" -}}
+    {{- if not $description -}}
+        {{- $description = partial "identity.html" "description" -}}
+    {{- end -}}
+    {{- $defaultSocialImage := cond (eq .Site.Language.Lang "zh") "images/social/home-zh.png" "images/social/home-en.png" -}}
+    {{- $socialImage := $defaultSocialImage | absURL -}}
+    {{- with .Params.images -}}
+        {{- with index . 0 -}}
+            {{- $socialImage = . | absURL -}}
+        {{- end -}}
+    {{- end -}}
+    {{- $socialImageType := "image/png" -}}
+    {{- if or (strings.HasSuffix (lower $socialImage) ".jpg") (strings.HasSuffix (lower $socialImage) ".jpeg") -}}
+        {{- $socialImageType = "image/jpeg" -}}
+    {{- else if strings.HasSuffix (lower $socialImage) ".webp" -}}
+        {{- $socialImageType = "image/webp" -}}
     {{- end -}}
     {{- if .Description -}}
         {{- $description = .Description -}}
@@ -24,10 +36,14 @@
     <meta name="author" content="{{ $author }}">
     <link rel="canonical" href="{{ .Permalink }}">
 
+    {{- $xDefault := .Permalink -}}
     {{- range .AllTranslations }}
     <link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ .Permalink }}">
+        {{- if eq .Language.Lang "zh" -}}
+            {{- $xDefault = .Permalink -}}
+        {{- end -}}
     {{- end }}
-    <link rel="alternate" hreflang="x-default" href="{{ .Site.BaseURL }}">
+    <link rel="alternate" hreflang="x-default" href="{{ $xDefault }}">
 
     {{- with .OutputFormats.Get "RSS" }}
     <link rel="alternate" type="application/rss+xml" title="{{ $siteTitle }}" href="{{ .Permalink }}">
@@ -40,10 +56,15 @@
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:locale" content="{{ replace .Site.Language.Locale "-" "_" }}">
     <meta property="og:image" content="{{ $socialImage }}">
-    <meta name="twitter:card" content="{{ if .Params.heroImage }}summary_large_image{{ else }}summary{{ end }}">
+    <meta property="og:image:type" content="{{ $socialImageType }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ if .IsHome }}{{ $siteTitle }}{{ else }}{{ .Title }}{{ end }}">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ if .IsHome }}{{ $siteTitle }}{{ else }}{{ .Title }}{{ end }}">
     <meta name="twitter:description" content="{{ $description }}">
     <meta name="twitter:image" content="{{ $socialImage }}">
+    <meta name="twitter:image:alt" content="{{ if .IsHome }}{{ $siteTitle }}{{ else }}{{ .Title }}{{ end }}">
 
     <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32.png" | relURL }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">

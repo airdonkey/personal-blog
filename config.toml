@@ -14,8 +14,9 @@ summaryLength = 36
     
     [languages.zh.params]
       author = "周鹏龙"
-      description = "作者、教育工作者与终身学习者"
-      tagline = "无名者的自我建造"
+      description = "写作者与教育工作者"
+      meta_description = "关于教育、社会流动与个人能动性的长期写作。"
+      tagline = "无名者的自我构建"
       credo = "不神化努力，也不向结构投降。"
       introduction = "写一个没有背景的小镇做题家，如何在迁徙、职业转换与时代变化中，一次次重新建造自己。"
       email = "contact@zhoupenglong.com"
@@ -60,14 +61,15 @@ summaryLength = 36
     locale = "en-US"
     label = "English"
     weight = 2
-    title = "Zhou Penglong | Rebuilding an Ordinary Life"
+    title = "Zhou Penglong | Building a Life Across Changing Systems"
     
     [languages.en.params]
       author = "Zhou Penglong"
-      description = "Writer, educator, and lifelong learner"
-      tagline = "Rebuilding an ordinary life"
-      credo = "Neither romanticising effort nor surrendering to circumstance."
-      introduction = "Essays on how a person without inherited advantage keeps rebuilding a life across migration, career changes, and changing times."
+      description = "Writer & Educator"
+      meta_description = "Essays on education, social mobility and human agency across China and New Zealand."
+      tagline = "Building a Life Across Changing Systems"
+      credo = "Education • Social Mobility • Human Agency"
+      introduction = "Writing across China and New Zealand about what education can change, what inherited rules cannot solve, and how ordinary people preserve room to act."
       email = "contact@zhoupenglong.com"
     
     [[languages.en.menu.main]]

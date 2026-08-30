@@ -8,7 +8,7 @@ layout: "about"
 translationKey: "about"
 ---
 
-I am Penglong Zhou, an educator, astronomy organisation administrator, computing student, and long-term writer based in New Zealand.
+I am Zhou Penglong, a writer and educator based in New Zealand.
 
 These identities do not form a tidy professional label, and I do not want to present myself as someone who has mastered every field he has entered. What connects them is a situation I have repeatedly faced: when a person without inherited status leaves a familiar environment, changes careers, and enters a new era, what can he rely on to build himself again?
 

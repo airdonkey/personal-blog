@@ -11,6 +11,7 @@ series: "education-and-technology"
 tags: ["education", "risk-and-decisions"]
 featured: true
 readerQuestion: "你最想传给孩子、却发现无法照搬的上升经验是什么？"
+translationKey: "second-exam"
 ---
 
 我们这代人中，有不少曾是考试的受益者。

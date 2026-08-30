@@ -87,4 +87,12 @@ Grand Tour 的基本单位是“一段旅程”，不是“一个国家”。一
 
 日常文案修改不属于“改变结构”。首页主文案、栏目导言、母题名称、人生阶段名称、标签说明、Grand Tour 地点资料和所有界面短语，都从 Pages CMS 的“网站可见文字”入口修改。后台锁定的 `key`、已发布页面的 `slug` 和内容路径才属于结构。具体入口见 [`CMS_EDITING_GUIDE.md`](CMS_EDITING_GUIDE.md)。
 
-版本：2026-08-29
+## 英文代表作队列
+
+英文站按“同一母题、针对英语读者重新写作”推进，不做中文站的逐篇镜像。
+
+1. **已完成**：`The Second Examination: When Education No Longer Offers the Same Route Upward`。这是英文首页当前的 Selected Essay。
+2. **下一篇**：`Two Calculators and a White Dwarf: What Should Exams Leave to Students—and What to Tools?`。等中文母文删除全部补写提示、论证稳定后再独立改写；此前不建立公开英文半成品。
+3. **暂缓**：课程体系比较稿等待数据完成；困难班级稿等待匿名案例与文献支撑；写作方法类“小径”不占用当前英语内容产能。
+
+版本：2026-08-30
