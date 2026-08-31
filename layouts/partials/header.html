@@ -3,10 +3,7 @@
     {{- $tagline := partial "identity.html" "tagline" -}}
     <div class="page-frame header-inner">
         <a class="site-brand" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ $author }} — {{ $tagline }}">
-            <picture>
-                <source srcset="{{ "images/badge-96.webp" | relURL }}" type="image/webp">
-                <img class="brand-mark" src="{{ "images/badge-96.png" | relURL }}" width="42" height="42" alt="">
-            </picture>
+            <img class="brand-mark" src="{{ "images/brand/emblem-reverse.svg" | relURL }}" width="42" height="42" alt="">
             <span>{{ $author }}</span>
         </a>
 
