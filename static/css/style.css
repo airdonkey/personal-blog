@@ -265,6 +265,8 @@ html[lang^="zh"] .eyebrow {
 .brand-mark {
   width: 42px;
   height: 42px;
+  display: block;
+  flex: 0 0 auto;
 }
 
 .header-actions {

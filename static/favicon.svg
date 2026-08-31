@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <style>
+    .canvas { fill: #F3F0E9; }
+    .ring { fill: #111D2C; }
+    .core { fill: #B49A70; }
+    @media (prefers-color-scheme: dark) {
+      .canvas { fill: #121B26; }
+      .ring { fill: #F1EDE5; }
+    }
+  </style>
+  <rect class="canvas" width="256" height="256" rx="36"/>
+  <g class="ring">
+    <path d="M136 20h48l52 52v48h-46V92l-26-26h-28z"/>
+    <path d="M136 20h48l52 52v48h-46V92l-26-26h-28z" transform="rotate(90 128 128)"/>
+    <path d="M136 20h48l52 52v48h-46V92l-26-26h-28z" transform="rotate(180 128 128)"/>
+    <path d="M136 20h48l52 52v48h-46V92l-26-26h-28z" transform="rotate(270 128 128)"/>
+  </g>
+  <path class="core" d="M128 98l30 30-30 30-30-30z"/>
+</svg>

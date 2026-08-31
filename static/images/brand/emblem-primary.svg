@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Zhou Penglong emblem</title>
+  <g fill="#111D2C">
+    <path d="M132 16h52l56 56v52h-48V92l-28-28h-32z"/>
+    <path d="M132 16h52l56 56v52h-48V92l-28-28h-32z" transform="rotate(90 128 128)"/>
+    <path d="M132 16h52l56 56v52h-48V92l-28-28h-32z" transform="rotate(180 128 128)"/>
+    <path d="M132 16h52l56 56v52h-48V92l-28-28h-32z" transform="rotate(270 128 128)"/>
+  </g>
+  <path fill="#B49A70" d="M128 101l27 27-27 27-27-27z"/>
+</svg>
