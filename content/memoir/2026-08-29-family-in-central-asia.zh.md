@@ -1,6 +1,6 @@
 ---
 title: "我们在中亚重新成为一家人"
-date: 2026-08-29
+date: 2026-05-23
 slug: "family-in-central-asia"
 draft: false
 status: "working"

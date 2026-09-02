@@ -1,6 +1,6 @@
 ---
 title: "我从Krist身上真正想学的，不是勤奋表演"
-date: 2026-08-29
+date: 2026-03-11
 slug: "learning-from-krist"
 draft: false
 status: "working"

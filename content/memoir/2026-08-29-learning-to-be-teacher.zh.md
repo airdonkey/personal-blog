@@ -1,6 +1,6 @@
 ---
 title: "移民以后，我重新学习怎样成为老师"
-date: 2026-08-29
+date: 2026-05-30
 slug: "learning-to-be-teacher"
 draft: false
 status: "working"

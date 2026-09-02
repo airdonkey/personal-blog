@@ -1,6 +1,6 @@
 ---
 title: "二十年后，我们回北京"
-date: 2026-08-29
+date: 2026-08-22
 slug: "return-to-beijing-twenty-years"
 draft: false
 status: "working"

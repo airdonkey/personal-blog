@@ -1,6 +1,6 @@
 ---
 title: "做题家父母的第二场考试：当一代人的上升经验无法原样传给下一代"
-date: 2026-08-29
+date: 2026-08-01
 slug: "second-exam"
 draft: false
 status: "working"

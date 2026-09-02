@@ -1,6 +1,6 @@
 ---
 title: "考二代：我们家两次被考试改变"
-date: 2026-08-29
+date: 2026-02-28
 slug: "two-generations-changed-by-exams"
 draft: false
 status: "working"

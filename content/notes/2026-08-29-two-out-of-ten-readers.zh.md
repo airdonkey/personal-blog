@@ -1,6 +1,6 @@
 ---
 title: "十个人里有两个：我想要怎样的读者"
-date: 2026-08-29
+date: 2026-02-25
 slug: "two-out-of-ten-readers"
 draft: false
 status: "working"

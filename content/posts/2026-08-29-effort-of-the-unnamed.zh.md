@@ -1,6 +1,6 @@
 ---
 title: "努力不是万能的，却仍是无名者最可靠的起点"
-date: 2026-08-29
+date: 2026-02-14
 slug: "effort-of-the-unnamed"
 draft: false
 status: "working"

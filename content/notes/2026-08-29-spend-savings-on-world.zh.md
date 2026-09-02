@@ -1,6 +1,6 @@
 ---
 title: "我为什么愿意把积蓄花在看世界上"
-date: 2026-08-29
+date: 2026-05-20
 slug: "spend-savings-on-world"
 draft: false
 status: "working"

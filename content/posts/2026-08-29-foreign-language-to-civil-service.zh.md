@@ -1,6 +1,6 @@
 ---
 title: "从外语热到考公热：一代人的职业坐标怎样翻转"
-date: 2026-08-29
+date: 2026-05-02
 slug: "foreign-language-to-civil-service"
 draft: false
 status: "working"

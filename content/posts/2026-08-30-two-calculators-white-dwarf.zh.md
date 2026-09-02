@@ -1,6 +1,6 @@
 ---
 title: "两台计算器与一颗白矮星：考试把什么留给人，什么交给工具"
-date: 2026-08-30
+date: 2026-08-15
 language: zh
 slug: "two-calculators-white-dwarf"
 draft: false

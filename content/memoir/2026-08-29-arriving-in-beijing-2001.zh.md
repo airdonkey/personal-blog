@@ -1,6 +1,6 @@
 ---
 title: "2001年，我们来到北京"
-date: 2026-08-29
+date: 2026-03-07
 slug: "arriving-in-beijing-2001"
 draft: false
 status: "working"

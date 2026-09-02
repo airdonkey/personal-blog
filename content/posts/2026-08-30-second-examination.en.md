@@ -1,6 +1,6 @@
 ---
 title: "The Second Examination: When Education No Longer Offers the Same Route Upward"
-date: 2026-08-30
+date: 2026-08-03
 language: en
 slug: "second-examination"
 draft: false

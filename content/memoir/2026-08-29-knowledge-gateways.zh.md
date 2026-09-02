@@ -1,6 +1,6 @@
 ---
 title: "我们那一代人的知识入口"
-date: 2026-08-29
+date: 2026-03-14
 slug: "knowledge-gateways"
 draft: false
 status: "working"

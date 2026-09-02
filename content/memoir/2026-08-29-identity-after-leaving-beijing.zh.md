@@ -1,6 +1,6 @@
 ---
 title: "离开北京以后，原来的身份还剩下什么"
-date: 2026-08-29
+date: 2026-05-16
 slug: "identity-after-leaving-beijing"
 draft: false
 status: "working"

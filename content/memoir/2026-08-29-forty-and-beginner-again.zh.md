@@ -1,6 +1,6 @@
 ---
 title: "四十岁以后，我又坐回了初学者的位置"
-date: 2026-08-29
+date: 2026-06-27
 slug: "forty-and-beginner-again"
 draft: false
 status: "working"

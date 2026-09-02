@@ -1,6 +1,6 @@
 ---
 title: "老师究竟凭什么被称为老师"
-date: 2026-08-29
+date: 2026-06-13
 slug: "what-makes-a-teacher"
 draft: false
 status: "working"

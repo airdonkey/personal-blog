@@ -1,6 +1,6 @@
 ---
 title: "父母只教会了我读书、做事和承担责任"
-date: 2026-08-29
+date: 2026-04-18
 slug: "hidden-curriculum-of-organisations"
 draft: false
 status: "working"

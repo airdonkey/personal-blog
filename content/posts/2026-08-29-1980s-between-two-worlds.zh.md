@@ -1,6 +1,6 @@
 ---
 title: "80后：在两套世界解释之间长大的一代"
-date: 2026-08-29
+date: 2026-03-21
 slug: "1980s-between-two-worlds"
 draft: false
 status: "working"

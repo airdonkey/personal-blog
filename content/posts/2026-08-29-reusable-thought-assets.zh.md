@@ -1,6 +1,6 @@
 ---
 title: "不跟别人拼在线时长：怎样把思想变成可以复用的资产"
-date: 2026-08-29
+date: 2026-07-18
 slug: "reusable-thought-assets"
 draft: false
 status: "working"

@@ -1,6 +1,6 @@
 ---
 title: "房间很小，世界正在打开：我们在幸福村的日子"
-date: 2026-08-29
+date: 2026-03-28
 slug: "small-room-open-world"
 draft: false
 status: "working"

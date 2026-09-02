@@ -1,6 +1,6 @@
 ---
 title: "先让半成品存在"
-date: 2026-08-29
+date: 2026-06-24
 slug: "public-first-drafts"
 draft: false
 status: "working"

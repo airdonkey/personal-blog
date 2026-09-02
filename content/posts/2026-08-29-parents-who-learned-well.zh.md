@@ -1,6 +1,6 @@
 ---
 title: "为什么越会学习的父母，越容易为孩子焦虑"
-date: 2026-08-29
+date: 2026-08-08
 slug: "parents-who-learned-well"
 draft: false
 status: "working"

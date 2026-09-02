@@ -1,6 +1,6 @@
 ---
 title: "我们在北京住过的那些地方"
-date: 2026-08-29
+date: 2026-04-25
 slug: "beijing-homes"
 draft: false
 status: "working"

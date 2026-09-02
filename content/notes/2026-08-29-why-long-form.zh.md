@@ -1,6 +1,6 @@
 ---
 title: "长文没有流量以后，为什么还要写"
-date: 2026-08-29
+date: 2026-02-11
 slug: "why-long-form"
 draft: false
 status: "working"

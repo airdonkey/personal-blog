@@ -1,6 +1,6 @@
 ---
 title: "《记事本圆梦计划》与一个迟迟不能启动的人"
-date: 2026-08-29
+date: 2026-07-08
 slug: "notebook-dream-plan"
 draft: false
 status: "working"

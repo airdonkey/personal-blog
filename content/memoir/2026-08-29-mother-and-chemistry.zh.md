@@ -1,6 +1,6 @@
 ---
 title: "母亲教会我的，首先不是化学"
-date: 2026-08-29
+date: 2026-02-21
 slug: "mother-and-chemistry"
 draft: false
 status: "working"

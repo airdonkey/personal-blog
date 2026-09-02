@@ -1,6 +1,6 @@
 ---
 title: "直到拿到执业资格，我才安心接受“老师”这个称呼"
-date: 2026-08-29
+date: 2026-06-06
 slug: "accepting-teacher-title"
 draft: false
 status: "working"

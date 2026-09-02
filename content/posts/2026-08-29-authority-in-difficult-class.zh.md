@@ -1,6 +1,6 @@
 ---
 title: "在困难班级里重新学习权威"
-date: 2026-08-29
+date: 2026-06-20
 slug: "authority-in-difficult-class"
 draft: false
 status: "working"

@@ -1,6 +1,6 @@
 ---
 title: "两条职业道路，怎样汇成一个家"
-date: 2026-08-29
+date: 2026-05-09
 slug: "two-careers-one-family"
 draft: false
 status: "working"

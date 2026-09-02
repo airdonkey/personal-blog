@@ -1,6 +1,6 @@
 ---
 title: "AI能润色所有人的表达以后，个人写作还剩下什么"
-date: 2026-08-29
+date: 2026-07-04
 slug: "writing-after-ai"
 draft: false
 status: "working"

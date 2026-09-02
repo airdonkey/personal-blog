@@ -1,6 +1,6 @@
 ---
 title: "一台记得常数，一台擅长画图：更贵的计算器为什么输掉一道白矮星题"
-date: 2026-08-30
+date: 2026-08-19
 language: zh
 slug: "white-dwarf-two-calculators"
 draft: false

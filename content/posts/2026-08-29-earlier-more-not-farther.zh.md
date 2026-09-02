@@ -1,6 +1,6 @@
 ---
 title: "中国孩子学得更早更多，为什么后来未必领先很多"
-date: 2026-08-29
+date: 2026-07-25
 slug: "earlier-more-not-farther"
 draft: false
 status: "working"

@@ -1,6 +1,6 @@
 ---
 title: "天文学为什么值得占据一个年轻人的时间"
-date: 2026-08-29
+date: 2026-07-29
 slug: "astronomy-and-youth"
 draft: false
 status: "working"
