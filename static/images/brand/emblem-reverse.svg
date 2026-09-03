@@ -1,10 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
-  <title id="title">Zhou Penglong emblem</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Zhou Penglong Open Frame emblem, reverse</title>
+  <desc id="desc">A light circle contains four open right angles and a champagne central square.</desc>
+  <circle cx="128" cy="128" r="99" fill="none" stroke="#F1EDE5" stroke-width="14"/>
   <g fill="#F1EDE5">
-    <path d="M132 16h52l56 56v52h-48V92l-28-28h-32z"/>
-    <path d="M132 16h52l56 56v52h-48V92l-28-28h-32z" transform="rotate(90 128 128)"/>
-    <path d="M132 16h52l56 56v52h-48V92l-28-28h-32z" transform="rotate(180 128 128)"/>
-    <path d="M132 16h52l56 56v52h-48V92l-28-28h-32z" transform="rotate(270 128 128)"/>
+    <path d="M78 78h40v14H92v26H78z"/>
+    <path d="M78 78h40v14H92v26H78z" transform="rotate(90 128 128)"/>
+    <path d="M78 78h40v14H92v26H78z" transform="rotate(180 128 128)"/>
+    <path d="M78 78h40v14H92v26H78z" transform="rotate(270 128 128)"/>
   </g>
-  <path fill="#B49A70" d="M128 101l27 27-27 27-27-27z"/>
+  <rect x="114" y="114" width="28" height="28" fill="#B49A70"/>
 </svg>

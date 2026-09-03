@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Zhou Penglong Open Frame emblem, monochrome</title>
+  <desc id="desc">A one-colour circle contains four open right angles and a central square.</desc>
+  <circle cx="128" cy="128" r="99" fill="none" stroke="#111D2C" stroke-width="15"/>
+  <g fill="#111D2C">
+    <path d="M78 78h40v15H93v25H78z"/>
+    <path d="M78 78h40v15H93v25H78z" transform="rotate(90 128 128)"/>
+    <path d="M78 78h40v15H93v25H78z" transform="rotate(180 128 128)"/>
+    <path d="M78 78h40v15H93v25H78z" transform="rotate(270 128 128)"/>
+    <rect x="113" y="113" width="30" height="30"/>
+  </g>
+</svg>

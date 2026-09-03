@@ -149,7 +149,7 @@ data/countries.json         # Hugo 构建时使用的游历数据
 data/site_identity.toml     # 后台可改的作者身份与首页主文案
 static/images/profile.*     # 头像
 static/images/travel/       # Grand Tour 网页衍生图（不保存原片）
-assets/brand/               # 不直接发布的品牌源文件
+assets/brand/               # 不直接发布的“开放之方”品牌源文件
 ```
 
 Grand Tour 的浏览器地图由 Hugo 在构建时从 `data/countries.json` 自动生成 JSON，因此只维护这一份数据。
