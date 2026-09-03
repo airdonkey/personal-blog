@@ -1741,6 +1741,36 @@ content:
         component: language
       - name: slug
         component: url_slug
+      - name: body
+        label: 正文 / Body
+        type: rich-text
+        required: true
+        description: 直接像普通文档一样书写。选中文字可设置格式；在空白行输入 / 可插入图片、表格、引用或代码。图片或已导出的图表也可直接粘贴、拖入，系统会自动上传并写入正确路径。
+        default: |
+          ## 从一个具体场景开始
+
+          写下当时在哪里、发生了什么，以及你首先注意到的细节。先不要解释道理。
+
+          ## 我真正想说的一句话
+
+          这件事改变或印证了你的什么判断？这一篇只保留一个核心判断。
+
+          ## 事情没有那么简单
+
+          写出与你的判断相反的一面、结构限制，或者你自己仍然无法回答的问题。
+
+          ## 它对普通人意味着什么
+
+          从个人经历回到读者：为什么一个没有相同经历的人仍然值得读完？
+
+          ## 留下一个问题
+
+          用一个具体问题结束，并把同一个问题填写到下方的“文末读者问题”。
+        options:
+          format: markdown
+          switcher: false
+          media: article_images
+          rename: safe
       - name: draft
         label: 草稿 / Draft
         type: boolean
@@ -1796,36 +1826,6 @@ content:
         required: false
         list: true
         description: 第一张用于 LinkedIn、Open Graph 和 Twitter；请使用 1200×630 图片，例如 /images/social/article-name.png。
-      - name: body
-        label: 正文 / Body
-        type: rich-text
-        required: true
-        default: |
-          ## 从一个具体场景开始
-
-          写下当时在哪里、发生了什么，以及你首先注意到的细节。先不要解释道理。
-
-          ## 我真正想说的一句话
-
-          这件事改变或印证了你的什么判断？这一篇只保留一个核心判断。
-
-          ## 事情没有那么简单
-
-          写出与你的判断相反的一面、结构限制，或者你自己仍然无法回答的问题。
-
-          ## 它对普通人意味着什么
-
-          从个人经历回到读者：为什么一个没有相同经历的人仍然值得读完？
-
-          ## 留下一个问题
-
-          用一个具体问题结束，并把同一个问题填写到上方的“文末读者问题”。
-        options:
-          format: markdown
-          switcher: true
-          media: article_images
-          rename: safe
-
   - name: memoirs
     label: 来时路（个人生活史）/ Memoir
     type: collection
@@ -1865,6 +1865,32 @@ content:
         component: language
       - name: slug
         component: url_slug
+      - name: body
+        label: 正文 / Body
+        type: rich-text
+        required: true
+        description: 直接像普通文档一样书写。选中文字可设置格式；在空白行输入 / 可插入图片、表格、引用或代码。图片或已导出的图表也可直接粘贴、拖入，系统会自动上传并写入正确路径。
+        default: |
+          ## 我记得的一个现场
+
+          先保存房间、街道、物件、声音或一句原话。不要急着证明它代表一个时代。
+
+          ## 当时的我并不知道
+
+          写下今天回看才看清的变化，但允许当年的自己保留局限。
+
+          ## 这段个人记忆与谁相连
+
+          从“我”走向同代人的共同经验；不替整整一代人下结论。
+
+          ## 待补证据
+
+          列出下一次只需补入的照片、地名、年份或对话。
+        options:
+          format: markdown
+          switcher: false
+          media: article_images
+          rename: safe
       - name: draft
         label: 草稿 / Draft
         type: boolean
@@ -1934,32 +1960,6 @@ content:
         type: string
         required: false
         pattern: "^[a-z0-9-]*$"
-      - name: body
-        label: 正文 / Body
-        type: rich-text
-        required: true
-        default: |
-          ## 我记得的一个现场
-
-          先保存房间、街道、物件、声音或一句原话。不要急着证明它代表一个时代。
-
-          ## 当时的我并不知道
-
-          写下今天回看才看清的变化，但允许当年的自己保留局限。
-
-          ## 这段个人记忆与谁相连
-
-          从“我”走向同代人的共同经验；不替整整一代人下结论。
-
-          ## 待补证据
-
-          列出下一次只需补入的照片、地名、年份或对话。
-        options:
-          format: markdown
-          switcher: true
-          media: article_images
-          rename: safe
-
   - name: notes
     label: 小径（短札记）/ Side Paths
     type: collection
@@ -1999,6 +1999,24 @@ content:
         component: language
       - name: slug
         component: url_slug
+      - name: body
+        label: 正文 / Body
+        type: rich-text
+        required: true
+        description: 直接像普通文档一样书写。选中文字可设置格式；在空白行输入 / 可插入图片、表格、引用或代码。图片或已导出的图表也可直接粘贴、拖入，系统会自动上传并写入正确路径。
+        default: |
+          ## 我注意到的细节
+
+          先写下触发这个念头的书、画面、声音、地方或一句话。
+
+          ## 它让我想到
+
+          只向前走一步：它与你的哪段经验或哪个问题发生了联系？写到这里就可以停下。
+        options:
+          format: markdown
+          switcher: false
+          media: article_images
+          rename: safe
       - name: draft
         label: 草稿 / Draft
         type: boolean
@@ -2025,24 +2043,6 @@ content:
         required: false
         description: 中英文版本填写相同的简短英文键；只有一个语言版本时可留空。
         pattern: "^[a-z0-9-]*$"
-      - name: body
-        label: 正文 / Body
-        type: rich-text
-        required: true
-        default: |
-          ## 我注意到的细节
-
-          先写下触发这个念头的书、画面、声音、地方或一句话。
-
-          ## 它让我想到
-
-          只向前走一步：它与你的哪段经验或哪个问题发生了联系？写到这里就可以停下。
-        options:
-          format: markdown
-          switcher: true
-          media: article_images
-          rename: safe
-
   - name: journeys
     label: 旅程与照片故事 / Journeys and photo stories
     type: collection
@@ -2082,6 +2082,28 @@ content:
         component: language
       - name: slug
         component: url_slug
+      - name: body
+        label: 游记正文 / Travelogue
+        type: rich-text
+        required: false
+        description: 直接像普通文档一样书写。选中文字可设置格式；在空白行输入 / 可插入图片、表格、引用或代码。图片或已导出的图表也可直接粘贴、拖入，系统会自动上传并写入游历图片目录。
+        default: |
+          ## 抵达
+
+          从一个具体场景开始：光线、声音、天气、身体感受，或者一句当时听见的话。
+
+          ## 沿途
+
+          不必写成景点清单。选择两三个真正改变你观察方式的现场。
+
+          ## 当时的我，今天的我
+
+          当时怎样理解这段旅程？多年以后，又有哪些判断发生了变化？
+        options:
+          format: markdown
+          switcher: false
+          media: travel_images
+          rename: safe
       - name: draft
         label: 草稿 / Draft
         type: boolean
@@ -2182,28 +2204,6 @@ content:
         type: string
         required: false
         pattern: "^[a-z0-9-]*$"
-      - name: body
-        label: 游记正文 / Travelogue
-        type: rich-text
-        required: false
-        default: |
-          ## 抵达
-
-          从一个具体场景开始：光线、声音、天气、身体感受，或者一句当时听见的话。
-
-          ## 沿途
-
-          不必写成景点清单。选择两三个真正改变你观察方式的现场。
-
-          ## 当时的我，今天的我
-
-          当时怎样理解这段旅程？多年以后，又有哪些判断发生了变化？
-        options:
-          format: markdown
-          switcher: true
-          media: travel_images
-          rename: safe
-
   - name: site_pages
     label: 固定页面 / Core pages
     type: group
