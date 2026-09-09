@@ -4,7 +4,7 @@ date: 2026-09-07
 slug: "education-in-practice"
 draft: false
 status: "working"
-nextStep: "17篇工作稿全部上线后，按读者路径检查内部链接与重复背景，删掉仍需由hub承担的说明。"
+nextStep: "19篇工作稿上线后，检查教师职业支线与实施类文章的交叉链接，并继续减少hub中重复背景说明。"
 description: "记录新西兰中学课程、资格认证、评估和AI政策怎样从正式文件进入真实学校与课堂。"
 workingThesis: "长期观察政策如何抵达课堂，以及抵达以后出现的实施成本、解释工作和真实trade-off。"
 series: "education-and-technology"
@@ -62,7 +62,12 @@ translationKey: "education-in-practice"
 16. [当官方文件回答不了“明天怎么做”：教师共同体承担了哪些解释工作？](/zh/posts/teacher-communities-calibration-layer/)
 17. [Knowledge-rich就是回到死记硬背吗？新课程真正要求教师教什么](/zh/posts/knowledge-and-practices/)
 
-## 四条阅读路径
+## 教师职业
+
+18. [我从幼教转到高中，教师执业证却一直没换](/zh/posts/teacher-registration-sector-switch/)
+19. [续一张新西兰教师执业证，到底要证明什么？](/zh/posts/practising-certificate-renewal/)
+
+## 五条阅读路径
 
 如果你是家长，可以从[2026 Year 9 cohort](/zh/posts/2026-year-9-cohort/)开始，再看[NCEA改革地图](/zh/posts/ncea-reform-where-we-are/)、[Foundational Award](/zh/posts/foundational-award/)和[Progress Descriptors](/zh/posts/progress-descriptors/)。
 
@@ -71,5 +76,7 @@ translationKey: "education-in-practice"
 如果你主要关心assessment和AI，可以从[CAA feedback](/zh/posts/caa-feedback-diagnosis/)进入，再看[NZQA automated scoring](/zh/posts/nzqa-ai-writing-marking/)、[ChatGPT grading](/zh/posts/chatgpt-grades-student-writing/)和[Assessment Authenticity](/zh/posts/assessment-authenticity-after-ai/)。
 
 如果你关心制度怎样真正运转，可以从[NCEA改革地图](/zh/posts/ncea-reform-where-we-are/)一路读到[Implementation Tax](/zh/posts/curriculum-implementation-tax/)和[Professional Interpretation Layer](/zh/posts/teacher-communities-calibration-layer/)。
+
+如果你关心教师职业，可以先看[为什么我的教师证从幼教一直用到高中](/zh/posts/teacher-registration-sector-switch/)，再看[Full practising certificate怎样renew](/zh/posts/practising-certificate-renewal/)。
 
 这批文章以后会继续增加。结构不追着热点变，网址也尽量不变。变化的是证据、版本，以及我对问题的理解。
